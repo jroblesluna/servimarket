@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "861186813540",
+    "project_id": "servimarket-5387d",
+    "storage_bucket": "servimarket-5387d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861186813540:android:79b8cd5d855454c568b971",
+        "android_client_info": {
+          "package_name": "com.servimarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "861186813540-2fs3sk40rinvl07kn7t1ub255p21p6dk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.servimarket",
+            "certificate_hash": "9a7c1b7a28f65266f35b6c77586ccf1cd257bc80"
+          }
+        },
+        {
+          "client_id": "861186813540-3dl8rrgk5a1d092g0gi9runqasldh207.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.servimarket",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "861186813540-hr41m36t7sh491dvc5ug8qrrtmajfp6g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWZClv5B2ixe6KcEQ5S2SroM45I5HnW18"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "861186813540-hr41m36t7sh491dvc5ug8qrrtmajfp6g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
