@@ -48,8 +48,18 @@ function SignUp({navigation}) {
   const handleSignUp = async () => {
     try {
       setNotSigningUp(false);
+      console.log('Creando');
       await auth().createUserWithEmailAndPassword(email, password);
-      await auth().currentUser.sendEmailVerification();
+      console.log('Obteniendo user nuevo');
+      const newUser = auth().currentUser;
+      console.log('Enviar mail de verificación');
+      await newUser.sendEmailVerification();
+      console.log('Aviso para verificar email');
+      Alert.alert(
+        'Verifica tu email',
+        'Tu usuario ha sido creado; sin embargo, para poder iniciar sesión debes revisar tu correo y hacer click en el link enviado para verificar tu dirección de email.',
+      );
+      console.log('Yendo a Login');
       navigation.navigate('Login');
     } catch (error) {
       console.log('Error en el registro:', error);

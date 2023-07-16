@@ -1,47 +1,150 @@
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
-import {View, Image, StyleSheet} from 'react-native';
-import Market from '../screens/PrivateZone/Market';
+import {View, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import ServiMarket from '../screens/PrivateZone/ServiMarket';
+import MyProfile from '../screens/PrivateZone/MyProfile';
+import MyServices from '../screens/PrivateZone/MyServices';
+import MyAppointments from '../screens/PrivateZone/MyAppointments';
+import ViewHistory from '../screens/PrivateZone/ViewHistory';
+import MyWallet from '../screens/PrivateZone/MyWallet';
+import MySettings from '../screens/PrivateZone/MySettings';
+import {useNavigation} from '@react-navigation/native';
 
-const CustomDrawerContent = ({handleSignOut, user}) => {
+const CustomDrawerContent = ({handleSignOut, user, navigation}) => {
   return (
-    <DrawerContentScrollView>
+    <DrawerContentScrollView style={styles.drawerContentScrollViewStyle}>
       <View style={styles.headerContainer}>
         {user && user.photoURL && (
           <Image source={{uri: user.photoURL}} style={styles.headerImage} />
         )}
       </View>
-      <DrawerItem label="Sign Out" onPress={handleSignOut} />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Profile"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MyProfile')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="ServiMarket"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('ServiMarket')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Services"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MyServices')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Appointments"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MyAppointments')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="View History"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('ViewHistory')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Wallet"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MyWallet')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Settings"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MySettings')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="Sign Out"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={handleSignOut}
+      />
     </DrawerContentScrollView>
   );
 };
 
-function PrivateZoneDrawer({handleSignOut, user}) {
+const HeaderRight = () => {
+  const navigation = useNavigation();
+
+  const handleOpenDrawer = () => {
+    navigation.openDrawer();
+  };
+
+  return (
+    <TouchableOpacity onPress={handleOpenDrawer}>
+      <Icon name="menu" size={24} color="black" style={{marginRight: 15}} />
+    </TouchableOpacity>
+  );
+};
+
+function PrivateZoneDrawer({handleSignOut, user, navigation}) {
   const Drawer = createDrawerNavigator();
 
   return (
     <Drawer.Navigator
+      initialRouteName="ServiMarket" // Modificar esta línea
+      screenOptions={{
+        drawerType: 'front',
+        drawerPosition: 'right',
+
+        drawerStyle: {
+          width: '66%',
+          opacity: 0.85,
+        },
+        headerLeft: () => null, // Elimina el icono de hamburguesa del lado izquierdo
+        headerRight: () => <HeaderRight navigation={navigation} />,
+        headerTitleAlign: 'center', // Centra el título en la barra de navegación
+      }}
       drawerContent={() => (
-        <CustomDrawerContent handleSignOut={handleSignOut} user={user} />
+        <CustomDrawerContent
+          handleSignOut={handleSignOut}
+          user={user}
+          navigation={navigation}
+        />
       )}>
-      <Drawer.Screen name="Main" component={Market} />
-      {/* Agregar más pantallas al navegador Drawer */}
+      <Drawer.Screen name="MyProfile" component={MyProfile} />
+      <Drawer.Screen name="ServiMarket" component={ServiMarket} />
+      <Drawer.Screen name="MyServices" component={MyServices} />
+      <Drawer.Screen name="MyAppointments" component={MyAppointments} />
+      <Drawer.Screen name="ViewHistory" component={ViewHistory} />
+      <Drawer.Screen name="MyWallet" component={MyWallet} />
+      <Drawer.Screen name="MySettings" component={MySettings} />
     </Drawer.Navigator>
   );
 }
 
 const styles = StyleSheet.create({
+  drawerContentScrollViewStyle: {
+    backgroundColor: '#1E3264',
+  },
   headerContainer: {
-    height: 200,
+    height: 150,
     justifyContent: 'center',
     alignItems: 'center',
   },
   headerImage: {
-    width: 150,
-    height: 150,
+    width: 100,
+    height: 100,
     resizeMode: 'contain',
     borderRadius: 75,
+  },
+  drawerItemStyle: {
+    marginVertical: 2,
+  },
+  drawerItemLabelStyle: {
+    color: 'white',
+    fontFamily: 'Roboto',
+    fontSize: 20,
+    fontWeight: 'bold',
   },
 });
 

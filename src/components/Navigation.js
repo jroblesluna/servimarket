@@ -24,7 +24,9 @@ function Navigation() {
         <Stack.Screen
           name="PrivateZone"
           component={PrivateZone}
-          options={{headerShown: false}}
+          options={{
+            headerShown: false,
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>

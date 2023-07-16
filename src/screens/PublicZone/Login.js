@@ -14,6 +14,7 @@ import {
 } from '@react-native-google-signin/google-signin';
 import auth from '@react-native-firebase/auth';
 import CustomImage from '../../components/CustomImage';
+import {useRoute} from '@react-navigation/native';
 
 GoogleSignin.configure({
   webClientId:
@@ -21,6 +22,9 @@ GoogleSignin.configure({
 });
 
 function Login() {
+  const route = useRoute();
+  const {notSigningUp} = route.params ?? {};
+
   const navigation = useNavigation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -30,13 +34,20 @@ function Login() {
 
   useEffect(() => {
     const unsubscribe = auth().onAuthStateChanged(currentUser => {
+      console.log('Checking...');
       if (currentUser) {
-        navigation.navigate('PrivateZone');
+        if (currentUser.emailVerified) {
+          navigation.navigate('PrivateZone');
+        } else {
+          if (!isLoggingIn && notSigningUp) {
+            auth().signOut();
+          }
+        }
       }
     });
 
     return unsubscribe;
-  }, [navigation]);
+  }, [isLoggingIn, notSigningUp, navigation]);
 
   const handleGoogleSignIn = async () => {
     console.log(1);
@@ -68,8 +79,16 @@ function Login() {
     try {
       console.log('Deshabilitando...');
       setIsLoggingIn(true); // Deshabilitar el botón de inicio de sesión
-      await auth().signInWithEmailAndPassword(email, password);
+      const {user} = await auth().signInWithEmailAndPassword(email, password);
       console.log('Logged In...');
+      if (user && !user.emailVerified) {
+        Alert.alert(
+          'Email no verificado',
+          'Por favor, verifica tu correo electrónico antes de iniciar sesión.',
+        );
+        setIsLoggingIn(false); // Habilitar el botón de inicio de sesión
+        return;
+      }
       navigation.navigate('PrivateZone');
     } catch (error) {
       console.log(error.message);

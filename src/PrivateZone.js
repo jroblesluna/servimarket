@@ -3,7 +3,7 @@ import {useNavigation} from '@react-navigation/native';
 import auth from '@react-native-firebase/auth';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import PrivateZoneDrawer from './components/PrivateZoneDrawer';
-import Market from './screens/PrivateZone/Market';
+import ServiMarket from './screens/PrivateZone/ServiMarket';
 
 function PrivateZone() {
   const navigation = useNavigation();
@@ -41,8 +41,11 @@ function PrivateZone() {
   };
 
   return (
-    <PrivateZoneDrawer handleSignOut={handleSignOut} user={user}>
-      <Market />
+    <PrivateZoneDrawer
+      handleSignOut={handleSignOut}
+      user={user}
+      navigation={navigation}>
+      <ServiMarket />
     </PrivateZoneDrawer>
   );
 }

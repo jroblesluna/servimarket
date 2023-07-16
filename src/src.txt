@@ -1,0 +1,804 @@
+Archivo /App.tsx:
+import React from 'react';
+import Navigation from './components/Navigation';
+import {Animated} from 'react-native';
+
+const av = new Animated.Value(0);
+av.addListener(() => {
+  return;
+});
+
+function App() {
+  return <Navigation />;
+}
+
+export default App;
+Archivo /PrivateZone.js:
+import React, {useEffect, useState} from 'react';
+import {useNavigation} from '@react-navigation/native';
+import auth from '@react-native-firebase/auth';
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import PrivateZoneDrawer from './components/PrivateZoneDrawer';
+import ServiMarket from './screens/PrivateZone/ServiMarket';
+
+function PrivateZone() {
+  const navigation = useNavigation();
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth().onAuthStateChanged(currentUser => {
+      setUser(currentUser);
+    });
+
+    return unsubscribe;
+  }, []);
+
+  const handleSignOut = async () => {
+    try {
+      console.log(user);
+      if (user != null) {
+        console.log('Auth Signing Out');
+        await auth().signOut();
+      }
+      const isGoogleSignedIn = await GoogleSignin.isSignedIn();
+      console.log('isGoogleSignedIn:', isGoogleSignedIn);
+      if (isGoogleSignedIn) {
+        console.log('Google Signing Out');
+        await GoogleSignin.revokeAccess();
+      }
+      navigation.reset({
+        index: 0,
+        routes: [{name: 'Login'}],
+      });
+    } catch (error) {
+      console.log('Error en Sign Out: ', error);
+    } finally {
+    }
+  };
+
+  return (
+    <PrivateZoneDrawer
+      handleSignOut={handleSignOut}
+      user={user}
+      navigation={navigation}>
+      <ServiMarket />
+    </PrivateZoneDrawer>
+  );
+}
+
+export default PrivateZone;
+Archivo /components/CustomImage.js:
+import React from 'react';
+import {Image, StyleSheet} from 'react-native';
+
+// Importar las imágenes necesarias
+import logoImage from '../assets/images/logo.png';
+
+const imageMap = {
+  logo: logoImage,
+  // Agrega aquí más nombres de archivo y sus rutas de importación correspondientes
+};
+
+const CustomImage = ({
+  fileName = 'logo',
+  width = 150,
+  height = 150,
+  borderRadius = 25,
+}) => {
+  const styles = StyleSheet.create({
+    imageStyle: {
+      width: width,
+      height: height,
+      borderRadius: borderRadius,
+    },
+  });
+
+  const imageSource = imageMap[fileName];
+
+  return <Image source={imageSource} style={styles.imageStyle} />;
+};
+
+export default CustomImage;
+Archivo /components/Navigation.js:
+import React from 'react';
+import {createStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer} from '@react-navigation/native';
+import Login from '../screens/PublicZone/Login';
+import SignUp from '../screens/PublicZone/SignUp';
+import PrivateZone from '../PrivateZone';
+
+const Stack = createStackNavigator();
+
+function Navigation() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="SignUp"
+          component={SignUp}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="PrivateZone"
+          component={PrivateZone}
+          options={{headerShown: false}}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default Navigation;
+Archivo /components/PrivateZoneDrawer.js:
+import React from 'react';
+import {createDrawerNavigator} from '@react-navigation/drawer';
+import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
+import {View, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import ServiMarket from '../screens/PrivateZone/ServiMarket';
+import MyProfile from '../screens/PrivateZone/MyProfile';
+import MyServices from '../screens/PrivateZone/MyServices';
+import MyAppointments from '../screens/PrivateZone/MyAppointments';
+import ViewHistory from '../screens/PrivateZone/ViewHistory';
+import MyWallet from '../screens/PrivateZone/MyWallet';
+import MySettings from '../screens/PrivateZone/MySettings';
+import {useNavigation} from '@react-navigation/native';
+
+const CustomDrawerContent = ({handleSignOut, user, navigation}) => {
+  return (
+    <DrawerContentScrollView style={styles.drawerContentScrollViewStyle}>
+      <View style={styles.headerContainer}>
+        {user && user.photoURL && (
+          <Image source={{uri: user.photoURL}} style={styles.headerImage} />
+        )}
+      </View>
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Profile"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MyProfile')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="ServiMarket"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('ServiMarket')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Services"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MyServices')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Appointments"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MyAppointments')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="View History"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('ViewHistory')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Wallet"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MyWallet')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Settings"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MySettings')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="Sign Out"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={handleSignOut}
+      />
+    </DrawerContentScrollView>
+  );
+};
+
+const HeaderRight = () => {
+  const navigation = useNavigation();
+
+  const handleOpenDrawer = () => {
+    navigation.openDrawer();
+  };
+
+  return (
+    <TouchableOpacity onPress={handleOpenDrawer}>
+      <Icon name="menu" size={24} color="black" style={{marginRight: 15}} />
+    </TouchableOpacity>
+  );
+};
+
+function PrivateZoneDrawer({handleSignOut, user, navigation}) {
+  const Drawer = createDrawerNavigator();
+
+  return (
+    <Drawer.Navigator
+      initialRouteName="ServiMarket" // Modificar esta línea
+      screenOptions={{
+        drawerType: 'front',
+        drawerPosition: 'right',
+
+        drawerStyle: {
+          width: '66%',
+          opacity: 0.85,
+        },
+        headerLeft: null,
+        headerRight: () => <HeaderRight navigation={navigation} />,
+      }}
+      drawerContent={() => (
+        <CustomDrawerContent
+          handleSignOut={handleSignOut}
+          user={user}
+          navigation={navigation}
+        />
+      )}>
+      <Drawer.Screen name="MyProfile" component={MyProfile} />
+      <Drawer.Screen name="ServiMarket" component={ServiMarket} />
+      <Drawer.Screen name="MyServices" component={MyServices} />
+      <Drawer.Screen name="MyAppointments" component={MyAppointments} />
+      <Drawer.Screen name="ViewHistory" component={ViewHistory} />
+      <Drawer.Screen name="MyWallet" component={MyWallet} />
+      <Drawer.Screen name="MySettings" component={MySettings} />
+    </Drawer.Navigator>
+  );
+}
+
+const styles = StyleSheet.create({
+  drawerContentScrollViewStyle: {
+    backgroundColor: '#1E3264',
+  },
+  headerContainer: {
+    height: 150,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  headerImage: {
+    width: 100,
+    height: 100,
+    resizeMode: 'contain',
+    borderRadius: 75,
+  },
+  drawerItemStyle: {
+    marginVertical: 2,
+  },
+  drawerItemLabelStyle: {
+    color: 'white',
+    fontFamily: 'Roboto',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+});
+
+export default PrivateZoneDrawer;
+Archivo /screens/PrivateZone/ServiMarket.js:
+import React from 'react';
+import {View, StyleSheet, Text} from 'react-native';
+
+function PrivateZone() {
+  return (
+    <View style={styles.container}>
+      <Text>Welcome to the Private Zone Screen!</Text>
+      {/* Agregar más componentes y contenido aquí */}
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
+
+export default PrivateZone;
+Archivo /screens/PublicZone/Login.js:
+import React, {useEffect, useRef, useState} from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  Alert,
+  TouchableOpacity,
+} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import {
+  GoogleSigninButton,
+  GoogleSignin,
+} from '@react-native-google-signin/google-signin';
+import auth from '@react-native-firebase/auth';
+import CustomImage from '../../components/CustomImage';
+import {useRoute} from '@react-navigation/native';
+
+GoogleSignin.configure({
+  webClientId:
+    '861186813540-hr41m36t7sh491dvc5ug8qrrtmajfp6g.apps.googleusercontent.com',
+});
+
+function Login() {
+  const route = useRoute();
+  const {notSigningUp} = route.params ?? {};
+
+  const navigation = useNavigation();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [isLoggingIn, setIsLoggingIn] = useState(false); // Estado para controlar el botón de inicio de sesión
+  const emailInputRef = useRef(null);
+  const passwordInputRef = useRef(null);
+
+  useEffect(() => {
+    const unsubscribe = auth().onAuthStateChanged(currentUser => {
+      console.log('Checking...');
+      if (currentUser) {
+        if (currentUser.emailVerified) {
+          navigation.navigate('PrivateZone');
+        } else {
+          if (!isLoggingIn && notSigningUp) {
+            auth().signOut();
+          }
+        }
+      }
+    });
+
+    return unsubscribe;
+  }, [isLoggingIn, notSigningUp, navigation]);
+
+  const handleGoogleSignIn = async () => {
+    console.log(1);
+    await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
+    console.log(2);
+    try {
+      console.log('Disabling...');
+      setIsLoggingIn(true); // Deshabilitar el botón de inicio de sesión
+      const {idToken} = await GoogleSignin.signIn();
+      const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+      await auth().signInWithCredential(googleCredential);
+      navigation.navigate('PrivateZone');
+    } catch (error) {
+    } finally {
+      console.log('Enabling...');
+      setIsLoggingIn(false);
+    }
+  };
+
+  const handleEmailSignIn = async () => {
+    console.log('emailSignIn');
+
+    if (email === '' || password === '') {
+      Alert.alert('Error', 'Por favor, completa todos los campos');
+      emailInputRef.current.focus(); // Posicionar el cursor en el campo de correo electrónico
+      return;
+    }
+
+    try {
+      console.log('Deshabilitando...');
+      setIsLoggingIn(true); // Deshabilitar el botón de inicio de sesión
+      const {user} = await auth().signInWithEmailAndPassword(email, password);
+      console.log('Logged In...');
+      if (user && !user.emailVerified) {
+        Alert.alert(
+          'Email no verificado',
+          'Por favor, verifica tu correo electrónico antes de iniciar sesión.',
+        );
+        setIsLoggingIn(false); // Habilitar el botón de inicio de sesión
+        return;
+      }
+      navigation.navigate('PrivateZone');
+    } catch (error) {
+      console.log(error.message);
+      let errorMessage = '';
+      switch (error.code) {
+        case 'auth/invalid-email':
+          errorMessage = 'Email inválido';
+          setEmail('');
+          emailInputRef.current.focus(); // Posicionar el cursor en el campo de correo electrónico
+          break;
+        case 'auth/user-not-found':
+        case 'auth/wrong-password':
+          //errorMessage = 'Usuario no encontrado';
+          //break;
+          errorMessage = 'Combinación de usuario y clave incorrecta';
+          setPassword('');
+          passwordInputRef.current.focus(); // Posicionar el cursor en el campo de correo electrónico
+          break;
+        default:
+          errorMessage = error.message;
+          break;
+      }
+      Alert.alert('Error', errorMessage);
+    } finally {
+      console.log('Habilitando...');
+      setIsLoggingIn(false); // Habilitar el botón de inicio de sesión
+    }
+  };
+
+  const handleEmailSignUp = () => {
+    try {
+      console.log('Deshabilitando');
+      setIsLoggingIn(false); // Habilitar el botón de inicio de sesión
+      navigation.navigate('SignUp');
+    } catch (error) {
+      Alert.alert('Error', error.message);
+    } finally {
+      setEmail('');
+      setPassword('');
+      console.log('Habilitando');
+      setIsLoggingIn(false); // Habilitar el botón de inicio de sesión
+    }
+  };
+
+  return (
+    <View style={styles.container}>
+      <CustomImage
+        imageName="logo"
+        width={100}
+        height={100}
+        borderRadius={15}
+      />
+
+      <Text style={styles.titleText}>ServiMarket.app</Text>
+
+      <TextInput
+        style={styles.input}
+        placeholder="Correo electrónico"
+        value={email}
+        onChangeText={text => setEmail(text)}
+        ref={emailInputRef} // Asignar la referencia al campo de correo electrónico
+      />
+
+      <TextInput
+        style={styles.input}
+        placeholder="Contraseña"
+        value={password}
+        onChangeText={text => setPassword(text)}
+        secureTextEntry
+        ref={passwordInputRef}
+      />
+      <View style={styles.classicLoginView}>
+        <TouchableOpacity
+          style={[
+            styles.classicButton,
+            styles.signInClassicButton,
+            isLoggingIn && styles.disabledButton, // Aplicar estilo de botón deshabilitado cuando isLoggingIn es true
+          ]}
+          onPress={() => handleEmailSignIn()}
+          disabled={isLoggingIn} // Deshabilitar el botón mientras se está realizando el inicio de sesión
+        >
+          <Text style={styles.classicButtonText}>Iniciar sesión</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[
+            styles.classicButton,
+            styles.signUpClassicButton,
+            isLoggingIn && styles.disabledButton,
+          ]}
+          onPress={() => handleEmailSignUp()}>
+          <Text style={styles.classicButtonText}>Registrarme</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.hr} />
+      <GoogleSigninButton
+        style={[styles.loginGoogleButton, isLoggingIn && styles.disabledButton]}
+        onPress={() => handleGoogleSignIn()}
+      />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  titleText: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#1E3264',
+  },
+  classicLoginView: {
+    flexDirection: 'row',
+  },
+  classicButtonText: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: 'white',
+  },
+  classicButton: {
+    width: 142,
+    height: 42,
+    margin: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 2,
+    shadowColor: '#000000',
+    shadowRadius: 2,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 1,
+    elevation: 4,
+  },
+  signInClassicButton: {
+    backgroundColor: '#202020',
+  },
+  signUpClassicButton: {
+    backgroundColor: '#1363DF',
+  },
+  loginGoogleButton: {
+    width: 300,
+    height: 50,
+    margin: 5,
+  },
+  disabledButton: {
+    opacity: 0.5, // Cambiar la opacidad del botón deshabilitado
+  },
+  input: {
+    width: 290,
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    marginVertical: 5,
+    paddingHorizontal: 10,
+  },
+  hr: {
+    width: 300,
+    height: 2,
+    borderLeftColor: '#505050',
+    borderBottomColor: '#606060',
+    borderTopColor: '#c0c0c0',
+    borderRightColor: '#d0d0d0',
+    borderWidth: 1,
+    marginVertical: 10,
+  },
+});
+
+export default Login;
+Archivo /screens/PublicZone/SignUp.js:
+import React, {useState, useEffect, useRef} from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+  Alert,
+} from 'react-native';
+import auth from '@react-native-firebase/auth';
+import CustomImage from '../../components/CustomImage';
+
+function SignUp({navigation}) {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [repeatPassword, setRepeatPassword] = useState('');
+  const [emailValid, setEmailValid] = useState(false);
+  const [passwordMatch, setPasswordMatch] = useState(false);
+  const [passwordLength, setPasswordLength] = useState(false);
+  const [passwordUppercase, setPasswordUppercase] = useState(false);
+  const [passwordLowercase, setPasswordLowercase] = useState(false);
+  const [passwordDigit, setPasswordDigit] = useState(false);
+  const [passwordSpecialChar, setPasswordSpecialChar] = useState(false);
+  const [notSigningUp, setNotSigningUp] = useState(true);
+
+  const emailInputRef = useRef(null);
+  const passwordInputRef = useRef(null);
+
+  useEffect(() => {
+    const validateEmail = () => {
+      const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+      setEmailValid(emailRegex.test(email));
+    };
+
+    const validatePassword = () => {
+      setPasswordMatch(password === repeatPassword);
+      setPasswordLength(password.length >= 8);
+      setPasswordUppercase(/[A-Z]/.test(password));
+      setPasswordLowercase(/[a-z]/.test(password));
+      setPasswordDigit(/[0-9]/.test(password));
+      setPasswordSpecialChar(/[!@#$%^&*(),.?":{}|<>]/.test(password));
+    };
+
+    validateEmail();
+    validatePassword();
+  }, [email, password, repeatPassword]);
+
+  const handleSignUp = async () => {
+    try {
+      setNotSigningUp(false);
+      console.log('Creando');
+      await auth().createUserWithEmailAndPassword(email, password);
+      console.log('Obteniendo user nuevo');
+      const newUser = auth().currentUser;
+      console.log('Enviar mail de verificación');
+      await newUser.sendEmailVerification();
+      console.log('Aviso para verificar email');
+      Alert.alert(
+        'Verifica tu email',
+        'Tu usuario ha sido creado; sin embargo, para poder iniciar sesión debes revisar tu correo y hacer click en el link enviado para verificar tu dirección de email.',
+      );
+      console.log('Yendo a Login');
+      navigation.navigate('Login');
+    } catch (error) {
+      console.log('Error en el registro:', error);
+      let errorMessage = '';
+      switch (error.code) {
+        case 'auth/invalid-email':
+          setEmail('');
+          emailInputRef.current.focus();
+          errorMessage = 'Email inválido';
+          break;
+        case 'auth/email-already-in-use':
+          setEmail('');
+          emailInputRef.current.focus();
+          errorMessage = 'Email ya registrado';
+          break;
+        case 'auth/weak-password':
+          setPassword('');
+          setRepeatPassword('');
+          errorMessage = 'Contraseña muy corta';
+          passwordInputRef.current.focus();
+          break;
+        default:
+          errorMessage = error.message;
+          break;
+      }
+      Alert.alert('Error', errorMessage);
+    } finally {
+      setNotSigningUp(true);
+    }
+  };
+
+  const renderValidationIndicator = (valid, text) => {
+    return valid ? (
+      <Text style={[styles.validationIndicator, {color: 'darkgreen'}]}>
+        ✓ {text}
+      </Text>
+    ) : (
+      <Text style={[styles.validationIndicator, {color: 'red'}]}>✗ {text}</Text>
+    );
+  };
+
+  return (
+    <View style={styles.container}>
+      <CustomImage imageName="logo" width={75} height={75} borderRadius={10} />
+      <Text style={styles.titleText}>Registro</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Correo electrónico"
+        value={email}
+        onChangeText={text => setEmail(text)}
+        ref={emailInputRef}
+      />
+      {renderValidationIndicator(emailValid, 'Email debe ser válido')}
+
+      <TextInput
+        style={styles.input}
+        placeholder="Contraseña"
+        value={password}
+        onChangeText={text => setPassword(text)}
+        secureTextEntry
+        ref={passwordInputRef}
+      />
+      {renderValidationIndicator(passwordLength, 'Mínimo 8 caracteres')}
+      {renderValidationIndicator(passwordUppercase, 'Mínimo 1 mayúscula')}
+      {renderValidationIndicator(passwordLowercase, 'Mínimo 1 minúscula')}
+      {renderValidationIndicator(passwordDigit, 'Mínimo 1 dígito')}
+      {renderValidationIndicator(
+        passwordSpecialChar,
+        'Mínimo 1 caracter especial',
+      )}
+
+      <TextInput
+        style={styles.input}
+        placeholder="Repetir Contraseña"
+        value={repeatPassword}
+        onChangeText={text => setRepeatPassword(text)}
+        secureTextEntry
+      />
+      {renderValidationIndicator(passwordMatch, 'Contraseñas coinciden')}
+
+      <TouchableOpacity
+        style={[
+          styles.registerButton,
+          {
+            backgroundColor:
+              emailValid &&
+              passwordMatch &&
+              passwordLength &&
+              passwordUppercase &&
+              passwordLowercase &&
+              passwordDigit &&
+              passwordSpecialChar &&
+              notSigningUp
+                ? '#1363DF'
+                : 'gray',
+          },
+        ]}
+        onPress={handleSignUp}
+        disabled={
+          !(
+            emailValid &&
+            passwordMatch &&
+            passwordLength &&
+            passwordUppercase &&
+            passwordLowercase &&
+            passwordDigit &&
+            passwordSpecialChar &&
+            notSigningUp
+          )
+        }>
+        <Text style={styles.registerButtonText}>Registrarme</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.loginButton}
+        onPress={() => navigation.goBack()}>
+        <Text style={styles.loginButtonText}>Volver al Inicio de Sesión</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  titleText: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#1E3264',
+  },
+  input: {
+    width: 290,
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    marginVertical: 5,
+    paddingHorizontal: 10,
+    fontSize: 16,
+  },
+  validationIndicator: {
+    marginVertical: 2,
+    fontWeight: 'bold',
+  },
+  registerButton: {
+    width: 150,
+    height: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 4,
+    marginTop: 10,
+  },
+  registerButtonText: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: 'white',
+  },
+  loginButton: {
+    marginTop: 20,
+  },
+  loginButtonText: {
+    color: '#1363DF',
+  },
+});
+
+export default SignUp;
