@@ -27,6 +27,11 @@ end
 
 target 'servimarket' do
   config = use_native_modules!
+  use_frameworks! :linkage => :static
+  $RNFirebaseAsStaticFramework = true
+
+  pod 'GoogleSignIn', '~> 7.0.0'
+
 
   # Flags change depending on the env values.
   flags = get_default_flags()
@@ -40,13 +45,14 @@ target 'servimarket' do
     #
     # Note that if you have use_frameworks! enabled, Flipper will not work and
     # you should disable the next line.
-    :flipper_configuration => flipper_config,
+    # :flipper_configuration => flipper_config,
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
   target 'servimarketTests' do
     inherit! :complete
+    inherit! :search_paths
     # Pods for testing
   end
 

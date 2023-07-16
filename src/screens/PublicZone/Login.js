@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {
   StyleSheet,
   Text,
@@ -20,29 +20,13 @@ GoogleSignin.configure({
     '861186813540-hr41m36t7sh491dvc5ug8qrrtmajfp6g.apps.googleusercontent.com',
 });
 
-async function onGoogleButtonPress(navigation) {
-  console.log(1);
-  await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
-  console.log(2);
-  try {
-    const {idToken} = await GoogleSignin.signIn();
-    console.log(3);
-  } catch (error) {
-    console.log(3.1);
-    console.log(error);
-  }
-  const googleCredential = auth.GoogleAuthProvider.credential(idToken);
-  console.log(4);
-  await auth().signInWithCredential(googleCredential);
-  console.log(5);
-  navigation.navigate('PrivateZone');
-  console.log(6);
-}
-
 function Login() {
   const navigation = useNavigation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isLoggingIn, setIsLoggingIn] = useState(false); // Estado para controlar el botón de inicio de sesión
+  const emailInputRef = useRef(null);
+  const passwordInputRef = useRef(null);
 
   useEffect(() => {
     const unsubscribe = auth().onAuthStateChanged(currentUser => {
@@ -54,39 +38,80 @@ function Login() {
     return unsubscribe;
   }, [navigation]);
 
+  const handleGoogleSignIn = async () => {
+    console.log(1);
+    await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
+    console.log(2);
+    try {
+      console.log('Disabling...');
+      setIsLoggingIn(true); // Deshabilitar el botón de inicio de sesión
+      const {idToken} = await GoogleSignin.signIn();
+      const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+      await auth().signInWithCredential(googleCredential);
+      navigation.navigate('PrivateZone');
+    } catch (error) {
+    } finally {
+      console.log('Enabling...');
+      setIsLoggingIn(false);
+    }
+  };
+
   const handleEmailSignIn = async () => {
+    console.log('emailSignIn');
+
     if (email === '' || password === '') {
       Alert.alert('Error', 'Por favor, completa todos los campos');
+      emailInputRef.current.focus(); // Posicionar el cursor en el campo de correo electrónico
       return;
     }
 
     try {
+      console.log('Deshabilitando...');
+      setIsLoggingIn(true); // Deshabilitar el botón de inicio de sesión
       await auth().signInWithEmailAndPassword(email, password);
+      console.log('Logged In...');
+      navigation.navigate('PrivateZone');
     } catch (error) {
       console.log(error.message);
       let errorMessage = '';
       switch (error.code) {
         case 'auth/invalid-email':
           errorMessage = 'Email inválido';
+          setEmail('');
+          emailInputRef.current.focus(); // Posicionar el cursor en el campo de correo electrónico
           break;
         case 'auth/user-not-found':
-          errorMessage = 'Usuario no encontrado';
-          break;
         case 'auth/wrong-password':
+          //errorMessage = 'Usuario no encontrado';
+          //break;
           errorMessage = 'Combinación de usuario y clave incorrecta';
+          setPassword('');
+          passwordInputRef.current.focus(); // Posicionar el cursor en el campo de correo electrónico
           break;
         default:
           errorMessage = error.message;
           break;
       }
       Alert.alert('Error', errorMessage);
-      setEmail('');
-      setPassword('');
+    } finally {
+      console.log('Habilitando...');
+      setIsLoggingIn(false); // Habilitar el botón de inicio de sesión
     }
   };
 
   const handleEmailSignUp = () => {
-    navigation.navigate('SignUp');
+    try {
+      console.log('Deshabilitando');
+      setIsLoggingIn(false); // Habilitar el botón de inicio de sesión
+      navigation.navigate('SignUp');
+    } catch (error) {
+      Alert.alert('Error', error.message);
+    } finally {
+      setEmail('');
+      setPassword('');
+      console.log('Habilitando');
+      setIsLoggingIn(false); // Habilitar el botón de inicio de sesión
+    }
   };
 
   return (
@@ -105,6 +130,7 @@ function Login() {
         placeholder="Correo electrónico"
         value={email}
         onChangeText={text => setEmail(text)}
+        ref={emailInputRef} // Asignar la referencia al campo de correo electrónico
       />
 
       <TextInput
@@ -113,24 +139,35 @@ function Login() {
         value={password}
         onChangeText={text => setPassword(text)}
         secureTextEntry
+        ref={passwordInputRef}
       />
       <View style={styles.classicLoginView}>
         <TouchableOpacity
-          style={[styles.classicButton, styles.signInClassicButton]}
-          onPress={() => handleEmailSignIn()}>
+          style={[
+            styles.classicButton,
+            styles.signInClassicButton,
+            isLoggingIn && styles.disabledButton, // Aplicar estilo de botón deshabilitado cuando isLoggingIn es true
+          ]}
+          onPress={() => handleEmailSignIn()}
+          disabled={isLoggingIn} // Deshabilitar el botón mientras se está realizando el inicio de sesión
+        >
           <Text style={styles.classicButtonText}>Iniciar sesión</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.classicButton, styles.signUpClassicButton]}
+          style={[
+            styles.classicButton,
+            styles.signUpClassicButton,
+            isLoggingIn && styles.disabledButton,
+          ]}
           onPress={() => handleEmailSignUp()}>
           <Text style={styles.classicButtonText}>Registrarme</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.hr} />
       <GoogleSigninButton
-        style={styles.loginGoogleButton}
-        onPress={() => onGoogleButtonPress(navigation)}
+        style={[styles.loginGoogleButton, isLoggingIn && styles.disabledButton]}
+        onPress={() => handleGoogleSignIn()}
       />
     </View>
   );
@@ -178,9 +215,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#1363DF',
   },
   loginGoogleButton: {
-    width: 150,
+    width: 300,
     height: 50,
     margin: 5,
+  },
+  disabledButton: {
+    opacity: 0.5, // Cambiar la opacidad del botón deshabilitado
   },
   input: {
     width: 290,

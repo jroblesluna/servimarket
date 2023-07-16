@@ -32,7 +32,7 @@ function PrivateZone() {
       }
       navigation.reset({
         index: 0,
-        routes: [{name: 'Home'}],
+        routes: [{name: 'Login'}],
       });
     } catch (error) {
       console.log('Error en Sign Out: ', error);

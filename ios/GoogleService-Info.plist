@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>861186813540-tgi4nr2pobna60710ekh1ndc7lcs6boj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.861186813540-tgi4nr2pobna60710ekh1ndc7lcs6boj</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>861186813540-2fs3sk40rinvl07kn7t1ub255p21p6dk.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyByRRR8EiSNhG404dfcvzktOsr_C71iPPw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>861186813540</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.servimarket</string>
+	<key>PROJECT_ID</key>
+	<string>servimarket-5387d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>servimarket-5387d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:861186813540:ios:415c7619837eae4768b971</string>
+</dict>
+</plist>
