@@ -138,11 +138,13 @@ const styles = StyleSheet.create({
     borderRadius: 75,
   },
   drawerItemStyle: {
-    marginVertical: 2,
+    marginVertical: 1,
+    marginLeft: 2,
+    marginRight: 0,
   },
   drawerItemLabelStyle: {
     color: 'white',
-    fontFamily: 'Roboto',
+    fontFamily: 'Comic Sans',
     fontSize: 20,
     fontWeight: 'bold',
   },

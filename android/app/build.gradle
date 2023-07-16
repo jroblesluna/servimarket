@@ -111,8 +111,7 @@ dependencies {
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
     implementation 'com.google.android.material:material'
     implementation 'com.facebook.react:react-native:+' // Asegúrate de tener esta línea
-    //implementation 'com.oblador:vector-icons:^9.2.0'
-
+    
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}")
     debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
         exclude group:'com.squareup.okhttp3', module:'okhttp'
