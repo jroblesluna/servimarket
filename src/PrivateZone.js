@@ -29,14 +29,16 @@ function PrivateZone() {
       if (isGoogleSignedIn) {
         console.log('Google Signing Out');
         await GoogleSignin.revokeAccess();
+        console.log('Access Revoked');
       }
+    } catch (error) {
+      console.log('Error en Sign Out: ', error);
+    } finally {
+      console.log('Nav Reset');
       navigation.reset({
         index: 0,
         routes: [{name: 'Login'}],
       });
-    } catch (error) {
-      console.log('Error en Sign Out: ', error);
-    } finally {
     }
   };
 

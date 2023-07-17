@@ -15,6 +15,7 @@ import {
 import auth from '@react-native-firebase/auth';
 import CustomImage from '../../components/CustomImage';
 import {useRoute} from '@react-navigation/native';
+import firestore from '@react-native-firebase/firestore';
 
 GoogleSignin.configure({
   webClientId:
@@ -34,15 +35,23 @@ function Login() {
 
   useEffect(() => {
     const unsubscribe = auth().onAuthStateChanged(currentUser => {
-      console.log('Checking...');
+      console.log('Checking if currentUser');
       if (currentUser) {
+        console.log('Checking if emailVerified');
         if (currentUser.emailVerified) {
+          console.log('navigation.navigate(PrivateZone);');
           navigation.navigate('PrivateZone');
         } else {
+          console.log('!isLoggingIn && notSigningUp?');
           if (!isLoggingIn && notSigningUp) {
+            console.log('Yes -> auth().signOut();');
             auth().signOut();
+          } else {
+            console.log('Nope. Ignore');
           }
         }
+      } else {
+        console.log('No currentUser');
       }
     });
 
@@ -50,19 +59,47 @@ function Login() {
   }, [isLoggingIn, notSigningUp, navigation]);
 
   const handleGoogleSignIn = async () => {
-    console.log(1);
-    await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
-    console.log(2);
+    console.log('1. DESHABILITANDO...');
+    setIsLoggingIn(true);
     try {
-      console.log('Disabling...');
-      setIsLoggingIn(true); // Deshabilitar el botón de inicio de sesión
+      console.log('2. Has Play Services');
+      const playServices = await GoogleSignin.hasPlayServices({
+        showPlayServicesUpdateDialog: true,
+      });
+      console.log(playServices);
+      console.log('3. const {idToken} = await GoogleSignin.signIn();');
       const {idToken} = await GoogleSignin.signIn();
+      console.log(
+        '4. const googleCredential = auth.GoogleAuthProvider.credential(idToken);',
+      );
       const googleCredential = auth.GoogleAuthProvider.credential(idToken);
-      await auth().signInWithCredential(googleCredential);
+      console.log('5. await auth().signInWithCredential(googleCredential);');
+      const googleUser = await auth().signInWithCredential(googleCredential);
+
+      console.log('6. Firestore');
+
+      const userRef = firestore().collection('users').doc(googleUser.uid);
+      const userDoc = await userRef.get();
+
+      if (userDoc.exists) {
+        console.log('El documento del usuario ya existe en Firestore');
+        // Aquí puedes decidir cómo manejar el caso en el que el documento del usuario ya existe.
+        // Puedes actualizar los datos existentes si es necesario o simplemente omitir la creación del documento nuevamente.
+        // Por ejemplo, podrías mostrar un mensaje al usuario indicando que ya ha iniciado sesión previamente.
+      } else {
+        await firestore().collection('users').doc(googleUser.uid).set({
+          email: googleUser.email,
+          displayName: googleUser.displayName,
+          photoURL: googleUser.photoURL,
+        });
+      }
+
+      console.log('7. navigation.navigate(PrivateZone);');
       navigation.navigate('PrivateZone');
     } catch (error) {
+      console.log('8. Error', error.message);
     } finally {
-      console.log('Enabling...');
+      console.log('9. HABILITANDO...');
       setIsLoggingIn(false);
     }
   };

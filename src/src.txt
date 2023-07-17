@@ -45,14 +45,16 @@ function PrivateZone() {
       if (isGoogleSignedIn) {
         console.log('Google Signing Out');
         await GoogleSignin.revokeAccess();
+        console.log('Access Revoked');
       }
+    } catch (error) {
+      console.log('Error en Sign Out: ', error);
+    } finally {
+      console.log('Nav Reset');
       navigation.reset({
         index: 0,
         routes: [{name: 'Login'}],
       });
-    } catch (error) {
-      console.log('Error en Sign Out: ', error);
-    } finally {
     }
   };
 
@@ -126,7 +128,9 @@ function Navigation() {
         <Stack.Screen
           name="PrivateZone"
           component={PrivateZone}
-          options={{headerShown: false}}
+          options={{
+            headerShown: false,
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
@@ -237,8 +241,9 @@ function PrivateZoneDrawer({handleSignOut, user, navigation}) {
           width: '66%',
           opacity: 0.85,
         },
-        headerLeft: null,
+        headerLeft: () => null, // Elimina el icono de hamburguesa del lado izquierdo
         headerRight: () => <HeaderRight navigation={navigation} />,
+        headerTitleAlign: 'center', // Centra el título en la barra de navegación
       }}
       drawerContent={() => (
         <CustomDrawerContent
@@ -274,11 +279,13 @@ const styles = StyleSheet.create({
     borderRadius: 75,
   },
   drawerItemStyle: {
-    marginVertical: 2,
+    marginVertical: 1,
+    marginLeft: 2,
+    marginRight: 0,
   },
   drawerItemLabelStyle: {
     color: 'white',
-    fontFamily: 'Roboto',
+    fontFamily: 'Comic Sans',
     fontSize: 20,
     fontWeight: 'bold',
   },
@@ -344,15 +351,23 @@ function Login() {
 
   useEffect(() => {
     const unsubscribe = auth().onAuthStateChanged(currentUser => {
-      console.log('Checking...');
+      console.log('Checking if currentUser');
       if (currentUser) {
+        console.log('Checking if emailVerified');
         if (currentUser.emailVerified) {
+          console.log('navigation.navigate(PrivateZone);');
           navigation.navigate('PrivateZone');
         } else {
+          console.log('!isLoggingIn && notSigningUp?');
           if (!isLoggingIn && notSigningUp) {
+            console.log('Yes -> auth().signOut();');
             auth().signOut();
+          } else {
+            console.log('Nope. Ignore');
           }
         }
+      } else {
+        console.log('No currentUser');
       }
     });
 
@@ -360,19 +375,28 @@ function Login() {
   }, [isLoggingIn, notSigningUp, navigation]);
 
   const handleGoogleSignIn = async () => {
-    console.log(1);
-    await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
-    console.log(2);
+    console.log('1. DESHABILITANDO...');
+    setIsLoggingIn(true);
     try {
-      console.log('Disabling...');
-      setIsLoggingIn(true); // Deshabilitar el botón de inicio de sesión
+      console.log('2. Has Play Services');
+      const playServices = await GoogleSignin.hasPlayServices({
+        showPlayServicesUpdateDialog: true,
+      });
+      console.log(playServices);
+      console.log('3. const {idToken} = await GoogleSignin.signIn();');
       const {idToken} = await GoogleSignin.signIn();
+      console.log(
+        '4. const googleCredential = auth.GoogleAuthProvider.credential(idToken);',
+      );
       const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+      console.log('5. await auth().signInWithCredential(googleCredential);');
       await auth().signInWithCredential(googleCredential);
+      console.log('6. navigation.navigate(PrivateZone);');
       navigation.navigate('PrivateZone');
     } catch (error) {
+      console.log('7. Error', error.message);
     } finally {
-      console.log('Enabling...');
+      console.log('8. HABILITANDO...');
       setIsLoggingIn(false);
     }
   };
