@@ -31,7 +31,6 @@ target 'servimarket' do
   $RNFirebaseAsStaticFramework = true
 
   pod 'GoogleSignIn', '~> 7.0.0'
-  pod 'MaterialIcons'
 
 
   # Flags change depending on the env values.
