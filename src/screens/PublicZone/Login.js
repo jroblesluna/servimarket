@@ -29,7 +29,7 @@ function Login() {
   const navigation = useNavigation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isLoggingIn, setIsLoggingIn] = useState(false); // Estado para controlar el botón de inicio de sesión
+  const [isLoggingIn, setIsLoggingIn] = useState(false);
   const emailInputRef = useRef(null);
   const passwordInputRef = useRef(null);
 
@@ -83,9 +83,6 @@ function Login() {
 
       if (userDoc.exists) {
         console.log('El documento del usuario ya existe en Firestore');
-        // Aquí puedes decidir cómo manejar el caso en el que el documento del usuario ya existe.
-        // Puedes actualizar los datos existentes si es necesario o simplemente omitir la creación del documento nuevamente.
-        // Por ejemplo, podrías mostrar un mensaje al usuario indicando que ya ha iniciado sesión previamente.
       } else {
         await firestore().collection('users').doc(googleUser.uid).set({
           email: googleUser.email,
@@ -109,13 +106,13 @@ function Login() {
 
     if (email === '' || password === '') {
       Alert.alert('Error', 'Por favor, completa todos los campos');
-      emailInputRef.current.focus(); // Posicionar el cursor en el campo de correo electrónico
+      emailInputRef.current.focus();
       return;
     }
 
     try {
       console.log('Deshabilitando...');
-      setIsLoggingIn(true); // Deshabilitar el botón de inicio de sesión
+      setIsLoggingIn(true);
       const {user} = await auth().signInWithEmailAndPassword(email, password);
       console.log('Logged In...');
       if (user && !user.emailVerified) {
@@ -123,7 +120,7 @@ function Login() {
           'Email no verificado',
           'Por favor, verifica tu correo electrónico antes de iniciar sesión.',
         );
-        setIsLoggingIn(false); // Habilitar el botón de inicio de sesión
+        setIsLoggingIn(false);
         return;
       }
       navigation.navigate('PrivateZone');
@@ -134,12 +131,10 @@ function Login() {
         case 'auth/invalid-email':
           errorMessage = 'Email inválido';
           setEmail('');
-          emailInputRef.current.focus(); // Posicionar el cursor en el campo de correo electrónico
+          emailInputRef.current.focus();
           break;
         case 'auth/user-not-found':
         case 'auth/wrong-password':
-          //errorMessage = 'Usuario no encontrado';
-          //break;
           errorMessage = 'Combinación de usuario y clave incorrecta';
           setPassword('');
           passwordInputRef.current.focus(); // Posicionar el cursor en el campo de correo electrónico
