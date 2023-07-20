@@ -76,18 +76,25 @@ function Login() {
       console.log('5. await auth().signInWithCredential(googleCredential);');
       const googleUser = await auth().signInWithCredential(googleCredential);
 
-      console.log('6. Firestore');
+      console.log('6. Firestore', googleUser);
 
-      const userRef = firestore().collection('users').doc(googleUser.uid);
+      const userRef = firestore()
+        .collection('users')
+        .doc(googleUser.user.email);
+      console.log('userRef', userRef);
       const userDoc = await userRef.get();
+      console.log('userDoc', userDoc);
 
       if (userDoc.exists) {
         console.log('El documento del usuario ya existe en Firestore');
       } else {
-        await firestore().collection('users').doc(googleUser.uid).set({
-          email: googleUser.email,
-          displayName: googleUser.displayName,
-          photoURL: googleUser.photoURL,
+        console.log('Creando documento del usuario en Firestore');
+        await firestore().collection('users').doc(googleUser.user.email).set({
+          email: googleUser.user.email,
+          displayName: googleUser.user.displayName,
+          givenName: googleUser.additionalUserInfo.profile.given_name,
+          familyName: googleUser.additionalUserInfo.profile.family_name,
+          photoURL: googleUser.user.photoURL,
         });
       }
 
@@ -137,7 +144,7 @@ function Login() {
         case 'auth/wrong-password':
           errorMessage = 'Combinación de usuario y clave incorrecta';
           setPassword('');
-          passwordInputRef.current.focus(); // Posicionar el cursor en el campo de correo electrónico
+          passwordInputRef.current.focus();
           break;
         default:
           errorMessage = error.message;
@@ -146,14 +153,14 @@ function Login() {
       Alert.alert('Error', errorMessage);
     } finally {
       console.log('Habilitando...');
-      setIsLoggingIn(false); // Habilitar el botón de inicio de sesión
+      setIsLoggingIn(false);
     }
   };
 
   const handleEmailSignUp = () => {
     try {
       console.log('Deshabilitando');
-      setIsLoggingIn(false); // Habilitar el botón de inicio de sesión
+      setIsLoggingIn(false);
       navigation.navigate('SignUp');
     } catch (error) {
       Alert.alert('Error', error.message);
@@ -161,7 +168,7 @@ function Login() {
       setEmail('');
       setPassword('');
       console.log('Habilitando');
-      setIsLoggingIn(false); // Habilitar el botón de inicio de sesión
+      setIsLoggingIn(false);
     }
   };
 
@@ -181,7 +188,7 @@ function Login() {
         placeholder="Correo electrónico"
         value={email}
         onChangeText={text => setEmail(text)}
-        ref={emailInputRef} // Asignar la referencia al campo de correo electrónico
+        ref={emailInputRef}
       />
 
       <TextInput
@@ -197,11 +204,10 @@ function Login() {
           style={[
             styles.classicButton,
             styles.signInClassicButton,
-            isLoggingIn && styles.disabledButton, // Aplicar estilo de botón deshabilitado cuando isLoggingIn es true
+            isLoggingIn && styles.disabledButton,
           ]}
           onPress={() => handleEmailSignIn()}
-          disabled={isLoggingIn} // Deshabilitar el botón mientras se está realizando el inicio de sesión
-        >
+          disabled={isLoggingIn}>
           <Text style={styles.classicButtonText}>Iniciar sesión</Text>
         </TouchableOpacity>
 

@@ -1,0 +1,142 @@
+[
+  {
+    "serviceCategoryId": 1,
+    "serviceCategoryEnglish": "Art, Music and Design",
+    "serviceCategorySpanish": "Arte, Música y Diseño"
+  },
+  {
+    "serviceCategoryId": 2,
+    "serviceCategoryEnglish": "Automotive and Transportation",
+    "serviceCategorySpanish": "Automóviles y Transporte"
+  },
+  {
+    "serviceCategoryId": 3,
+    "serviceCategoryEnglish": "Beauty and Personal Care",
+    "serviceCategorySpanish": "Belleza y Cuidado Personal"
+  },
+  {
+    "serviceCategoryId": 4,
+    "serviceCategoryEnglish": "Childcare and Education",
+    "serviceCategorySpanish": "Cuidado Infantil y Educación"
+  },
+  {
+    "serviceCategoryId": 5,
+    "serviceCategoryEnglish": "Cleaning and Organization",
+    "serviceCategorySpanish": "Limpieza y Organización"
+  },
+  {
+    "serviceCategoryId": 6,
+    "serviceCategoryEnglish": "Construction and Repair",
+    "serviceCategorySpanish": "Construcción y Reparación"
+  },
+  {
+    "serviceCategoryId": 7,
+    "serviceCategoryEnglish": "Consulting Services",
+    "serviceCategorySpanish": "Servicios de Asesoría y Consultoría"
+  },
+  {
+    "serviceCategoryId": 8,
+    "serviceCategoryEnglish": "Education and Tutoring",
+    "serviceCategorySpanish": "Educación y Clases Particulares"
+  },
+  {
+    "serviceCategoryId": 9,
+    "serviceCategoryEnglish": "Events and Entertainment",
+    "serviceCategorySpanish": "Eventos y Entretenimiento"
+  },
+  {
+    "serviceCategoryId": 10,
+    "serviceCategoryEnglish": "Finance and Accounting",
+    "serviceCategorySpanish": "Finanzas y Contabilidad"
+  },
+  {
+    "serviceCategoryId": 11,
+    "serviceCategoryEnglish": "Fitness and Health",
+    "serviceCategorySpanish": "Fitness y Salud"
+  },
+  {
+    "serviceCategoryId": 12,
+    "serviceCategoryEnglish": "Food and Beverage",
+    "serviceCategorySpanish": "Gastronomía, Alimentos y Bebidas"
+  },
+  {
+    "serviceCategoryId": 13,
+    "serviceCategoryEnglish": "Health and Wellness",
+    "serviceCategorySpanish": "Salud y Bienestar"
+  },
+  {
+    "serviceCategoryId": 14,
+    "serviceCategoryEnglish": "Home Improvement",
+    "serviceCategorySpanish": "Mejoras para el Hogar"
+  },
+  {
+    "serviceCategoryId": 15,
+    "serviceCategoryEnglish": "Home Services",
+    "serviceCategorySpanish": "Servicios para el Hogar"
+  },
+  {
+    "serviceCategoryId": 16,
+    "serviceCategoryEnglish": "Hospitality and Accommodation",
+    "serviceCategorySpanish": "Hospitalidad y Alojamiento"
+  },
+  {
+    "serviceCategoryId": 17,
+    "serviceCategoryEnglish": "Information Technology",
+    "serviceCategorySpanish": "TI, Informática y Tecnología de la Información"
+  },
+  {
+    "serviceCategoryId": 18,
+    "serviceCategoryEnglish": "Landscaping and Gardening",
+    "serviceCategorySpanish": "Paisajismo y Jardinería"
+  },
+  {
+    "serviceCategoryId": 19,
+    "serviceCategoryEnglish": "Language Services",
+    "serviceCategorySpanish": "Servicios de Idiomas"
+  },
+  {
+    "serviceCategoryId": 20,
+    "serviceCategoryEnglish": "Legal and Law",
+    "serviceCategorySpanish": "Legal y Derecho"
+  },
+  {
+    "serviceCategoryId": 21,
+    "serviceCategoryEnglish": "Miscellaneous",
+    "serviceCategorySpanish": "Varios"
+  },
+  {
+    "serviceCategoryId": 22,
+    "serviceCategoryEnglish": "Office and Administrative Services",
+    "serviceCategorySpanish": "Servicios de Oficina y Administrativos"
+  },
+  {
+    "serviceCategoryId": 23,
+    "serviceCategoryEnglish": "Personal Services",
+    "serviceCategorySpanish": "Servicios Personales"
+  },
+  {
+    "serviceCategoryId": 24,
+    "serviceCategoryEnglish": "Pets and Animals",
+    "serviceCategorySpanish": "Mascotas y Animales"
+  },
+  {
+    "serviceCategoryId": 25,
+    "serviceCategoryEnglish": "Professional Services",
+    "serviceCategorySpanish": "Servicios Profesionales"
+  },
+  {
+    "serviceCategoryId": 26,
+    "serviceCategoryEnglish": "Security and Safety",
+    "serviceCategorySpanish": "Seguridad y Protección"
+  },
+  {
+    "serviceCategoryId": 27,
+    "serviceCategoryEnglish": "Travel and Tourism",
+    "serviceCategorySpanish": "Viajes y Turismo"
+  },
+  {
+    "serviceCategoryId": 28,
+    "serviceCategoryEnglish": "Writing and Translation",
+    "serviceCategorySpanish": "Escritura y Traducción"
+  }
+]
