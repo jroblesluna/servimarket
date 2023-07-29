@@ -3,3678 +3,4291 @@
     "serviceId": 1,
     "serviceEnglish": "3D artist",
     "serviceSpanish": "Artista 3D",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 2,
     "serviceEnglish": "Aerial photographer",
     "serviceSpanish": "Fotógrafo aéreo",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 3,
     "serviceEnglish": "Airbrush artist",
     "serviceSpanish": "Artista de aerógrafo",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 4,
     "serviceEnglish": "Architect",
     "serviceSpanish": "Arquitecto",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 5,
     "serviceEnglish": "Architectural design",
     "serviceSpanish": "Diseño arquitectónico",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 6,
     "serviceEnglish": "Art instructor",
     "serviceSpanish": "Instructor de arte",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 7,
     "serviceEnglish": "Art restoration",
     "serviceSpanish": "Restauración de arte",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 8,
     "serviceEnglish": "Art therapist",
     "serviceSpanish": "Terapeuta de arte",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 9,
     "serviceEnglish": "Art therapy",
     "serviceSpanish": "Terapia de arte",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 10,
     "serviceEnglish": "Calligrapher",
     "serviceSpanish": "Calígrafo",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 11,
     "serviceEnglish": "Cartoonist",
     "serviceSpanish": "Caricaturista",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 12,
     "serviceEnglish": "Ceramic artist",
     "serviceSpanish": "Artista de cerámica",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 13,
     "serviceEnglish": "Character artist",
     "serviceSpanish": "Artista de personajes",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 14,
     "serviceEnglish": "Commercial photographer",
     "serviceSpanish": "Fotógrafo comercial",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 15,
     "serviceEnglish": "Costume designer",
     "serviceSpanish": "Diseñador de vestuario",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 16,
     "serviceEnglish": "Custom furniture maker",
     "serviceSpanish": "Fabricante de muebles personalizados",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 17,
     "serviceEnglish": "Custom jewelry",
     "serviceSpanish": "Joyería personalizada",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 18,
     "serviceEnglish": "Dance choreographer",
     "serviceSpanish": "Coreógrafo de danza",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 19,
     "serviceEnglish": "Dance instructor",
     "serviceSpanish": "Instructor de baile",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 20,
     "serviceEnglish": "Decorative painter",
     "serviceSpanish": "Pintor decorativo",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 21,
     "serviceEnglish": "Editing services",
     "serviceSpanish": "Servicios de edición",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 22,
     "serviceEnglish": "Electric guitar lessons",
     "serviceSpanish": "Clases de guitarra eléctrica",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 23,
     "serviceEnglish": "Engagement photographer",
     "serviceSpanish": "Fotógrafo de compromiso",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 24,
     "serviceEnglish": "Escape room designer",
     "serviceSpanish": "Diseñador de salas de escape",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 25,
     "serviceEnglish": "Fashion designer",
     "serviceSpanish": "Diseñador de moda",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 26,
     "serviceEnglish": "Feng shui consultant",
     "serviceSpanish": "Consultor de Feng Shui",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 27,
     "serviceEnglish": "Feng shui designer",
     "serviceSpanish": "Diseñador de Feng Shui",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 28,
     "serviceEnglish": "Floral designer",
     "serviceSpanish": "Diseñador floral",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 29,
     "serviceEnglish": "Florist",
     "serviceSpanish": "Florista",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 30,
     "serviceEnglish": "Garden designer",
     "serviceSpanish": "Diseñador de jardines",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 31,
     "serviceEnglish": "Glassblower",
     "serviceSpanish": "Vidriero",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 32,
     "serviceEnglish": "Graphic designer",
     "serviceSpanish": "Diseñador gráfico",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 33,
     "serviceEnglish": "Guitar repair",
     "serviceSpanish": "Reparación de guitarras",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 34,
     "serviceEnglish": "Guitar teacher",
     "serviceSpanish": "Profesor de guitarra",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 35,
     "serviceEnglish": "Illustrator",
     "serviceSpanish": "Ilustrador",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 36,
     "serviceEnglish": "Industrial designer",
     "serviceSpanish": "Diseñador industrial",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 37,
     "serviceEnglish": "Jeweler",
     "serviceSpanish": "Joyero",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 38,
     "serviceEnglish": "Jewellery designer",
     "serviceSpanish": "Diseñador de joyas",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 39,
     "serviceEnglish": "Jewelry repair",
     "serviceSpanish": "Reparación de joyas",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 40,
     "serviceEnglish": "Knitting instructor",
     "serviceSpanish": "Instructor de tejido",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 41,
     "serviceEnglish": "Landscape photographer",
     "serviceSpanish": "Fotógrafo de paisajes",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 42,
     "serviceEnglish": "Life drawing model",
     "serviceSpanish": "Modelo de dibujo de vida",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 43,
     "serviceEnglish": "Model",
     "serviceSpanish": "Modelo",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 44,
     "serviceEnglish": "Mosaic artist",
     "serviceSpanish": "Artista de mosaicos",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 45,
     "serviceEnglish": "Music composition",
     "serviceSpanish": "Composición musical",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 46,
     "serviceEnglish": "Music conductor",
     "serviceSpanish": "Director de música",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 47,
     "serviceEnglish": "Music lessons",
     "serviceSpanish": "Clases de música",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 48,
     "serviceEnglish": "Music producer",
     "serviceSpanish": "Productor de música",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 49,
     "serviceEnglish": "Musician",
     "serviceSpanish": "Músico",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 50,
     "serviceEnglish": "Online music lessons",
     "serviceSpanish": "Clases de música en línea",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 51,
     "serviceEnglish": "Origami instructor",
     "serviceSpanish": "Instructor de origami",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 52,
     "serviceEnglish": "Packaging design",
     "serviceSpanish": "Diseño de empaques",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 53,
     "serviceEnglish": "Painter",
     "serviceSpanish": "Pintor",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 54,
     "serviceEnglish": "Photo restoration",
     "serviceSpanish": "Restauración de fotos",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 55,
     "serviceEnglish": "Photographer",
     "serviceSpanish": "Fotógrafo",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 56,
     "serviceEnglish": "Piano teacher",
     "serviceSpanish": "Profesor de piano",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 57,
     "serviceEnglish": "Piano tuner",
     "serviceSpanish": "Afinador de pianos",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 58,
     "serviceEnglish": "Portrait photographer",
     "serviceSpanish": "Fotógrafo de retratos",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 59,
     "serviceEnglish": "Print design",
     "serviceSpanish": "Diseño de impresión",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 60,
     "serviceEnglish": "Product photographer",
     "serviceSpanish": "Fotógrafo de productos",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 61,
     "serviceEnglish": "Puppet maker",
     "serviceSpanish": "Fabricante de títeres",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 62,
     "serviceEnglish": "Puppeteer",
     "serviceSpanish": "Titiritero",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 63,
     "serviceEnglish": "Quilting instructor",
     "serviceSpanish": "Instructor de acolchado",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 64,
     "serviceEnglish": "Record producer",
     "serviceSpanish": "Productor discográfico",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 65,
     "serviceEnglish": "Residential architect",
     "serviceSpanish": "Arquitecto residencial",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 66,
     "serviceEnglish": "Saxophone lessons",
     "serviceSpanish": "Clases de saxofón",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 67,
     "serviceEnglish": "Sewing lessons",
     "serviceSpanish": "Clases de costura",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 68,
     "serviceEnglish": "Singing lessons",
     "serviceSpanish": "Clases de canto",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 69,
     "serviceEnglish": "Stationery design",
     "serviceSpanish": "Diseño de papelería",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 70,
     "serviceEnglish": "Still life photographer",
     "serviceSpanish": "Fotógrafo de naturaleza muerta",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 71,
     "serviceEnglish": "Street food vendor",
     "serviceSpanish": "Vendedor de comida callejera",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 72,
     "serviceEnglish": "Tailor",
     "serviceSpanish": "Sastre",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 73,
     "serviceEnglish": "Tattoo artist",
     "serviceSpanish": "Tatuador",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 74,
     "serviceEnglish": "Taxidermist",
     "serviceSpanish": "Taxidermista",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 75,
     "serviceEnglish": "Toy repair",
     "serviceSpanish": "Reparación de juguetes",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 76,
     "serviceEnglish": "Trombone lessons",
     "serviceSpanish": "Clases de trombón",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 77,
     "serviceEnglish": "Urban gardening",
     "serviceSpanish": "Jardinería urbana",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 78,
     "serviceEnglish": "Videographer",
     "serviceSpanish": "Videógrafo",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 79,
     "serviceEnglish": "Violin lessons",
     "serviceSpanish": "Clases de violín",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 80,
     "serviceEnglish": "Virtual interior design",
     "serviceSpanish": "Diseño de interiores virtual",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 81,
     "serviceEnglish": "Voice lessons",
     "serviceSpanish": "Clases de canto",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 82,
     "serviceEnglish": "Wood carving",
     "serviceSpanish": "Tallado en madera",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 83,
     "serviceEnglish": "Wrapping paper design",
     "serviceSpanish": "Diseño de papel de regalo",
-    "categoryID": "serviceCategories/1"
+    "categoryId": "serviceCategories/1",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 84,
     "serviceEnglish": "Air conditioning repair",
     "serviceSpanish": "Reparación de aire acondicionado",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 85,
     "serviceEnglish": "Antique restoration",
     "serviceSpanish": "Restauración de antigüedades",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 86,
     "serviceEnglish": "Appliance repair",
     "serviceSpanish": "Reparación de electrodomésticos",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 87,
     "serviceEnglish": "Auto body repair",
     "serviceSpanish": "Reparación de carrocería",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 88,
     "serviceEnglish": "Auto detailer",
     "serviceSpanish": "Detallador de autos",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 89,
     "serviceEnglish": "Auto glass repair",
     "serviceSpanish": "Reparación de vidrios de autos",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 90,
     "serviceEnglish": "Auto insurance agent",
     "serviceSpanish": "Agente de seguros de autos",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 91,
     "serviceEnglish": "Auto painting",
     "serviceSpanish": "Pintura de autos",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 92,
     "serviceEnglish": "Bicycle rental",
     "serviceSpanish": "Alquiler de bicicletas",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 93,
     "serviceEnglish": "Bicycle repair",
     "serviceSpanish": "Reparación de bicicletas",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 94,
     "serviceEnglish": "Boat rental",
     "serviceSpanish": "Alquiler de botes",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 95,
     "serviceEnglish": "Car detailing",
     "serviceSpanish": "Detallado de autos",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 96,
     "serviceEnglish": "Car inspection",
     "serviceSpanish": "Inspección de autos",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 97,
     "serviceEnglish": "Car mechanic",
     "serviceSpanish": "Mecánico de autos",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 98,
     "serviceEnglish": "Car rental",
     "serviceSpanish": "Alquiler de coches",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 99,
     "serviceEnglish": "Car wash",
     "serviceSpanish": "Lavado de autos",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 100,
     "serviceEnglish": "Courier",
     "serviceSpanish": "Mensajero",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 101,
     "serviceEnglish": "Delivery services",
     "serviceSpanish": "Servicios de entrega",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 102,
     "serviceEnglish": "Driving instructor",
     "serviceSpanish": "Instructor de manejo",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 103,
     "serviceEnglish": "Freight forwarder",
     "serviceSpanish": "Transitario",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 104,
     "serviceEnglish": "Motorcycle mechanic",
     "serviceSpanish": "Mecánico de motocicletas",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 105,
     "serviceEnglish": "Motorcycle rental",
     "serviceSpanish": "Alquiler de motocicletas",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 106,
     "serviceEnglish": "Moving company",
     "serviceSpanish": "Empresa de mudanzas",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 107,
     "serviceEnglish": "Moving help",
     "serviceSpanish": "Ayuda para mudanzas",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 108,
     "serviceEnglish": "Moving truck rental",
     "serviceSpanish": "Alquiler de camiones de mudanza",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 109,
     "serviceEnglish": "Small engine repair",
     "serviceSpanish": "Reparación de motores pequeños",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 110,
     "serviceEnglish": "Tire repair",
     "serviceSpanish": "Reparación de neumáticos",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 111,
     "serviceEnglish": "Tour bus rental",
     "serviceSpanish": "Alquiler de autobús turístico",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 112,
     "serviceEnglish": "Truck rental",
     "serviceSpanish": "Alquiler de camiones",
-    "categoryID": "serviceCategories/2"
+    "categoryId": "serviceCategories/2",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 113,
     "serviceEnglish": "Aesthetician",
     "serviceSpanish": "Esteticista",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 114,
     "serviceEnglish": "Beauty consultant",
     "serviceSpanish": "Consultor de belleza",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 115,
     "serviceEnglish": "Dry cleaning",
     "serviceSpanish": "Lavandería",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 116,
     "serviceEnglish": "Hair extension specialist",
     "serviceSpanish": "Especialista en extensiones de cabello",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 117,
     "serviceEnglish": "Hair removal",
     "serviceSpanish": "Depilación",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 118,
     "serviceEnglish": "Hair transplant",
     "serviceSpanish": "Trasplante de cabello",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 119,
     "serviceEnglish": "Hairstylist",
     "serviceSpanish": "Estilista",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 120,
     "serviceEnglish": "Image consultant",
     "serviceSpanish": "Consultor de imagen",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 121,
     "serviceEnglish": "Makeup artist",
     "serviceSpanish": "Maquillador",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 122,
     "serviceEnglish": "Makeup lessons",
     "serviceSpanish": "Clases de maquillaje",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 123,
     "serviceEnglish": "Nail technician",
     "serviceSpanish": "Técnico de uñas",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 124,
     "serviceEnglish": "Personal shopper",
     "serviceSpanish": "Comprador personal",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 125,
     "serviceEnglish": "Personal stylist",
     "serviceSpanish": "Estilista personal",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 126,
     "serviceEnglish": "Personal trainer",
     "serviceSpanish": "Entrenador personal",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 127,
     "serviceEnglish": "Professional cuddling",
     "serviceSpanish": "Cuddling profesional",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 128,
     "serviceEnglish": "Skin care specialist",
     "serviceSpanish": "Especialista en cuidado de la piel",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 129,
     "serviceEnglish": "Soap maker",
     "serviceSpanish": "Fabricante de jabones",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 130,
     "serviceEnglish": "Wig stylist",
     "serviceSpanish": "Estilista de pelucas",
-    "categoryID": "serviceCategories/3"
+    "categoryId": "serviceCategories/3",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 131,
     "serviceEnglish": "Babysitter",
     "serviceSpanish": "Cuidador de niños",
-    "categoryID": "serviceCategories/4"
+    "categoryId": "serviceCategories/4",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 132,
     "serviceEnglish": "Camp counselor",
     "serviceSpanish": "Consejero de campamento",
-    "categoryID": "serviceCategories/4"
+    "categoryId": "serviceCategories/4",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 133,
     "serviceEnglish": "Child psychologist",
     "serviceSpanish": "Psicólogo infantil",
-    "categoryID": "serviceCategories/4"
+    "categoryId": "serviceCategories/4",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 134,
     "serviceEnglish": "Childcare provider",
     "serviceSpanish": "Proveedor de cuidado infantil",
-    "categoryID": "serviceCategories/4"
+    "categoryId": "serviceCategories/4",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 135,
     "serviceEnglish": "Daycare",
     "serviceSpanish": "Guardería",
-    "categoryID": "serviceCategories/4"
+    "categoryId": "serviceCategories/4",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 136,
     "serviceEnglish": "Doula - childbirth assistant",
     "serviceSpanish": "Doula - acompañante de parto",
-    "categoryID": "serviceCategories/4"
+    "categoryId": "serviceCategories/4",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 137,
     "serviceEnglish": "Home daycare",
     "serviceSpanish": "Guardería en casa",
-    "categoryID": "serviceCategories/4"
+    "categoryId": "serviceCategories/4",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 138,
     "serviceEnglish": "Kids party entertainment",
     "serviceSpanish": "Entretenimiento para fiestas infantiles",
-    "categoryID": "serviceCategories/4"
+    "categoryId": "serviceCategories/4",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 139,
     "serviceEnglish": "Kids Teacher",
     "serviceSpanish": "Profesor de niños",
-    "categoryID": "serviceCategories/4"
+    "categoryId": "serviceCategories/4",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 140,
     "serviceEnglish": "Kids Tutor",
     "serviceSpanish": "Tutor para niños",
-    "categoryID": "serviceCategories/4"
+    "categoryId": "serviceCategories/4",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 141,
     "serviceEnglish": "Kids Tutoring",
     "serviceSpanish": "Clases particulares para niños",
-    "categoryID": "serviceCategories/4"
+    "categoryId": "serviceCategories/4",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 142,
     "serviceEnglish": "Nanny",
     "serviceSpanish": "Niñera",
-    "categoryID": "serviceCategories/4"
+    "categoryId": "serviceCategories/4",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 143,
     "serviceEnglish": "Nanny cam installation",
     "serviceSpanish": "Instalación de cámaras para niñeras",
-    "categoryID": "serviceCategories/4"
+    "categoryId": "serviceCategories/4",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 144,
     "serviceEnglish": "Youth counselor",
     "serviceSpanish": "Consejero de jóvenes",
-    "categoryID": "serviceCategories/4"
+    "categoryId": "serviceCategories/4",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 145,
     "serviceEnglish": "Bird control",
     "serviceSpanish": "Control de aves",
-    "categoryID": "serviceCategories/5"
+    "categoryId": "serviceCategories/5",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 146,
     "serviceEnglish": "Cleaning services",
     "serviceSpanish": "Servicios de limpieza",
-    "categoryID": "serviceCategories/5"
+    "categoryId": "serviceCategories/5",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 147,
     "serviceEnglish": "Commercial cleaning",
     "serviceSpanish": "Limpieza comercial",
-    "categoryID": "serviceCategories/5"
+    "categoryId": "serviceCategories/5",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 148,
     "serviceEnglish": "General cleaning",
     "serviceSpanish": "Limpieza general",
-    "categoryID": "serviceCategories/5"
+    "categoryId": "serviceCategories/5",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 149,
     "serviceEnglish": "House cleaning",
     "serviceSpanish": "Limpieza de casas",
-    "categoryID": "serviceCategories/5"
+    "categoryId": "serviceCategories/5",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 150,
     "serviceEnglish": "House sitter",
     "serviceSpanish": "Cuidador de viviendas",
-    "categoryID": "serviceCategories/5"
+    "categoryId": "serviceCategories/5",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 151,
     "serviceEnglish": "House sitting",
     "serviceSpanish": "Cuidado de casa",
-    "categoryID": "serviceCategories/5"
+    "categoryId": "serviceCategories/5",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 152,
     "serviceEnglish": "Housekeeping",
     "serviceSpanish": "Limpieza de hogar",
-    "categoryID": "serviceCategories/5"
+    "categoryId": "serviceCategories/5",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 153,
     "serviceEnglish": "Junk removal",
     "serviceSpanish": "Retiro de basura",
-    "categoryID": "serviceCategories/5"
+    "categoryId": "serviceCategories/5",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 154,
     "serviceEnglish": "Pest control",
     "serviceSpanish": "Control de plagas",
-    "categoryID": "serviceCategories/5"
+    "categoryId": "serviceCategories/5",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 155,
     "serviceEnglish": "Pest exterminator",
     "serviceSpanish": "Exterminador de plagas",
-    "categoryID": "serviceCategories/5"
+    "categoryId": "serviceCategories/5",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 156,
     "serviceEnglish": "Shoe repair",
     "serviceSpanish": "Reparación de zapatos",
-    "categoryID": "serviceCategories/5"
+    "categoryId": "serviceCategories/5",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 157,
     "serviceEnglish": "Arborist",
     "serviceSpanish": "Arborista",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 158,
     "serviceEnglish": "Bathroom remodeler",
     "serviceSpanish": "Remodelador de baños",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 159,
     "serviceEnglish": "Blacksmith",
     "serviceSpanish": "Herrero",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 160,
     "serviceEnglish": "Bricklayer",
     "serviceSpanish": "Albañil",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 161,
     "serviceEnglish": "Cabinet maker",
     "serviceSpanish": "Carpintero de gabinetes",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 162,
     "serviceEnglish": "Cabinet refinishing",
     "serviceSpanish": "Renovación de gabinetes",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 163,
     "serviceEnglish": "CAD designer",
     "serviceSpanish": "Diseñador CAD",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 164,
     "serviceEnglish": "Carpenter",
     "serviceSpanish": "Carpintero",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 165,
     "serviceEnglish": "Carpet cleaner",
     "serviceSpanish": "Limpiador de alfombras",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 166,
     "serviceEnglish": "Carpet installation",
     "serviceSpanish": "Instalación de alfombras",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 167,
     "serviceEnglish": "Chimney sweep",
     "serviceSpanish": "Deshollinador",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 168,
     "serviceEnglish": "Civil engineer",
     "serviceSpanish": "Ingeniero civil",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 169,
     "serviceEnglish": "Concrete contractor",
     "serviceSpanish": "Contratista de concreto",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 170,
     "serviceEnglish": "Deck builder",
     "serviceSpanish": "Constructor de cubiertas",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 171,
     "serviceEnglish": "Drywall contractor",
     "serviceSpanish": "Contratista de drywall",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 172,
     "serviceEnglish": "Electrician",
     "serviceSpanish": "Electricista",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 173,
     "serviceEnglish": "Exterior painter",
     "serviceSpanish": "Pintor exterior",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 174,
     "serviceEnglish": "Fire alarm installation",
     "serviceSpanish": "Instalación de alarmas de incendio",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 175,
     "serviceEnglish": "Fire damage restoration",
     "serviceSpanish": "Restauración de daños por incendios",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 176,
     "serviceEnglish": "Furniture assembly",
     "serviceSpanish": "Ensamblaje de muebles",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 177,
     "serviceEnglish": "Garage door repair",
     "serviceSpanish": "Reparación de puertas de garaje",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 178,
     "serviceEnglish": "Garage gym setup",
     "serviceSpanish": "Instalación de gimnasio en garaje",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 179,
     "serviceEnglish": "Garage organizer",
     "serviceSpanish": "Organizador de garaje",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 180,
     "serviceEnglish": "General contractor",
     "serviceSpanish": "Contratista general",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 181,
     "serviceEnglish": "Glass installation",
     "serviceSpanish": "Instalación de vidrios",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 182,
     "serviceEnglish": "Glass repair",
     "serviceSpanish": "Reparación de vidrios",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 183,
     "serviceEnglish": "Handyman",
     "serviceSpanish": "Multioficios",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 184,
     "serviceEnglish": "Handyman services",
     "serviceSpanish": "Servicios generales",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 185,
     "serviceEnglish": "Home automation",
     "serviceSpanish": "Automatización del hogar",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 186,
     "serviceEnglish": "Home inspector",
     "serviceSpanish": "Inspector de viviendas",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 187,
     "serviceEnglish": "Home organizer",
     "serviceSpanish": "Organizador de hogar",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 188,
     "serviceEnglish": "Home solar panel installation",
     "serviceSpanish": "Instalación de paneles solares en el hogar",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 189,
     "serviceEnglish": "House cleaner",
     "serviceSpanish": "Limpiador de casas",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 190,
     "serviceEnglish": "House framing",
     "serviceSpanish": "Estructuras de casas",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 191,
     "serviceEnglish": "House painter",
     "serviceSpanish": "Pintor de casas",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 192,
     "serviceEnglish": "House painting",
     "serviceSpanish": "Pintura de casas",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 193,
     "serviceEnglish": "HVAC repair",
     "serviceSpanish": "Reparación de HVAC",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 194,
     "serviceEnglish": "HVAC technician",
     "serviceSpanish": "Técnico de Calefacción y Aire Acondicionado",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 195,
     "serviceEnglish": "Insulation installation",
     "serviceSpanish": "Instalación de aislamiento",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 196,
     "serviceEnglish": "Interior painter",
     "serviceSpanish": "Pintor de interiores",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 197,
     "serviceEnglish": "Interior painting",
     "serviceSpanish": "Pintura de interiores",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 198,
     "serviceEnglish": "Kitchen remodeler",
     "serviceSpanish": "Remodelador de cocinas",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 199,
     "serviceEnglish": "Land surveyor",
     "serviceSpanish": "Agrimensor",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 200,
     "serviceEnglish": "Lighting designer",
     "serviceSpanish": "Diseñador de iluminación",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 201,
     "serviceEnglish": "Lighting installation",
     "serviceSpanish": "Instalación de iluminación",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 202,
     "serviceEnglish": "Lock installation",
     "serviceSpanish": "Instalación de cerraduras",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 203,
     "serviceEnglish": "Locksmith",
     "serviceSpanish": "Cerrajero",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 204,
     "serviceEnglish": "Metalworker",
     "serviceSpanish": "Metalúrgico",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 205,
     "serviceEnglish": "Paint removal",
     "serviceSpanish": "Remoción de pintura",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 206,
     "serviceEnglish": "Plastering",
     "serviceSpanish": "Enlucido",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 207,
     "serviceEnglish": "Playground installation",
     "serviceSpanish": "Instalación de parques infantiles",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 208,
     "serviceEnglish": "Plumber",
     "serviceSpanish": "Fontanero",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 209,
     "serviceEnglish": "Renovation contractor",
     "serviceSpanish": "Contratista de renovación",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 210,
     "serviceEnglish": "Roof repair",
     "serviceSpanish": "Reparación de techos",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 211,
     "serviceEnglish": "Roofing contractor",
     "serviceSpanish": "Contratista de techos",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 212,
     "serviceEnglish": "Solar panel installer",
     "serviceSpanish": "Instalador de paneles solares",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 213,
     "serviceEnglish": "Structural engineer",
     "serviceSpanish": "Ingeniero estructural",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 214,
     "serviceEnglish": "Tile cleaning",
     "serviceSpanish": "Limpieza de azulejos",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 215,
     "serviceEnglish": "Tile installer",
     "serviceSpanish": "Instalador de azulejos",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 216,
     "serviceEnglish": "Upholstery repair",
     "serviceSpanish": "Reparación de tapicería",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 217,
     "serviceEnglish": "Wall painting",
     "serviceSpanish": "Pintura de paredes",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 218,
     "serviceEnglish": "Wallpaper installation",
     "serviceSpanish": "Instalación de papel tapiz",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 219,
     "serviceEnglish": "Water damage restoration",
     "serviceSpanish": "Restauración de daños por agua",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 220,
     "serviceEnglish": "Window cleaner",
     "serviceSpanish": "Limpiador de ventanas",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 221,
     "serviceEnglish": "Window installation",
     "serviceSpanish": "Instalación de ventanas",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 222,
     "serviceEnglish": "Window repair",
     "serviceSpanish": "Reparación de ventanas",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 223,
     "serviceEnglish": "Wood fence installation",
     "serviceSpanish": "Instalación de cercas de madera",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 224,
     "serviceEnglish": "Woodworker",
     "serviceSpanish": "Carpintero de madera",
-    "categoryID": "serviceCategories/6"
+    "categoryId": "serviceCategories/6",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 225,
     "serviceEnglish": "Accessibility consultant",
     "serviceSpanish": "Consultor de accesibilidad",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 226,
     "serviceEnglish": "AI chatbot development",
     "serviceSpanish": "Desarrollo de chatbots de IA",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 227,
     "serviceEnglish": "Appraiser",
     "serviceSpanish": "Tasador",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 228,
     "serviceEnglish": "Brand consultant",
     "serviceSpanish": "Consultor de marca",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 229,
     "serviceEnglish": "Business coach",
     "serviceSpanish": "Coach de negocios",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 230,
     "serviceEnglish": "Business consultant",
     "serviceSpanish": "Consultor de negocios",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 231,
     "serviceEnglish": "Career coach",
     "serviceSpanish": "Coach de carrera",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 232,
     "serviceEnglish": "Career counselor",
     "serviceSpanish": "Asesor vocacional",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 233,
     "serviceEnglish": "Community manager",
     "serviceSpanish": "Gestor de comunidad",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 234,
     "serviceEnglish": "Content moderation",
     "serviceSpanish": "Moderación de contenido",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 235,
     "serviceEnglish": "Content writing",
     "serviceSpanish": "Escritura de contenido",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 236,
     "serviceEnglish": "Copy editor",
     "serviceSpanish": "Editor de copias",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 237,
     "serviceEnglish": "Copywriter",
     "serviceSpanish": "Redactor publicitario",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 238,
     "serviceEnglish": "E-commerce consultant",
     "serviceSpanish": "Consultor de comercio electrónico",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 239,
     "serviceEnglish": "eBay seller",
     "serviceSpanish": "Vendedor de eBay",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 240,
     "serviceEnglish": "Educational consultant",
     "serviceSpanish": "Consultor educativo",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 241,
     "serviceEnglish": "Energy consultant",
     "serviceSpanish": "Consultor energético",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 242,
     "serviceEnglish": "Environmental consultant",
     "serviceSpanish": "Consultor ambiental",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 243,
     "serviceEnglish": "Executive coach",
     "serviceSpanish": "Coach ejecutivo",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 244,
     "serviceEnglish": "Financial advisor",
     "serviceSpanish": "Asesor financiero",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 245,
     "serviceEnglish": "Financial analyst",
     "serviceSpanish": "Analista financiero",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 246,
     "serviceEnglish": "Financial planner",
     "serviceSpanish": "Planificador financiero",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 247,
     "serviceEnglish": "Grant consultant",
     "serviceSpanish": "Consultor de subvenciones",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 248,
     "serviceEnglish": "Grant writer",
     "serviceSpanish": "Redactor de solicitudes de fondos",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 249,
     "serviceEnglish": "Green energy consultant",
     "serviceSpanish": "Consultor de energía verde",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 250,
     "serviceEnglish": "Immigration lawyer",
     "serviceSpanish": "Abogado de inmigración",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 251,
     "serviceEnglish": "Import and export consultant",
     "serviceSpanish": "Consultor de importación/exportación",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 252,
     "serviceEnglish": "Influencer marketing",
     "serviceSpanish": "Marketing de influencers",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 253,
     "serviceEnglish": "Insurance agent",
     "serviceSpanish": "Agente de seguros",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 254,
     "serviceEnglish": "Insurance broker",
     "serviceSpanish": "Corredor de seguros",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 255,
     "serviceEnglish": "Interior decorator",
     "serviceSpanish": "Decorador de interiores",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 256,
     "serviceEnglish": "Interior designer",
     "serviceSpanish": "Diseñador de interiores",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 257,
     "serviceEnglish": "Life coach",
     "serviceSpanish": "Entrenador personal",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 258,
     "serviceEnglish": "LinkedIn consultant",
     "serviceSpanish": "Consultor de LinkedIn",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 259,
     "serviceEnglish": "Market researcher",
     "serviceSpanish": "Investigador de mercado",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 260,
     "serviceEnglish": "Marketing consultant",
     "serviceSpanish": "Consultor de marketing",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 261,
     "serviceEnglish": "Notary public",
     "serviceSpanish": "Notario público",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 262,
     "serviceEnglish": "Online coaching",
     "serviceSpanish": "Coaching en línea",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 263,
     "serviceEnglish": "Online marketing",
     "serviceSpanish": "Marketing en línea",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 264,
     "serviceEnglish": "Organizational consultant",
     "serviceSpanish": "Consultor de organización",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 265,
     "serviceEnglish": "Proposal writer",
     "serviceSpanish": "Redactor de propuestas",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 266,
     "serviceEnglish": "Public relations",
     "serviceSpanish": "Relaciones públicas",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 267,
     "serviceEnglish": "Real estate agent",
     "serviceSpanish": "Agente de bienes raíces",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 268,
     "serviceEnglish": "Real estate appraiser",
     "serviceSpanish": "Tasador de bienes raíces",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 269,
     "serviceEnglish": "Relationship coach",
     "serviceSpanish": "Coach de relaciones",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 270,
     "serviceEnglish": "Resume design",
     "serviceSpanish": "Diseño de currículum",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 271,
     "serviceEnglish": "Resume writer",
     "serviceSpanish": "Redactor de currículum",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 272,
     "serviceEnglish": "Resume writing",
     "serviceSpanish": "Redacción de currículum",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 273,
     "serviceEnglish": "Search engine marketing",
     "serviceSpanish": "Marketing en motores de búsqueda",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 274,
     "serviceEnglish": "Search engine optimization",
     "serviceSpanish": "Optimización de motores de búsqueda",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 275,
     "serviceEnglish": "Social media influencer",
     "serviceSpanish": "Influencer de redes sociales",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 276,
     "serviceEnglish": "Social media manager",
     "serviceSpanish": "Gestor de redes sociales",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 277,
     "serviceEnglish": "Tax consultant",
     "serviceSpanish": "Asesor fiscal",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 278,
     "serviceEnglish": "Tax preparer",
     "serviceSpanish": "Preparador de impuestos",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 279,
     "serviceEnglish": "Wedding planner",
     "serviceSpanish": "Organizador de bodas",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 280,
     "serviceEnglish": "WordPress developer",
     "serviceSpanish": "Desarrollador de WordPress",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 281,
     "serviceEnglish": "Writer",
     "serviceSpanish": "Escritor",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 282,
     "serviceEnglish": "Writing coach",
     "serviceSpanish": "Coach de escritura",
-    "categoryID": "serviceCategories/7"
+    "categoryId": "serviceCategories/7",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 283,
     "serviceEnglish": "Chinese tutor",
     "serviceSpanish": "Tutor de chino",
-    "categoryID": "serviceCategories/8"
+    "categoryId": "serviceCategories/8",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 284,
     "serviceEnglish": "French tutor",
     "serviceSpanish": "Tutor de francés",
-    "categoryID": "serviceCategories/8"
+    "categoryId": "serviceCategories/8",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 285,
     "serviceEnglish": "German tutor",
     "serviceSpanish": "Tutor de alemán",
-    "categoryID": "serviceCategories/8"
+    "categoryId": "serviceCategories/8",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 286,
     "serviceEnglish": "Italian tutor",
     "serviceSpanish": "Tutor de italiano",
-    "categoryID": "serviceCategories/8"
+    "categoryId": "serviceCategories/8",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 287,
     "serviceEnglish": "Japanese tutor",
     "serviceSpanish": "Tutor de japonés",
-    "categoryID": "serviceCategories/8"
+    "categoryId": "serviceCategories/8",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 288,
     "serviceEnglish": "Language lessons",
     "serviceSpanish": "Clases de idiomas",
-    "categoryID": "serviceCategories/8"
+    "categoryId": "serviceCategories/8",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 289,
     "serviceEnglish": "Music lessons",
     "serviceSpanish": "Clases de música",
-    "categoryID": "serviceCategories/8"
+    "categoryId": "serviceCategories/8",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 290,
     "serviceEnglish": "Online tutoring",
     "serviceSpanish": "Tutoría en línea",
-    "categoryID": "serviceCategories/8"
+    "categoryId": "serviceCategories/8",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 291,
     "serviceEnglish": "Portuguese tutor",
     "serviceSpanish": "Tutor de portugués",
-    "categoryID": "serviceCategories/8"
+    "categoryId": "serviceCategories/8",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 292,
     "serviceEnglish": "Russian tutor",
     "serviceSpanish": "Tutor de ruso",
-    "categoryID": "serviceCategories/8"
+    "categoryId": "serviceCategories/8",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 293,
     "serviceEnglish": "Spanish tutor",
     "serviceSpanish": "Tutor de español",
-    "categoryID": "serviceCategories/8"
+    "categoryId": "serviceCategories/8",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 294,
     "serviceEnglish": "Test preparation",
     "serviceSpanish": "Preparación de exámenes",
-    "categoryID": "serviceCategories/8"
+    "categoryId": "serviceCategories/8",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 295,
     "serviceEnglish": "Turkish tutor",
     "serviceSpanish": "Tutor de turco",
-    "categoryID": "serviceCategories/8"
+    "categoryId": "serviceCategories/8",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 296,
     "serviceEnglish": "Tutoring services",
     "serviceSpanish": "Servicios de tutoría",
-    "categoryID": "serviceCategories/8"
+    "categoryId": "serviceCategories/8",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 297,
     "serviceEnglish": "Acting lessons",
     "serviceSpanish": "Clases de actuación",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 298,
     "serviceEnglish": "Actor - actress",
     "serviceSpanish": "Actor - actriz",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 299,
     "serviceEnglish": "Bagpiper",
     "serviceSpanish": "Gaitero",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 300,
     "serviceEnglish": "Balloon artist",
     "serviceSpanish": "Artista de globos",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 301,
     "serviceEnglish": "Balloon decorations",
     "serviceSpanish": "Decoraciones con globos",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 302,
     "serviceEnglish": "Bartender",
     "serviceSpanish": "Bartender",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 303,
     "serviceEnglish": "Bartending lessons",
     "serviceSpanish": "Clases de coctelería",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 304,
     "serviceEnglish": "Christmas light installation",
     "serviceSpanish": "Instalación de luces navideñas",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 305,
     "serviceEnglish": "Clown",
     "serviceSpanish": "Payaso",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 306,
     "serviceEnglish": "Costume rental",
     "serviceSpanish": "Alquiler de disfraces",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 307,
     "serviceEnglish": "DJ",
     "serviceSpanish": "DJ",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 308,
     "serviceEnglish": "DJ equipment rental",
     "serviceSpanish": "Alquiler de equipos de DJ",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 309,
     "serviceEnglish": "DJ lessons",
     "serviceSpanish": "Clases de DJ",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 310,
     "serviceEnglish": "Event coordinator",
     "serviceSpanish": "Coordinador de eventos",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 311,
     "serviceEnglish": "Event decorator",
     "serviceSpanish": "Decorador de eventos",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 312,
     "serviceEnglish": "Event livestreaming",
     "serviceSpanish": "Transmisión en vivo de eventos",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 313,
     "serviceEnglish": "Event photographer",
     "serviceSpanish": "Fotógrafo de eventos",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 314,
     "serviceEnglish": "Event planner",
     "serviceSpanish": "Organizador de eventos",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 315,
     "serviceEnglish": "Event planning",
     "serviceSpanish": "Organización de eventos",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 316,
     "serviceEnglish": "Event security",
     "serviceSpanish": "Seguridad de eventos",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 317,
     "serviceEnglish": "Face painter",
     "serviceSpanish": "Pintacaritas",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 318,
     "serviceEnglish": "Film director",
     "serviceSpanish": "Director de cine",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 319,
     "serviceEnglish": "Fireworks display",
     "serviceSpanish": "Exhibición de fuegos artificiales",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 320,
     "serviceEnglish": "Flower delivery",
     "serviceSpanish": "Entrega de flores",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 321,
     "serviceEnglish": "Furniture rental",
     "serviceSpanish": "Alquiler de muebles",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 322,
     "serviceEnglish": "Ghost tour guide",
     "serviceSpanish": "Guía de tour de fantasmas",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 323,
     "serviceEnglish": "Gift wrapping",
     "serviceSpanish": "Envoltura de regalos",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 324,
     "serviceEnglish": "Home theater installation",
     "serviceSpanish": "Instalación de cine en casa",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 325,
     "serviceEnglish": "Jazz musician",
     "serviceSpanish": "Músico de jazz",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 326,
     "serviceEnglish": "Karaoke rental",
     "serviceSpanish": "Alquiler de karaoke",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 327,
     "serviceEnglish": "Latex balloon artist",
     "serviceSpanish": "Artista de globos de látex",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 328,
     "serviceEnglish": "Party bus rental",
     "serviceSpanish": "Alquiler de autobús de fiesta",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 329,
     "serviceEnglish": "Party entertainer",
     "serviceSpanish": "Animador de fiestas",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 330,
     "serviceEnglish": "Party planner",
     "serviceSpanish": "Organizador de fiestas",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 331,
     "serviceEnglish": "Photo booth rental",
     "serviceSpanish": "Alquiler de fotomatón",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 332,
     "serviceEnglish": "Podcast editing",
     "serviceSpanish": "Edición de podcasts",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 333,
     "serviceEnglish": "Promotional model",
     "serviceSpanish": "Modelo promocional",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 334,
     "serviceEnglish": "Stagehand",
     "serviceSpanish": "Técnico de escenario",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 335,
     "serviceEnglish": "Stand-up comedian",
     "serviceSpanish": "Comediante de pie",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 336,
     "serviceEnglish": "Virtual event hosting",
     "serviceSpanish": "Organización de eventos virtuales",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 337,
     "serviceEnglish": "Virtual event planning",
     "serviceSpanish": "Planificación de eventos virtuales",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 338,
     "serviceEnglish": "Voice actor",
     "serviceSpanish": "Actor de voz",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 339,
     "serviceEnglish": "Wedding cake",
     "serviceSpanish": "Pastel de bodas",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 340,
     "serviceEnglish": "Wedding car rental",
     "serviceSpanish": "Alquiler de coches para bodas",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 341,
     "serviceEnglish": "Wedding dress alterations",
     "serviceSpanish": "Arreglos de vestidos de boda",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 342,
     "serviceEnglish": "Wedding invitation design",
     "serviceSpanish": "Diseño de invitaciones de bodas",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 343,
     "serviceEnglish": "Wedding makeup",
     "serviceSpanish": "Maquillaje de bodas",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 344,
     "serviceEnglish": "Wedding officiant",
     "serviceSpanish": "Oficiante de bodas",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 345,
     "serviceEnglish": "Wedding photographer",
     "serviceSpanish": "Fotógrafo de bodas",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 346,
     "serviceEnglish": "Wedding singer",
     "serviceSpanish": "Cantante de bodas",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 347,
     "serviceEnglish": "Wedding videographer",
     "serviceSpanish": "Videógrafo de bodas",
-    "categoryID": "serviceCategories/9"
+    "categoryId": "serviceCategories/9",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 348,
     "serviceEnglish": "Accountant",
     "serviceSpanish": "Contador",
-    "categoryID": "serviceCategories/10"
+    "categoryId": "serviceCategories/10",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 349,
     "serviceEnglish": "Book editor",
     "serviceSpanish": "Editor de libros",
-    "categoryID": "serviceCategories/10"
+    "categoryId": "serviceCategories/10",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 350,
     "serviceEnglish": "Book restoration",
     "serviceSpanish": "Restauración de libros",
-    "categoryID": "serviceCategories/10"
+    "categoryId": "serviceCategories/10",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 351,
     "serviceEnglish": "Bookkeeper",
     "serviceSpanish": "Auxiliar contable",
-    "categoryID": "serviceCategories/10"
+    "categoryId": "serviceCategories/10",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 352,
     "serviceEnglish": "Certified public accountant",
     "serviceSpanish": "Contador público certificado",
-    "categoryID": "serviceCategories/10"
+    "categoryId": "serviceCategories/10",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 353,
     "serviceEnglish": "Credit counselor",
     "serviceSpanish": "Asesor de crédito",
-    "categoryID": "serviceCategories/10"
+    "categoryId": "serviceCategories/10",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 354,
     "serviceEnglish": "Cryptocurrency consultant",
     "serviceSpanish": "Consultor de criptomonedas",
-    "categoryID": "serviceCategories/10"
+    "categoryId": "serviceCategories/10",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 355,
     "serviceEnglish": "Investment advisor",
     "serviceSpanish": "Asesor de inversiones",
-    "categoryID": "serviceCategories/10"
+    "categoryId": "serviceCategories/10",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 356,
     "serviceEnglish": "Life insurance agent",
     "serviceSpanish": "Agente de seguros de vida",
-    "categoryID": "serviceCategories/10"
+    "categoryId": "serviceCategories/10",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 357,
     "serviceEnglish": "Life insurance broker",
     "serviceSpanish": "Corredor de seguros de vida",
-    "categoryID": "serviceCategories/10"
+    "categoryId": "serviceCategories/10",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 358,
     "serviceEnglish": "Mortgage broker",
     "serviceSpanish": "Corredor de hipotecas",
-    "categoryID": "serviceCategories/10"
+    "categoryId": "serviceCategories/10",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 359,
     "serviceEnglish": "Proofreader",
     "serviceSpanish": "Corrector de pruebas",
-    "categoryID": "serviceCategories/10"
+    "categoryId": "serviceCategories/10",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 360,
     "serviceEnglish": "Acupuncturist",
     "serviceSpanish": "Acupunturista",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 361,
     "serviceEnglish": "Bodywork therapist",
     "serviceSpanish": "Terapeuta corporal",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 362,
     "serviceEnglish": "Chiropractor",
     "serviceSpanish": "Quiropráctico",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 363,
     "serviceEnglish": "Crossfit trainer",
     "serviceSpanish": "Entrenador de CrossFit",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 364,
     "serviceEnglish": "Fitness classes",
     "serviceSpanish": "Clases de fitness",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 365,
     "serviceEnglish": "Fitness equipment repair",
     "serviceSpanish": "Reparación de equipos de fitness",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 366,
     "serviceEnglish": "Fitness instructor",
     "serviceSpanish": "Instructor de fitness",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 367,
     "serviceEnglish": "Fitness trainer",
     "serviceSpanish": "Entrenador de fitness",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 368,
     "serviceEnglish": "Health coach",
     "serviceSpanish": "Coach de salud",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 369,
     "serviceEnglish": "Karate instructor",
     "serviceSpanish": "Instructor de karate",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 370,
     "serviceEnglish": "Kickboxing instructor",
     "serviceSpanish": "Instructor de kickboxing",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 371,
     "serviceEnglish": "Martial arts classes",
     "serviceSpanish": "Clases de artes marciales",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 372,
     "serviceEnglish": "Martial arts instructor",
     "serviceSpanish": "Instructor de artes marciales",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 373,
     "serviceEnglish": "Massage chair rental",
     "serviceSpanish": "Alquiler de sillas de masaje",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 374,
     "serviceEnglish": "Massage lessons",
     "serviceSpanish": "Clases de masajes",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 375,
     "serviceEnglish": "Massage therapist",
     "serviceSpanish": "Terapeuta de masajes",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 376,
     "serviceEnglish": "Nutrition coach",
     "serviceSpanish": "Coach de nutrición",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 377,
     "serviceEnglish": "Nutrition consultation",
     "serviceSpanish": "Consulta de nutrición",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 378,
     "serviceEnglish": "Nutritionist",
     "serviceSpanish": "Nutricionista",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 379,
     "serviceEnglish": "Online fitness classes",
     "serviceSpanish": "Clases de fitness en línea",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 380,
     "serviceEnglish": "Pilates classes",
     "serviceSpanish": "Clases de pilates",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 381,
     "serviceEnglish": "Pilates instructor",
     "serviceSpanish": "Instructor de pilates",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 382,
     "serviceEnglish": "Scuba diving instructor",
     "serviceSpanish": "Instructor de buceo",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 383,
     "serviceEnglish": "Skateboard instructor",
     "serviceSpanish": "Instructor de skateboard",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 384,
     "serviceEnglish": "Sports coach",
     "serviceSpanish": "Entrenador deportivo",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 385,
     "serviceEnglish": "Surfing lessons",
     "serviceSpanish": "Clases de surf",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 386,
     "serviceEnglish": "Swimming instructor",
     "serviceSpanish": "Instructor de natación",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 387,
     "serviceEnglish": "Tennis instructor",
     "serviceSpanish": "Instructor de tenis",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 388,
     "serviceEnglish": "Virtual personal training",
     "serviceSpanish": "Entrenamiento personal virtual",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 389,
     "serviceEnglish": "Weight loss coach",
     "serviceSpanish": "Coach de pérdida de peso",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 390,
     "serviceEnglish": "Yoga instructor",
     "serviceSpanish": "Instructor de yoga",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 391,
     "serviceEnglish": "Yoga lessons",
     "serviceSpanish": "Clases de yoga",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 392,
     "serviceEnglish": "Yoga retreat",
     "serviceSpanish": "Retiro de yoga",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 393,
     "serviceEnglish": "Zumba instructor",
     "serviceSpanish": "Instructor de Zumba",
-    "categoryID": "serviceCategories/11"
+    "categoryId": "serviceCategories/11",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 394,
     "serviceEnglish": "Baker",
     "serviceSpanish": "Panadero",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 395,
     "serviceEnglish": "Barista",
     "serviceSpanish": "Barista",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 396,
     "serviceEnglish": "Bread baker",
     "serviceSpanish": "Panadero",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 397,
     "serviceEnglish": "Cake decorator",
     "serviceSpanish": "Decorador de pasteles",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 398,
     "serviceEnglish": "Caterer",
     "serviceSpanish": "Catering",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 399,
     "serviceEnglish": "Catering",
     "serviceSpanish": "Servicios de catering",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 400,
     "serviceEnglish": "Chef",
     "serviceSpanish": "Chef",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 401,
     "serviceEnglish": "Chef lessons",
     "serviceSpanish": "Clases de cocina",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 402,
     "serviceEnglish": "Chocolatier",
     "serviceSpanish": "Chocolatero",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 403,
     "serviceEnglish": "Confectioner",
     "serviceSpanish": "Confitero",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 404,
     "serviceEnglish": "Food delivery",
     "serviceSpanish": "Entrega de alimentos",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 405,
     "serviceEnglish": "Food stylist",
     "serviceSpanish": "Estilista de comida",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 406,
     "serviceEnglish": "Grocery delivery",
     "serviceSpanish": "Entrega de comestibles",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 407,
     "serviceEnglish": "Home beer brewing",
     "serviceSpanish": "Elaboración de cerveza en casa",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 408,
     "serviceEnglish": "Home brewery",
     "serviceSpanish": "Fábrica de cerveza casera",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 409,
     "serviceEnglish": "Ice cream truck",
     "serviceSpanish": "Camión de helados",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 410,
     "serviceEnglish": "Personal chef",
     "serviceSpanish": "Chef personal",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 411,
     "serviceEnglish": "Private chef",
     "serviceSpanish": "Chef privado",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 412,
     "serviceEnglish": "Wine tasting",
     "serviceSpanish": "Cata de vinos",
-    "categoryID": "serviceCategories/12"
+    "categoryId": "serviceCategories/12",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 413,
     "serviceEnglish": "Aromatherapist",
     "serviceSpanish": "Aromaterapeuta",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 414,
     "serviceEnglish": "Couples therapy",
     "serviceSpanish": "Terapia de parejas",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 415,
     "serviceEnglish": "Dentist",
     "serviceSpanish": "Dentista",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 416,
     "serviceEnglish": "Dietitian",
     "serviceSpanish": "Dietista",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 417,
     "serviceEnglish": "Elderly caregiver",
     "serviceSpanish": "Cuidador de personas mayores",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 418,
     "serviceEnglish": "Energy healer",
     "serviceSpanish": "Sanador energético",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 419,
     "serviceEnglish": "Hypnotherapist",
     "serviceSpanish": "Hipnoterapeuta",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 420,
     "serviceEnglish": "Meditation instructor",
     "serviceSpanish": "Instructor de meditación",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 421,
     "serviceEnglish": "Meditation lessons",
     "serviceSpanish": "Clases de meditación",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 422,
     "serviceEnglish": "Music therapy",
     "serviceSpanish": "Terapia musical",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 423,
     "serviceEnglish": "Online therapy",
     "serviceSpanish": "Terapia en línea",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 424,
     "serviceEnglish": "Pharmacy",
     "serviceSpanish": "Farmacia",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 425,
     "serviceEnglish": "Physical therapist",
     "serviceSpanish": "Terapeuta físico",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 426,
     "serviceEnglish": "Speech therapist",
     "serviceSpanish": "Terapeuta del habla",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 427,
     "serviceEnglish": "Stress management coach",
     "serviceSpanish": "Coach de manejo del estrés",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 428,
     "serviceEnglish": "Stress relief coach",
     "serviceSpanish": "Coach de alivio del estrés",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 429,
     "serviceEnglish": "Thai massage",
     "serviceSpanish": "Masaje tailandés",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 430,
     "serviceEnglish": "Therapist",
     "serviceSpanish": "Terapeuta",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 431,
     "serviceEnglish": "Virtual reality therapy",
     "serviceSpanish": "Terapia de realidad virtual",
-    "categoryID": "serviceCategories/13"
+    "categoryId": "serviceCategories/13",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 432,
     "serviceEnglish": "Disaster restoration",
     "serviceSpanish": "Restauración después de desastres",
-    "categoryID": "serviceCategories/14"
+    "categoryId": "serviceCategories/14",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 433,
     "serviceEnglish": "Gutter cleaning",
     "serviceSpanish": "Limpieza de canalones",
-    "categoryID": "serviceCategories/14"
+    "categoryId": "serviceCategories/14",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 434,
     "serviceEnglish": "Home hydroponics",
     "serviceSpanish": "Hidroponía casera",
-    "categoryID": "serviceCategories/14"
+    "categoryId": "serviceCategories/14",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 435,
     "serviceEnglish": "Home organization",
     "serviceSpanish": "Organización del hogar",
-    "categoryID": "serviceCategories/14"
+    "categoryId": "serviceCategories/14",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 436,
     "serviceEnglish": "Home security installation",
     "serviceSpanish": "Instalación de seguridad del hogar",
-    "categoryID": "serviceCategories/14"
+    "categoryId": "serviceCategories/14",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 437,
     "serviceEnglish": "Home staging",
     "serviceSpanish": "Escenografía para viviendas",
-    "categoryID": "serviceCategories/14"
+    "categoryId": "serviceCategories/14",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 438,
     "serviceEnglish": "Home water purification",
     "serviceSpanish": "Purificación de agua en casa",
-    "categoryID": "serviceCategories/14"
+    "categoryId": "serviceCategories/14",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 439,
     "serviceEnglish": "Outdoor lighting",
     "serviceSpanish": "Iluminación exterior",
-    "categoryID": "serviceCategories/14"
+    "categoryId": "serviceCategories/14",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 440,
     "serviceEnglish": "Pressure washing",
     "serviceSpanish": "Limpieza a presión",
-    "categoryID": "serviceCategories/14"
+    "categoryId": "serviceCategories/14",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 441,
     "serviceEnglish": "Security system installation",
     "serviceSpanish": "Instalación de sistemas de seguridad",
-    "categoryID": "serviceCategories/14"
+    "categoryId": "serviceCategories/14",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 442,
     "serviceEnglish": "TV mounting",
     "serviceSpanish": "Instalación de televisores",
-    "categoryID": "serviceCategories/14"
+    "categoryId": "serviceCategories/14",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 443,
     "serviceEnglish": "Appliance installation",
     "serviceSpanish": "Instalación de electrodomésticos",
-    "categoryID": "serviceCategories/15"
+    "categoryId": "serviceCategories/15",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 444,
     "serviceEnglish": "Closet organizer",
     "serviceSpanish": "Organizador de armarios",
-    "categoryID": "serviceCategories/15"
+    "categoryId": "serviceCategories/15",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 445,
     "serviceEnglish": "Furniture assembly",
     "serviceSpanish": "Ensamblaje de muebles",
-    "categoryID": "serviceCategories/15"
+    "categoryId": "serviceCategories/15",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 446,
     "serviceEnglish": "Home cleaning",
     "serviceSpanish": "Limpieza de hogar",
-    "categoryID": "serviceCategories/15"
+    "categoryId": "serviceCategories/15",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 447,
     "serviceEnglish": "House painting",
     "serviceSpanish": "Pintura de casas",
-    "categoryID": "serviceCategories/15"
+    "categoryId": "serviceCategories/15",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 448,
     "serviceEnglish": "Lawn mowing",
     "serviceSpanish": "Corte de césped",
-    "categoryID": "serviceCategories/15"
+    "categoryId": "serviceCategories/15",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 449,
     "serviceEnglish": "Property manager",
     "serviceSpanish": "Administrador de propiedades",
-    "categoryID": "serviceCategories/15"
+    "categoryId": "serviceCategories/15",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 450,
     "serviceEnglish": "Storage rental",
     "serviceSpanish": "Alquiler de almacenamiento",
-    "categoryID": "serviceCategories/15"
+    "categoryId": "serviceCategories/15",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 451,
     "serviceEnglish": "Storage solutions",
     "serviceSpanish": "Soluciones de almacenamiento",
-    "categoryID": "serviceCategories/15"
+    "categoryId": "serviceCategories/15",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 452,
     "serviceEnglish": "Bed and breakfast",
     "serviceSpanish": "Bed and breakfast",
-    "categoryID": "serviceCategories/16"
+    "categoryId": "serviceCategories/16",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 453,
     "serviceEnglish": "Bed and breakfast",
     "serviceSpanish": "Alojamiento y desayuno",
-    "categoryID": "serviceCategories/16"
+    "categoryId": "serviceCategories/16",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 454,
     "serviceEnglish": "Guesthouse rental",
     "serviceSpanish": "Alquiler de casa de huéspedes",
-    "categoryID": "serviceCategories/16"
+    "categoryId": "serviceCategories/16",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 455,
     "serviceEnglish": "Homestay hosting",
     "serviceSpanish": "Alojamiento en casa",
-    "categoryID": "serviceCategories/16"
+    "categoryId": "serviceCategories/16",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 456,
     "serviceEnglish": "Hostel accommodation",
     "serviceSpanish": "Alojamiento en hostal",
-    "categoryID": "serviceCategories/16"
+    "categoryId": "serviceCategories/16",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 457,
     "serviceEnglish": "Vacation rental",
     "serviceSpanish": "Alquiler de vacaciones",
-    "categoryID": "serviceCategories/16"
+    "categoryId": "serviceCategories/16",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 458,
     "serviceEnglish": "Waiter - waitress",
     "serviceSpanish": "Mesero",
-    "categoryID": "serviceCategories/16"
+    "categoryId": "serviceCategories/16",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 459,
     "serviceEnglish": "Waitstaff",
     "serviceSpanish": "Personal de servicio",
-    "categoryID": "serviceCategories/16"
+    "categoryId": "serviceCategories/16",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 460,
     "serviceEnglish": "App design",
     "serviceSpanish": "Diseño de aplicaciones",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 461,
     "serviceEnglish": "App development",
     "serviceSpanish": "Desarrollo de aplicaciones",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 462,
     "serviceEnglish": "Computer coding lessons",
     "serviceSpanish": "Clases de programación",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 463,
     "serviceEnglish": "Computer lessons",
     "serviceSpanish": "Clases de computación",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 464,
     "serviceEnglish": "Computer programmer",
     "serviceSpanish": "Programador de computadoras",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 465,
     "serviceEnglish": "Computer repair",
     "serviceSpanish": "Reparación de computadoras",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 466,
     "serviceEnglish": "Computer training",
     "serviceSpanish": "Entrenamiento en informática",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 467,
     "serviceEnglish": "Cybersecurity consultant",
     "serviceSpanish": "Consultor de ciberseguridad",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 468,
     "serviceEnglish": "Cybersecurity training",
     "serviceSpanish": "Entrenamiento de ciberseguridad",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 469,
     "serviceEnglish": "Data analyst",
     "serviceSpanish": "Analista de datos",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 470,
     "serviceEnglish": "Data entry",
     "serviceSpanish": "Entrada de datos",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 471,
     "serviceEnglish": "Data scientist",
     "serviceSpanish": "Científico de datos",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 472,
     "serviceEnglish": "Database administrator",
     "serviceSpanish": "Administrador de bases de datos",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 473,
     "serviceEnglish": "Electrical engineer",
     "serviceSpanish": "Ingeniero eléctrico",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 474,
     "serviceEnglish": "Environmental engineer",
     "serviceSpanish": "Ingeniero ambiental",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 475,
     "serviceEnglish": "Ethical hacking",
     "serviceSpanish": "Hacking ético",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 476,
     "serviceEnglish": "Game developer",
     "serviceSpanish": "Desarrollador de juegos",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 477,
     "serviceEnglish": "IT consultant",
     "serviceSpanish": "Consultor de TI",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 478,
     "serviceEnglish": "IT support",
     "serviceSpanish": "Soporte técnico de TI",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 479,
     "serviceEnglish": "Manufacturing engineer",
     "serviceSpanish": "Ingeniero de manufactura",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 480,
     "serviceEnglish": "Mechanical engineer",
     "serviceSpanish": "Ingeniero mecánico",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 481,
     "serviceEnglish": "Mobile app developer",
     "serviceSpanish": "Desarrollador de aplicaciones móviles",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 482,
     "serviceEnglish": "Mobile app testing",
     "serviceSpanish": "Pruebas de aplicaciones móviles",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 483,
     "serviceEnglish": "Mobile phone repair",
     "serviceSpanish": "Reparación de teléfonos móviles",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 484,
     "serviceEnglish": "Mobile repair",
     "serviceSpanish": "Reparación de dispositivos móviles",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 485,
     "serviceEnglish": "Remote IT support",
     "serviceSpanish": "Soporte remoto de TI",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 486,
     "serviceEnglish": "Software developer",
     "serviceSpanish": "Desarrollador de software",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 487,
     "serviceEnglish": "Software engineer",
     "serviceSpanish": "Ingeniero de software",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 488,
     "serviceEnglish": "Software testing",
     "serviceSpanish": "Pruebas de software",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 489,
     "serviceEnglish": "UX designer",
     "serviceSpanish": "Diseñador UX",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 490,
     "serviceEnglish": "Video editing",
     "serviceSpanish": "Edición de video",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 491,
     "serviceEnglish": "Video game developer",
     "serviceSpanish": "Desarrollador de videojuegos",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 492,
     "serviceEnglish": "Virtual reality developer",
     "serviceSpanish": "Desarrollador de realidad virtual",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 493,
     "serviceEnglish": "Web analytics",
     "serviceSpanish": "Analítica web",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 494,
     "serviceEnglish": "Web content writer",
     "serviceSpanish": "Redactor de contenido web",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 495,
     "serviceEnglish": "Web designer",
     "serviceSpanish": "Diseñador web",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 496,
     "serviceEnglish": "Web developer",
     "serviceSpanish": "Desarrollador web",
-    "categoryID": "serviceCategories/17"
+    "categoryId": "serviceCategories/17",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 497,
     "serviceEnglish": "Garden maintenance",
     "serviceSpanish": "Mantenimiento de jardines",
-    "categoryID": "serviceCategories/18"
+    "categoryId": "serviceCategories/18",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 498,
     "serviceEnglish": "Gardener",
     "serviceSpanish": "Jardinero",
-    "categoryID": "serviceCategories/18"
+    "categoryId": "serviceCategories/18",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 499,
     "serviceEnglish": "Greenhouse builder",
     "serviceSpanish": "Constructor de invernaderos",
-    "categoryID": "serviceCategories/18"
+    "categoryId": "serviceCategories/18",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 500,
     "serviceEnglish": "Irrigation system installation",
     "serviceSpanish": "Instalación de sistemas de riego",
-    "categoryID": "serviceCategories/18"
+    "categoryId": "serviceCategories/18",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 501,
     "serviceEnglish": "Landscape architect",
     "serviceSpanish": "Arquitecto paisajista",
-    "categoryID": "serviceCategories/18"
+    "categoryId": "serviceCategories/18",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 502,
     "serviceEnglish": "Landscape design",
     "serviceSpanish": "Diseño de paisajes",
-    "categoryID": "serviceCategories/18"
+    "categoryId": "serviceCategories/18",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 503,
     "serviceEnglish": "Landscaper",
     "serviceSpanish": "Paisajista",
-    "categoryID": "serviceCategories/18"
+    "categoryId": "serviceCategories/18",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 504,
     "serviceEnglish": "Outdoor lighting design",
     "serviceSpanish": "Diseño de iluminación exterior",
-    "categoryID": "serviceCategories/18"
+    "categoryId": "serviceCategories/18",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 505,
     "serviceEnglish": "Plant care",
     "serviceSpanish": "Cuidado de plantas",
-    "categoryID": "serviceCategories/18"
+    "categoryId": "serviceCategories/18",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 506,
     "serviceEnglish": "Pool cleaner",
     "serviceSpanish": "Limpiador de piscinas",
-    "categoryID": "serviceCategories/18"
+    "categoryId": "serviceCategories/18",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 507,
     "serviceEnglish": "Swimming pool maintenance",
     "serviceSpanish": "Mantenimiento de piscinas",
-    "categoryID": "serviceCategories/18"
+    "categoryId": "serviceCategories/18",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 508,
     "serviceEnglish": "Tree removal",
     "serviceSpanish": "Remoción de árboles",
-    "categoryID": "serviceCategories/18"
+    "categoryId": "serviceCategories/18",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 509,
     "serviceEnglish": "Tree trimming",
     "serviceSpanish": "Poda de árboles",
-    "categoryID": "serviceCategories/18"
+    "categoryId": "serviceCategories/18",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 510,
     "serviceEnglish": "Document translation",
     "serviceSpanish": "Traducción de documentos",
-    "categoryID": "serviceCategories/19"
+    "categoryId": "serviceCategories/19",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 511,
     "serviceEnglish": "Interpretation services",
     "serviceSpanish": "Servicios de interpretación",
-    "categoryID": "serviceCategories/19"
+    "categoryId": "serviceCategories/19",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 512,
     "serviceEnglish": "Interpreter",
     "serviceSpanish": "Intérprete",
-    "categoryID": "serviceCategories/19"
+    "categoryId": "serviceCategories/19",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 513,
     "serviceEnglish": "Language exchange",
     "serviceSpanish": "Intercambio de idiomas",
-    "categoryID": "serviceCategories/19"
+    "categoryId": "serviceCategories/19",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 514,
     "serviceEnglish": "Language interpreter",
     "serviceSpanish": "Intérprete de idiomas",
-    "categoryID": "serviceCategories/19"
+    "categoryId": "serviceCategories/19",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 515,
     "serviceEnglish": "Language lessons",
     "serviceSpanish": "Clases de idiomas",
-    "categoryID": "serviceCategories/19"
+    "categoryId": "serviceCategories/19",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 516,
     "serviceEnglish": "Language localization",
     "serviceSpanish": "Localización de idiomas",
-    "categoryID": "serviceCategories/19"
+    "categoryId": "serviceCategories/19",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 517,
     "serviceEnglish": "Language transcription",
     "serviceSpanish": "Transcripción de idiomas",
-    "categoryID": "serviceCategories/19"
+    "categoryId": "serviceCategories/19",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 518,
     "serviceEnglish": "Language tutor",
     "serviceSpanish": "Tutor de idiomas",
-    "categoryID": "serviceCategories/19"
+    "categoryId": "serviceCategories/19",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 519,
     "serviceEnglish": "Language tutoring",
     "serviceSpanish": "Tutoría de idiomas",
-    "categoryID": "serviceCategories/19"
+    "categoryId": "serviceCategories/19",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 520,
     "serviceEnglish": "Online language lessons",
     "serviceSpanish": "Clases de idiomas en línea",
-    "categoryID": "serviceCategories/19"
+    "categoryId": "serviceCategories/19",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 521,
     "serviceEnglish": "Public speaking coach",
     "serviceSpanish": "Coach de oratoria",
-    "categoryID": "serviceCategories/19"
+    "categoryId": "serviceCategories/19",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 522,
     "serviceEnglish": "Sign language interpreter",
     "serviceSpanish": "Intérprete de lenguaje de señas",
-    "categoryID": "serviceCategories/19"
+    "categoryId": "serviceCategories/19",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 523,
     "serviceEnglish": "Translation services",
     "serviceSpanish": "Servicios de traducción",
-    "categoryID": "serviceCategories/19"
+    "categoryId": "serviceCategories/19",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 524,
     "serviceEnglish": "Bankruptcy lawyer",
     "serviceSpanish": "Abogado de bancarrota",
-    "categoryID": "serviceCategories/20"
+    "categoryId": "serviceCategories/20",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 525,
     "serviceEnglish": "Business lawyer",
     "serviceSpanish": "Abogado de negocios",
-    "categoryID": "serviceCategories/20"
+    "categoryId": "serviceCategories/20",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 526,
     "serviceEnglish": "Construction lawyer",
     "serviceSpanish": "Abogado de construcción",
-    "categoryID": "serviceCategories/20"
+    "categoryId": "serviceCategories/20",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 527,
     "serviceEnglish": "Corporate lawyer",
     "serviceSpanish": "Abogado corporativo",
-    "categoryID": "serviceCategories/20"
+    "categoryId": "serviceCategories/20",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 528,
     "serviceEnglish": "Court interpreter",
     "serviceSpanish": "Intérprete de tribunal",
-    "categoryID": "serviceCategories/20"
+    "categoryId": "serviceCategories/20",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 529,
     "serviceEnglish": "Court reporter",
     "serviceSpanish": "Taquígrafo",
-    "categoryID": "serviceCategories/20"
+    "categoryId": "serviceCategories/20",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 530,
     "serviceEnglish": "Family lawyer",
     "serviceSpanish": "Abogado de familia",
-    "categoryID": "serviceCategories/20"
+    "categoryId": "serviceCategories/20",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 531,
     "serviceEnglish": "Lawyer",
     "serviceSpanish": "Abogado",
-    "categoryID": "serviceCategories/20"
+    "categoryId": "serviceCategories/20",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 532,
     "serviceEnglish": "Legal consultant",
     "serviceSpanish": "Consultor legal",
-    "categoryID": "serviceCategories/20"
+    "categoryId": "serviceCategories/20",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 533,
     "serviceEnglish": "Private investigator",
     "serviceSpanish": "Investigador privado",
-    "categoryID": "serviceCategories/20"
+    "categoryId": "serviceCategories/20",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 534,
     "serviceEnglish": "Traffic lawyer",
     "serviceSpanish": "Abogado de tráfico",
-    "categoryID": "serviceCategories/20"
+    "categoryId": "serviceCategories/20",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 535,
     "serviceEnglish": "Product tester",
     "serviceSpanish": "Probador de productos",
-    "categoryID": "serviceCategories/21"
+    "categoryId": "serviceCategories/21",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 536,
     "serviceEnglish": "Professional decluttering",
     "serviceSpanish": "Despeje profesional",
-    "categoryID": "serviceCategories/21"
+    "categoryId": "serviceCategories/21",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 537,
     "serviceEnglish": "Call center services",
     "serviceSpanish": "Servicios de centro de llamadas",
-    "categoryID": "serviceCategories/22"
+    "categoryId": "serviceCategories/22",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 538,
     "serviceEnglish": "Human resources consultant",
     "serviceSpanish": "Consultor de recursos humanos",
-    "categoryID": "serviceCategories/22"
+    "categoryId": "serviceCategories/22",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 539,
     "serviceEnglish": "Human resources manager",
     "serviceSpanish": "Gerente de recursos humanos",
-    "categoryID": "serviceCategories/22"
+    "categoryId": "serviceCategories/22",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 540,
     "serviceEnglish": "Janitor",
     "serviceSpanish": "Conserje",
-    "categoryID": "serviceCategories/22"
+    "categoryId": "serviceCategories/22",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 541,
     "serviceEnglish": "Office assistant",
     "serviceSpanish": "Asistente de oficina",
-    "categoryID": "serviceCategories/22"
+    "categoryId": "serviceCategories/22",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 542,
     "serviceEnglish": "Office cleaning",
     "serviceSpanish": "Limpieza de oficinas",
-    "categoryID": "serviceCategories/22"
+    "categoryId": "serviceCategories/22",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 543,
     "serviceEnglish": "Online tutoring",
     "serviceSpanish": "Tutorías en línea",
-    "categoryID": "serviceCategories/22"
+    "categoryId": "serviceCategories/22",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 544,
     "serviceEnglish": "Personal assistant",
     "serviceSpanish": "Asistente personal",
-    "categoryID": "serviceCategories/22"
+    "categoryId": "serviceCategories/22",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 545,
     "serviceEnglish": "Professional organizer",
     "serviceSpanish": "Organizador profesional",
-    "categoryID": "serviceCategories/22"
+    "categoryId": "serviceCategories/22",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 546,
     "serviceEnglish": "Transcriptionist",
     "serviceSpanish": "Transcriptor",
-    "categoryID": "serviceCategories/22"
+    "categoryId": "serviceCategories/22",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 547,
     "serviceEnglish": "Virtual assistant",
     "serviceSpanish": "Asistente virtual",
-    "categoryID": "serviceCategories/22"
+    "categoryId": "serviceCategories/22",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 548,
     "serviceEnglish": "Concierge",
     "serviceSpanish": "Conserje",
-    "categoryID": "serviceCategories/23"
+    "categoryId": "serviceCategories/23",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 549,
     "serviceEnglish": "Image consulting",
     "serviceSpanish": "Asesoramiento de imagen",
-    "categoryID": "serviceCategories/23"
+    "categoryId": "serviceCategories/23",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 550,
     "serviceEnglish": "Life coaching",
     "serviceSpanish": "Coaching de vida",
-    "categoryID": "serviceCategories/23"
+    "categoryId": "serviceCategories/23",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 551,
     "serviceEnglish": "Personal concierge",
     "serviceSpanish": "Conserje personal",
-    "categoryID": "serviceCategories/23"
+    "categoryId": "serviceCategories/23",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 552,
     "serviceEnglish": "Personal shopper",
     "serviceSpanish": "Comprador personal",
-    "categoryID": "serviceCategories/23"
+    "categoryId": "serviceCategories/23",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 553,
     "serviceEnglish": "Personal styling",
     "serviceSpanish": "Estilismo personal",
-    "categoryID": "serviceCategories/23"
+    "categoryId": "serviceCategories/23",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 554,
     "serviceEnglish": "Personal training",
     "serviceSpanish": "Entrenamiento personal",
-    "categoryID": "serviceCategories/23"
+    "categoryId": "serviceCategories/23",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 555,
     "serviceEnglish": "Virtual assistant",
     "serviceSpanish": "Asistente virtual",
-    "categoryID": "serviceCategories/23"
+    "categoryId": "serviceCategories/23",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 556,
     "serviceEnglish": "Animal control",
     "serviceSpanish": "Control de animales",
-    "categoryID": "serviceCategories/24"
+    "categoryId": "serviceCategories/24",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 557,
     "serviceEnglish": "Animal trainer",
     "serviceSpanish": "Entrenador de animales",
-    "categoryID": "serviceCategories/24"
+    "categoryId": "serviceCategories/24",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 558,
     "serviceEnglish": "Aquarium services",
     "serviceSpanish": "Servicios de acuarios",
-    "categoryID": "serviceCategories/24"
+    "categoryId": "serviceCategories/24",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 559,
     "serviceEnglish": "Dog agility training",
     "serviceSpanish": "Entrenamiento de agilidad para perros",
-    "categoryID": "serviceCategories/24"
+    "categoryId": "serviceCategories/24",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 560,
     "serviceEnglish": "Dog boarding",
     "serviceSpanish": "Hospedaje de perros",
-    "categoryID": "serviceCategories/24"
+    "categoryId": "serviceCategories/24",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 561,
     "serviceEnglish": "Dog breeder",
     "serviceSpanish": "Criador de perros",
-    "categoryID": "serviceCategories/24"
+    "categoryId": "serviceCategories/24",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 562,
     "serviceEnglish": "Dog daycare",
     "serviceSpanish": "Guardería de perros",
-    "categoryID": "serviceCategories/24"
+    "categoryId": "serviceCategories/24",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 563,
     "serviceEnglish": "Dog grooming",
     "serviceSpanish": "Aseo de perros",
-    "categoryID": "serviceCategories/24"
+    "categoryId": "serviceCategories/24",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 564,
     "serviceEnglish": "Dog trainer",
     "serviceSpanish": "Entrenador de perros",
-    "categoryID": "serviceCategories/24"
+    "categoryId": "serviceCategories/24",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 565,
     "serviceEnglish": "Dog walker",
     "serviceSpanish": "Paseador de perros",
-    "categoryID": "serviceCategories/24"
+    "categoryId": "serviceCategories/24",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 566,
     "serviceEnglish": "Naturalist",
     "serviceSpanish": "Naturalista",
-    "categoryID": "serviceCategories/24"
+    "categoryId": "serviceCategories/24",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 567,
     "serviceEnglish": "Pet adoption",
     "serviceSpanish": "Adopción de mascotas",
-    "categoryID": "serviceCategories/24"
+    "categoryId": "serviceCategories/24",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 568,
     "serviceEnglish": "Pet boarding",
     "serviceSpanish": "Hospedaje de mascotas",
-    "categoryID": "serviceCategories/24"
+    "categoryId": "serviceCategories/24",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 569,
     "serviceEnglish": "Pet groomer",
     "serviceSpanish": "Peluquero de mascotas",
-    "categoryID": "serviceCategories/24"
+    "categoryId": "serviceCategories/24",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 570,
     "serviceEnglish": "Pet sitter",
     "serviceSpanish": "Cuidador de mascotas",
-    "categoryID": "serviceCategories/24"
+    "categoryId": "serviceCategories/24",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 571,
     "serviceEnglish": "Pet trainer",
     "serviceSpanish": "Entrenador de mascotas",
-    "categoryID": "serviceCategories/24"
+    "categoryId": "serviceCategories/24",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 572,
     "serviceEnglish": "Zookeeper",
     "serviceSpanish": "Cuidador de zoológico",
-    "categoryID": "serviceCategories/24"
+    "categoryId": "serviceCategories/24",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 573,
     "serviceEnglish": "Business consulting",
     "serviceSpanish": "Consultoría empresarial",
-    "categoryID": "serviceCategories/25"
+    "categoryId": "serviceCategories/25",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 574,
     "serviceEnglish": "Drone pilot",
     "serviceSpanish": "Piloto de drones",
-    "categoryID": "serviceCategories/25"
+    "categoryId": "serviceCategories/25",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 575,
     "serviceEnglish": "Financial planning",
     "serviceSpanish": "Planificación financiera",
-    "categoryID": "serviceCategories/25"
+    "categoryId": "serviceCategories/25",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 576,
     "serviceEnglish": "Forensic scientist",
     "serviceSpanish": "Científico forense",
-    "categoryID": "serviceCategories/25"
+    "categoryId": "serviceCategories/25",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 577,
     "serviceEnglish": "Legal consultation",
     "serviceSpanish": "Consulta legal",
-    "categoryID": "serviceCategories/25"
+    "categoryId": "serviceCategories/25",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 578,
     "serviceEnglish": "Marketing strategy",
     "serviceSpanish": "Estrategia de marketing",
-    "categoryID": "serviceCategories/25"
+    "categoryId": "serviceCategories/25",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 579,
     "serviceEnglish": "Mobile notary",
     "serviceSpanish": "Notario móvil",
-    "categoryID": "serviceCategories/25"
+    "categoryId": "serviceCategories/25",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 580,
     "serviceEnglish": "Social worker",
     "serviceSpanish": "Trabajador social",
-    "categoryID": "serviceCategories/25"
+    "categoryId": "serviceCategories/25",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 581,
     "serviceEnglish": "Tax preparation",
     "serviceSpanish": "Preparación de impuestos",
-    "categoryID": "serviceCategories/25"
+    "categoryId": "serviceCategories/25",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 582,
     "serviceEnglish": "Bodyguard",
     "serviceSpanish": "Guardaespaldas",
-    "categoryID": "serviceCategories/26"
+    "categoryId": "serviceCategories/26",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 583,
     "serviceEnglish": "Emergency response services",
     "serviceSpanish": "Servicios de respuesta de emergencia",
-    "categoryID": "serviceCategories/26"
+    "categoryId": "serviceCategories/26",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 584,
     "serviceEnglish": "Firefighter",
     "serviceSpanish": "Bombero",
-    "categoryID": "serviceCategories/26"
+    "categoryId": "serviceCategories/26",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 585,
     "serviceEnglish": "Private investigation",
     "serviceSpanish": "Investigación privada",
-    "categoryID": "serviceCategories/26"
+    "categoryId": "serviceCategories/26",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 586,
     "serviceEnglish": "Security consultation",
     "serviceSpanish": "Consultoría de seguridad",
-    "categoryID": "serviceCategories/26"
+    "categoryId": "serviceCategories/26",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 587,
     "serviceEnglish": "Security guard",
     "serviceSpanish": "Guardia de seguridad",
-    "categoryID": "serviceCategories/26"
+    "categoryId": "serviceCategories/26",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 588,
     "serviceEnglish": "Security guard services",
     "serviceSpanish": "Servicios de guardia de seguridad",
-    "categoryID": "serviceCategories/26"
+    "categoryId": "serviceCategories/26",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 589,
     "serviceEnglish": "Security system installation",
     "serviceSpanish": "Instalación de sistemas de seguridad",
-    "categoryID": "serviceCategories/26"
+    "categoryId": "serviceCategories/26",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 590,
     "serviceEnglish": "Adventure tourism",
     "serviceSpanish": "Turismo de aventura",
-    "categoryID": "serviceCategories/27"
+    "categoryId": "serviceCategories/27",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 591,
     "serviceEnglish": "Cruise booking",
     "serviceSpanish": "Reserva de cruceros",
-    "categoryID": "serviceCategories/27"
+    "categoryId": "serviceCategories/27",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 592,
     "serviceEnglish": "Guesthouse",
     "serviceSpanish": "Casa de huéspedes",
-    "categoryID": "serviceCategories/27"
+    "categoryId": "serviceCategories/27",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 593,
     "serviceEnglish": "Hotel booking",
     "serviceSpanish": "Reserva de hoteles",
-    "categoryID": "serviceCategories/27"
+    "categoryId": "serviceCategories/27",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 594,
     "serviceEnglish": "Limousine service",
     "serviceSpanish": "Servicio de limusina",
-    "categoryID": "serviceCategories/27"
+    "categoryId": "serviceCategories/27",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 595,
     "serviceEnglish": "Packing services",
     "serviceSpanish": "Servicios de embalaje",
-    "categoryID": "serviceCategories/27"
+    "categoryId": "serviceCategories/27",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 596,
     "serviceEnglish": "Tour guide",
     "serviceSpanish": "Guía turístico",
-    "categoryID": "serviceCategories/27"
+    "categoryId": "serviceCategories/27",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 597,
     "serviceEnglish": "Tour guide services",
     "serviceSpanish": "Servicios de guía turística",
-    "categoryID": "serviceCategories/27"
+    "categoryId": "serviceCategories/27",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 598,
     "serviceEnglish": "Tour operator",
     "serviceSpanish": "Operador turístico",
-    "categoryID": "serviceCategories/27"
+    "categoryId": "serviceCategories/27",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 599,
     "serviceEnglish": "Travel agent",
     "serviceSpanish": "Agente de viajes",
-    "categoryID": "serviceCategories/27"
+    "categoryId": "serviceCategories/27",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 600,
     "serviceEnglish": "Travel blogger",
     "serviceSpanish": "Blogger de viajes",
-    "categoryID": "serviceCategories/27"
+    "categoryId": "serviceCategories/27",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 601,
     "serviceEnglish": "Travel photographer",
     "serviceSpanish": "Fotógrafo de viajes",
-    "categoryID": "serviceCategories/27"
+    "categoryId": "serviceCategories/27",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 602,
     "serviceEnglish": "Travel planning",
     "serviceSpanish": "Planificación de viajes",
-    "categoryID": "serviceCategories/27"
+    "categoryId": "serviceCategories/27",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 603,
     "serviceEnglish": "Content creation",
     "serviceSpanish": "Creación de contenido",
-    "categoryID": "serviceCategories/28"
+    "categoryId": "serviceCategories/28",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 604,
     "serviceEnglish": "Copywriting",
     "serviceSpanish": "Redacción",
-    "categoryID": "serviceCategories/28"
+    "categoryId": "serviceCategories/28",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 605,
     "serviceEnglish": "Editing and proofreading",
     "serviceSpanish": "Edición y corrección",
-    "categoryID": "serviceCategories/28"
+    "categoryId": "serviceCategories/28",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 606,
     "serviceEnglish": "Freelance writer",
     "serviceSpanish": "Escritor independiente",
-    "categoryID": "serviceCategories/28"
+    "categoryId": "serviceCategories/28",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 607,
     "serviceEnglish": "Ghostwriter",
     "serviceSpanish": "Escritor fantasma",
-    "categoryID": "serviceCategories/28"
+    "categoryId": "serviceCategories/28",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 608,
     "serviceEnglish": "Localization services",
     "serviceSpanish": "Servicios de localización",
-    "categoryID": "serviceCategories/28"
+    "categoryId": "serviceCategories/28",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 609,
     "serviceEnglish": "Screenwriter",
     "serviceSpanish": "Guionista de cine",
-    "categoryID": "serviceCategories/28"
+    "categoryId": "serviceCategories/28",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 610,
     "serviceEnglish": "Scriptwriter",
     "serviceSpanish": "Guionista",
-    "categoryID": "serviceCategories/28"
+    "categoryId": "serviceCategories/28",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 611,
     "serviceEnglish": "Transcription services",
     "serviceSpanish": "Servicios de transcripción",
-    "categoryID": "serviceCategories/28"
+    "categoryId": "serviceCategories/28",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 612,
     "serviceEnglish": "Translation services",
     "serviceSpanish": "Servicios de traducción",
-    "categoryID": "serviceCategories/28"
+    "categoryId": "serviceCategories/28",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   },
   {
     "serviceId": 613,
     "serviceEnglish": "Translator",
     "serviceSpanish": "Traductor",
-    "categoryID": "serviceCategories/28"
+    "categoryId": "serviceCategories/28",
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
   }
 ]

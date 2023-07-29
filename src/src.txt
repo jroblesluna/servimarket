@@ -293,14 +293,110 @@ const styles = StyleSheet.create({
 
 export default PrivateZoneDrawer;
 Archivo /screens/PrivateZone/ServiMarket.js:
-import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {View, StyleSheet, Text, Image, FlatList} from 'react-native';
+import firestore from '@react-native-firebase/firestore';
 
-function PrivateZone() {
+function ServiMarket() {
+  const [services, setServices] = useState([]);
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const categoriesSnapshot = await firestore()
+          .collection('serviceCategories')
+          .get();
+        const categoriesData = categoriesSnapshot.docs.map(doc => doc.data());
+        setCategories(categoriesData);
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
+  useEffect(() => {
+    const fetchServicesData = async () => {
+      try {
+        const servicesQuerySnapshot = await firestore()
+          .collection('services')
+          .limit(5)
+          .get();
+        const combinedServicesWithCategories = servicesQuerySnapshot.docs.map(
+          async serviceDocument => {
+            const serviceDocumentData = serviceDocument.data();
+            if (serviceDocumentData.serviceCategory) {
+              const serviceCategoryId = serviceDocumentData.serviceCategory.id;
+              const parsedServiceCategoryId = parseInt(serviceCategoryId, 10); // Convertir a entero
+              const serviceCategory = categories.find(
+                category =>
+                  category.serviceCategoryId === parsedServiceCategoryId,
+              );
+              return {
+                ...serviceDocumentData,
+                serviceCategory,
+              };
+            } else {
+              return serviceDocumentData;
+            }
+          },
+        );
+        const servicesWithCategories = await Promise.all(
+          combinedServicesWithCategories,
+        );
+        setServices(servicesWithCategories);
+      } catch (error) {
+        console.error('Error fetching services data:', error);
+      }
+    };
+
+    fetchServicesData();
+  }, [categories]);
+
+  const renderServiceItem = ({item}) => (
+    <View style={styles.serviceItemContainer}>
+      <Image source={{uri: item.imageUrl}} style={styles.serviceImage} />
+      <View style={styles.overlay} />
+      <View style={styles.textContainer}>
+        <Text style={styles.serviceText}>{item.serviceEnglish}</Text>
+        {item.serviceCategory && (
+          <Text style={styles.categoryText}>
+            {item.serviceCategory.serviceCategoryEnglish}
+          </Text>
+        )}
+      </View>
+    </View>
+  );
+
   return (
     <View style={styles.container}>
-      <Text>Welcome to the Private Zone Screen!</Text>
-      {/* Agregar más componentes y contenido aquí */}
+      <Text style={styles.title}>Estoy buscando</Text>
+      <View style={styles.servicesView}>
+        <FlatList
+          data={services}
+          renderItem={renderServiceItem}
+          keyExtractor={item => item.serviceId.toString()}
+          showsHorizontalScrollIndicator={true}
+          horizontal
+        />
+      </View>
+      <Text style={styles.title}>Texto 1</Text>
+      <Text style={styles.title}>Texto 2</Text>
+      <Text style={styles.title}>Texto 3</Text>
+      <Text style={styles.title}>Texto 4</Text>
+      <Text style={styles.title}>Texto 5</Text>
+      <Text style={styles.title}>Texto 6</Text>
+      <Text style={styles.title}>Texto 7</Text>
+      <Text style={styles.title}>Texto 8</Text>
+      <Text style={styles.title}>Texto 9</Text>
+      <Text style={styles.title}>Texto 10</Text>
+      <Text style={styles.title}>Texto 11</Text>
+      <Text style={styles.title}>Texto 12</Text>
+      <Text style={styles.title}>Texto 13</Text>
+      <Text style={styles.title}>Texto 14</Text>
+      <Text style={styles.title}>Texto 15</Text>
     </View>
   );
 }
@@ -308,12 +404,67 @@ function PrivateZone() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingHorizontal: 16,
+    backgroundColor: '#f0a',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 16,
+  },
+  servicesView: {
+    //backgroundColor: '#032',
+    height: 150,
+  },
+  serviceItemContainer: {
+    position: 'relative',
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginRight: 10,
+    height: 150,
+  },
+  serviceImage: {
+    width: 225,
+    height: 150,
+    borderRadius: 15,
+  },
+  textContainer: {
+    position: 'absolute',
+    width: 225,
+    height: 150,
     justifyContent: 'center',
     alignItems: 'center',
+    padding: 10,
+    zIndex: 2,
+  },
+  overlay: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'black',
+    opacity: 0.5,
+    borderRadius: 15,
+    zIndex: 1,
+  },
+  serviceText: {
+    position: 'absolute',
+    top: 10,
+    left: 10,
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: 'white',
+  },
+  categoryText: {
+    position: 'absolute',
+    bottom: 10,
+    right: 10,
+    fontSize: 20,
+    color: '#A8C5F3',
+    textAlign: 'right',
   },
 });
 
-export default PrivateZone;
+export default ServiMarket;
 Archivo /screens/PublicZone/Login.js:
 import React, {useEffect, useRef, useState} from 'react';
 import {
@@ -332,6 +483,7 @@ import {
 import auth from '@react-native-firebase/auth';
 import CustomImage from '../../components/CustomImage';
 import {useRoute} from '@react-navigation/native';
+import firestore from '@react-native-firebase/firestore';
 
 GoogleSignin.configure({
   webClientId:
@@ -345,7 +497,7 @@ function Login() {
   const navigation = useNavigation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isLoggingIn, setIsLoggingIn] = useState(false); // Estado para controlar el botón de inicio de sesión
+  const [isLoggingIn, setIsLoggingIn] = useState(false);
   const emailInputRef = useRef(null);
   const passwordInputRef = useRef(null);
 
@@ -390,13 +542,36 @@ function Login() {
       );
       const googleCredential = auth.GoogleAuthProvider.credential(idToken);
       console.log('5. await auth().signInWithCredential(googleCredential);');
-      await auth().signInWithCredential(googleCredential);
-      console.log('6. navigation.navigate(PrivateZone);');
+      const googleUser = await auth().signInWithCredential(googleCredential);
+
+      console.log('6. Firestore', googleUser);
+
+      const userRef = firestore()
+        .collection('users')
+        .doc(googleUser.user.email);
+      console.log('userRef', userRef);
+      const userDoc = await userRef.get();
+      console.log('userDoc', userDoc);
+
+      if (userDoc.exists) {
+        console.log('El documento del usuario ya existe en Firestore');
+      } else {
+        console.log('Creando documento del usuario en Firestore');
+        await firestore().collection('users').doc(googleUser.user.email).set({
+          email: googleUser.user.email,
+          displayName: googleUser.user.displayName,
+          givenName: googleUser.additionalUserInfo.profile.given_name,
+          familyName: googleUser.additionalUserInfo.profile.family_name,
+          photoURL: googleUser.user.photoURL,
+        });
+      }
+
+      console.log('7. navigation.navigate(PrivateZone);');
       navigation.navigate('PrivateZone');
     } catch (error) {
-      console.log('7. Error', error.message);
+      console.log('8. Error', error.message);
     } finally {
-      console.log('8. HABILITANDO...');
+      console.log('9. HABILITANDO...');
       setIsLoggingIn(false);
     }
   };
@@ -406,13 +581,13 @@ function Login() {
 
     if (email === '' || password === '') {
       Alert.alert('Error', 'Por favor, completa todos los campos');
-      emailInputRef.current.focus(); // Posicionar el cursor en el campo de correo electrónico
+      emailInputRef.current.focus();
       return;
     }
 
     try {
       console.log('Deshabilitando...');
-      setIsLoggingIn(true); // Deshabilitar el botón de inicio de sesión
+      setIsLoggingIn(true);
       const {user} = await auth().signInWithEmailAndPassword(email, password);
       console.log('Logged In...');
       if (user && !user.emailVerified) {
@@ -420,7 +595,7 @@ function Login() {
           'Email no verificado',
           'Por favor, verifica tu correo electrónico antes de iniciar sesión.',
         );
-        setIsLoggingIn(false); // Habilitar el botón de inicio de sesión
+        setIsLoggingIn(false);
         return;
       }
       navigation.navigate('PrivateZone');
@@ -431,15 +606,13 @@ function Login() {
         case 'auth/invalid-email':
           errorMessage = 'Email inválido';
           setEmail('');
-          emailInputRef.current.focus(); // Posicionar el cursor en el campo de correo electrónico
+          emailInputRef.current.focus();
           break;
         case 'auth/user-not-found':
         case 'auth/wrong-password':
-          //errorMessage = 'Usuario no encontrado';
-          //break;
           errorMessage = 'Combinación de usuario y clave incorrecta';
           setPassword('');
-          passwordInputRef.current.focus(); // Posicionar el cursor en el campo de correo electrónico
+          passwordInputRef.current.focus();
           break;
         default:
           errorMessage = error.message;
@@ -448,14 +621,14 @@ function Login() {
       Alert.alert('Error', errorMessage);
     } finally {
       console.log('Habilitando...');
-      setIsLoggingIn(false); // Habilitar el botón de inicio de sesión
+      setIsLoggingIn(false);
     }
   };
 
   const handleEmailSignUp = () => {
     try {
       console.log('Deshabilitando');
-      setIsLoggingIn(false); // Habilitar el botón de inicio de sesión
+      setIsLoggingIn(false);
       navigation.navigate('SignUp');
     } catch (error) {
       Alert.alert('Error', error.message);
@@ -463,7 +636,7 @@ function Login() {
       setEmail('');
       setPassword('');
       console.log('Habilitando');
-      setIsLoggingIn(false); // Habilitar el botón de inicio de sesión
+      setIsLoggingIn(false);
     }
   };
 
@@ -483,7 +656,7 @@ function Login() {
         placeholder="Correo electrónico"
         value={email}
         onChangeText={text => setEmail(text)}
-        ref={emailInputRef} // Asignar la referencia al campo de correo electrónico
+        ref={emailInputRef}
       />
 
       <TextInput
@@ -499,11 +672,10 @@ function Login() {
           style={[
             styles.classicButton,
             styles.signInClassicButton,
-            isLoggingIn && styles.disabledButton, // Aplicar estilo de botón deshabilitado cuando isLoggingIn es true
+            isLoggingIn && styles.disabledButton,
           ]}
           onPress={() => handleEmailSignIn()}
-          disabled={isLoggingIn} // Deshabilitar el botón mientras se está realizando el inicio de sesión
-        >
+          disabled={isLoggingIn}>
           <Text style={styles.classicButtonText}>Iniciar sesión</Text>
         </TouchableOpacity>
 
