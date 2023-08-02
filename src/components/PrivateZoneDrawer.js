@@ -4,6 +4,8 @@ import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 import {View, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import ServiMarket from '../screens/PrivateZone/ServiMarket';
+import SearchServices from '../screens/PrivateZone/SearchServices';
+import ServiceInstantSearch from '../screens/PrivateZone/ServiceInstantSearch';
 import MyProfile from '../screens/PrivateZone/MyProfile';
 import MyServices from '../screens/PrivateZone/MyServices';
 import MyAppointments from '../screens/PrivateZone/MyAppointments';
@@ -31,6 +33,18 @@ const CustomDrawerContent = ({handleSignOut, user, navigation}) => {
         label="ServiMarket"
         labelStyle={styles.drawerItemLabelStyle}
         onPress={() => navigation.navigate('ServiMarket')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="Search Services"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('SearchServices')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="Service Instant Search"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('ServiceInstantSearch')}
       />
       <DrawerItem
         style={styles.drawerItemStyle}
@@ -113,6 +127,8 @@ function PrivateZoneDrawer({handleSignOut, user, navigation}) {
       )}>
       <Drawer.Screen name="MyProfile" component={MyProfile} />
       <Drawer.Screen name="ServiMarket" component={ServiMarket} />
+      <Drawer.Screen name="SearchServices" component={SearchServices} />
+      <Drawer.Screen name="ServiceInstantSearch" component={ServiceInstantSearch} />
       <Drawer.Screen name="MyServices" component={MyServices} />
       <Drawer.Screen name="MyAppointments" component={MyAppointments} />
       <Drawer.Screen name="ViewHistory" component={ViewHistory} />

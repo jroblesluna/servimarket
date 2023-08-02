@@ -145,6 +145,8 @@ import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 import {View, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import ServiMarket from '../screens/PrivateZone/ServiMarket';
+import SearchServices from '../screens/PrivateZone/SearchServices';
+import ServiceInstantSearch from '../screens/PrivateZone/ServiceInstantSearch';
 import MyProfile from '../screens/PrivateZone/MyProfile';
 import MyServices from '../screens/PrivateZone/MyServices';
 import MyAppointments from '../screens/PrivateZone/MyAppointments';
@@ -172,6 +174,18 @@ const CustomDrawerContent = ({handleSignOut, user, navigation}) => {
         label="ServiMarket"
         labelStyle={styles.drawerItemLabelStyle}
         onPress={() => navigation.navigate('ServiMarket')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="Search Services"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('SearchServices')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="Service Instant Search"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('ServiceInstantSearch')}
       />
       <DrawerItem
         style={styles.drawerItemStyle}
@@ -254,6 +268,8 @@ function PrivateZoneDrawer({handleSignOut, user, navigation}) {
       )}>
       <Drawer.Screen name="MyProfile" component={MyProfile} />
       <Drawer.Screen name="ServiMarket" component={ServiMarket} />
+      <Drawer.Screen name="SearchServices" component={SearchServices} />
+      <Drawer.Screen name="ServiceInstantSearch" component={ServiceInstantSearch} />
       <Drawer.Screen name="MyServices" component={MyServices} />
       <Drawer.Screen name="MyAppointments" component={MyAppointments} />
       <Drawer.Screen name="ViewHistory" component={ViewHistory} />
@@ -292,10 +308,135 @@ const styles = StyleSheet.create({
 });
 
 export default PrivateZoneDrawer;
-Archivo /screens/PrivateZone/ServiMarket.js:
+Archivo /components/Highlight.js:
+import React from 'react';
+import { Text } from 'react-native';
+import PropTypes from 'prop-types';
+import { connectHighlight } from 'react-instantsearch-native';
+
+const Highlight = ({ attribute, hit, highlight }) => {
+  const highlights = highlight({
+    highlightProperty: '_highlightResult',
+    attribute,
+    hit,
+  });
+
+  return (
+    <Text>
+      {highlights.map(({ value, isHighlighted }, index) => {
+        const style = {
+          backgroundColor: isHighlighted ? 'yellow' : 'transparent',
+        };
+
+        return (
+          <Text key={index} style={style}>
+            {value}
+          </Text>
+        );
+      })}
+    </Text>
+  );
+};
+
+Highlight.propTypes = {
+  attribute: PropTypes.string.isRequired,
+  hit: PropTypes.object.isRequired,
+  highlight: PropTypes.func.isRequired,
+};
+
+export default connectHighlight(Highlight);Archivo /components/InfiniteHits.js:
+import React from 'react';
+import {StyleSheet, Text, View, FlatList} from 'react-native';
+import PropTypes from 'prop-types';
+import {connectInfiniteHits} from 'react-instantsearch-native';
+import Highlight from './Highlight';
+
+const styles = StyleSheet.create({
+  separator: {
+    borderBottomWidth: 1,
+    borderColor: '#ddd',
+  },
+  item: {
+    padding: 10,
+    flexDirection: 'column',
+    backgroundColor: 'coral',
+  },
+  titleText: {
+    fontWeight: 'bold',
+  },
+});
+
+const InfiniteHits = ({hits, hasMore, refineNext}) => (
+  <FlatList
+    data={hits}
+    keyExtractor={item => item.objectID}
+    ItemSeparatorComponent={() => <View style={styles.separator} />}
+    onEndReached={() => hasMore && refineNext()}
+    renderItem={({item}) => (
+      <View style={styles.item}>
+        <Text style={styles.titleText}>
+          {item.serviceEnglish}
+          <Highlight attribute="name" hit={item} />
+        </Text>
+      </View>
+    )}
+  />
+);
+
+InfiniteHits.propTypes = {
+  hits: PropTypes.arrayOf(PropTypes.object).isRequired,
+  hasMore: PropTypes.bool.isRequired,
+  refineNext: PropTypes.func.isRequired,
+};
+
+export default connectInfiniteHits(InfiniteHits);
+Archivo /components/SearchBox.js:
+import React from 'react';
+import {StyleSheet, View, TextInput} from 'react-native';
+import PropTypes from 'prop-types';
+import {connectSearchBox} from 'react-instantsearch-native';
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 16,
+    backgroundColor: 'coral',
+  },
+  input: {
+    height: 48,
+    padding: 12,
+    fontSize: 16,
+    backgroundColor: '#fff',
+    borderRadius: 4,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+  },
+});
+
+const SearchBox = ({currentRefinement, refine}) => (
+  <View style={styles.container}>
+    <TextInput
+      style={styles.input}
+      onChangeText={value => refine(value)}
+      value={currentRefinement}
+      placeholder="what are you looking for?"
+    />
+  </View>
+);
+
+SearchBox.propTypes = {
+  currentRefinement: PropTypes.string.isRequired,
+  refine: PropTypes.func.isRequired,
+};
+
+export default connectSearchBox(SearchBox);Archivo /screens/PrivateZone/ServiMarket.js:
 import React, {useEffect, useState} from 'react';
 import {View, StyleSheet, Text, Image, FlatList} from 'react-native';
 import firestore from '@react-native-firebase/firestore';
+import {ScrollView} from 'react-native-gesture-handler';
 
 function ServiMarket() {
   const [services, setServices] = useState([]);
@@ -371,8 +512,8 @@ function ServiMarket() {
   );
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Estoy buscando</Text>
+    <ScrollView style={styles.container}>
+      <Text style={styles.searchTitle}>Estoy buscando</Text>
       <View style={styles.servicesView}>
         <FlatList
           data={services}
@@ -382,39 +523,23 @@ function ServiMarket() {
           horizontal
         />
       </View>
-      <Text style={styles.title}>Texto 1</Text>
-      <Text style={styles.title}>Texto 2</Text>
-      <Text style={styles.title}>Texto 3</Text>
-      <Text style={styles.title}>Texto 4</Text>
-      <Text style={styles.title}>Texto 5</Text>
-      <Text style={styles.title}>Texto 6</Text>
-      <Text style={styles.title}>Texto 7</Text>
-      <Text style={styles.title}>Texto 8</Text>
-      <Text style={styles.title}>Texto 9</Text>
-      <Text style={styles.title}>Texto 10</Text>
-      <Text style={styles.title}>Texto 11</Text>
-      <Text style={styles.title}>Texto 12</Text>
-      <Text style={styles.title}>Texto 13</Text>
-      <Text style={styles.title}>Texto 14</Text>
-      <Text style={styles.title}>Texto 15</Text>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 16,
-    backgroundColor: '#f0a',
+    paddingHorizontal: 10,
+    backgroundColor: '#fff',
   },
-  title: {
+  searchTitle: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
   },
   servicesView: {
-    //backgroundColor: '#032',
-    height: 150,
+    //height: 150,
   },
   serviceItemContainer: {
     position: 'relative',
@@ -465,6 +590,161 @@ const styles = StyleSheet.create({
 });
 
 export default ServiMarket;
+Archivo /screens/PrivateZone/SearchServices.js:
+import React, {useState, useEffect, useRef} from 'react';
+import {
+  View,
+  StyleSheet,
+  Text,
+  TextInput,
+  FlatList,
+  ActivityIndicator,
+} from 'react-native';
+import algoliasearch from 'algoliasearch/lite';
+
+const SearchServices = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [services, setServices] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const searchTimeout = useRef(null);
+
+  // Configurar Algolia
+  const ALGOLIA_APP_ID = 'VSO7VMX0UE';
+  const ALGOLIA_API_KEY = '262fe5ea97e94bf5e4a9460e2846fba1';
+  const ALGOLIA_INDEX_NAME = 'serviceSearchIndex'; // Nombre del índice de Algolia
+
+  const algoliaClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_API_KEY);
+  const algoliaIndex = algoliaClient.initIndex(ALGOLIA_INDEX_NAME);
+
+  const fetchServices = async term => {
+    try {
+      setLoading(true);
+      console.log(term);
+      // Realizar búsqueda en Algolia
+      const algoliaResponse = await algoliaIndex.search(term);
+      // Obtener los datos de los resultados
+
+      setServices(algoliaResponse.hits);
+      setLoading(false);
+    } catch (error) {
+      console.error('Error fetching services data:', error);
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (searchTerm.length >= 3) {
+      // Debounce the search execution using a timeout
+      if (searchTimeout.current) clearTimeout(searchTimeout.current);
+
+      searchTimeout.current = setTimeout(() => {
+        fetchServices(searchTerm);
+      }, 1500);
+    } else {
+      // Clear the search results if the search term is less than 3 characters
+      setServices([]);
+    }
+  }, [searchTerm]);
+
+  const renderItem = ({item}) => (
+    <Text style={styles.serviceItem}>
+      {item.serviceEnglish} / {item.serviceSpanish}
+    </Text>
+  );
+
+  return (
+    <View style={styles.container}>
+      <TextInput
+        style={styles.searchInput}
+        placeholder="Buscar servicios..."
+        value={searchTerm}
+        onChangeText={text => setSearchTerm(text)}
+      />
+      {loading ? (
+        <ActivityIndicator
+          size="large"
+          color="#0000ff"
+          style={styles.loadingIndicator}
+        />
+      ) : (
+        <FlatList
+          data={services}
+          renderItem={renderItem}
+          keyExtractor={item => item.objectID.toString()}
+        />
+      )}
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 10,
+    backgroundColor: '#fff',
+  },
+  searchInput: {
+    height: 40,
+    borderWidth: 1,
+    borderColor: 'gray',
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    marginBottom: 10,
+  },
+  serviceItem: {
+    fontSize: 18,
+    marginBottom: 5,
+  },
+  loadingIndicator: {
+    marginTop: 20,
+  },
+});
+
+export default SearchServices;
+Archivo /screens/PrivateZone/ServiceInstantSearch.js:
+import {StyleSheet, Text, SafeAreaView} from 'react-native';
+import React from 'react';
+import algoliasearch from 'algoliasearch/lite';
+import {InstantSearch, Hits} from 'react-instantsearch-native';
+import SearchBox from '../../components/SearchBox';
+import InfiniteHits from '../../components/InfiniteHits';
+
+const ServiceInstantSearch = () => {
+  const ALGOLIA_APP_ID = 'VSO7VMX0UE';
+  const ALGOLIA_API_KEY = '262fe5ea97e94bf5e4a9460e2846fba1';
+  const ALGOLIA_INDEX_NAME = 'serviceSearchIndex'; // Nombre del índice de Algolia
+
+  const algoliaClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_API_KEY);
+  return (
+    <SafeAreaView style={styles.safeAreaViewStyle}>
+      <InstantSearch
+        style={styles.instantSearchStyle}
+        indexName={ALGOLIA_INDEX_NAME}
+        searchClient={algoliaClient}>
+        <SearchBox />
+        <InfiniteHits style={styles.infiniteHits} />
+      </InstantSearch>
+    </SafeAreaView>
+  );
+};
+
+export default ServiceInstantSearch;
+
+const styles = StyleSheet.create({
+  safeAreaViewStyle: {
+    backgroundColor: 'gray',
+    justifyContent: 'center',
+  },
+  instantSearchStyle: {
+    backgroundColor: 'green',
+  },
+  infiniteHits: {
+    backgroundColor: 'green',
+    fontFamily: 'Times',
+    fontSize: 24,
+    height: 500,
+  },
+});
 Archivo /screens/PublicZone/Login.js:
 import React, {useEffect, useRef, useState} from 'react';
 import {
