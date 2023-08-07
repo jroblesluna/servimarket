@@ -1,10 +1,21 @@
+import {
+  FlatList,
+  Image,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import {View, StyleSheet, Text, Image, FlatList} from 'react-native';
 import firestore from '@react-native-firebase/firestore';
-import {ScrollView} from 'react-native-gesture-handler';
+import algoliasearch from 'algoliasearch/lite';
+import {InstantSearch} from 'react-instantsearch-native';
+import SearchBox from '../../components/SearchBox';
+import PropTypes from 'prop-types';
+import {connectInfiniteHits} from 'react-instantsearch-native';
+import {connectHighlight} from 'react-instantsearch-native';
 
-function ServiMarket() {
-  const [services, setServices] = useState([]);
+const ServiMarket = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -23,108 +34,177 @@ function ServiMarket() {
     fetchCategories();
   }, []);
 
-  useEffect(() => {
-    const fetchServicesData = async () => {
-      try {
-        const servicesQuerySnapshot = await firestore()
-          .collection('services')
-          .limit(5)
-          .get();
-        const combinedServicesWithCategories = servicesQuerySnapshot.docs.map(
-          async serviceDocument => {
-            const serviceDocumentData = serviceDocument.data();
-            if (serviceDocumentData.serviceCategory) {
-              const serviceCategoryId = serviceDocumentData.serviceCategory.id;
-              const parsedServiceCategoryId = parseInt(serviceCategoryId, 10); // Convertir a entero
-              const serviceCategory = categories.find(
-                category =>
-                  category.serviceCategoryId === parsedServiceCategoryId,
-              );
-              return {
-                ...serviceDocumentData,
-                serviceCategory,
-              };
-            } else {
-              return serviceDocumentData;
-            }
-          },
-        );
-        const servicesWithCategories = await Promise.all(
-          combinedServicesWithCategories,
-        );
-        setServices(servicesWithCategories);
-      } catch (error) {
-        console.error('Error fetching services data:', error);
-      }
-    };
+  const ALGOLIA_APP_ID = 'VSO7VMX0UE';
+  const ALGOLIA_API_KEY = '262fe5ea97e94bf5e4a9460e2846fba1';
+  const ALGOLIA_INDEX_NAME = 'serviceSearchIndex';
 
-    fetchServicesData();
-  }, [categories]);
+  const algoliaClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_API_KEY);
 
-  const renderServiceItem = ({item}) => (
-    <View style={styles.serviceItemContainer}>
-      <Image source={{uri: item.imageUrl}} style={styles.serviceImage} />
-      <View style={styles.overlay} />
-      <View style={styles.textContainer}>
-        <Text style={styles.serviceText}>{item.serviceEnglish}</Text>
-        {item.serviceCategory && (
-          <Text style={styles.categoryText}>
-            {item.serviceCategory.serviceCategoryEnglish}
-          </Text>
-        )}
-      </View>
-    </View>
-  );
+  const preInfiniteHits = ({hits, hasMore, refineNext}) => {
+    console.log(hits);
+    return (
+      <FlatList
+        data={hits}
+        keyExtractor={item => item.objectID}
+        ItemSeparatorComponent={() => <View style={styles.separator} />}
+        onEndReached={() => hasMore && refineNext()}
+        renderItem={renderServiceItem}
+        //numColumns={2}
+      />
+    );
+  };
+
+  preInfiniteHits.propTypes = {
+    hits: PropTypes.arrayOf(PropTypes.object).isRequired,
+    hasMore: PropTypes.bool.isRequired,
+    refineNext: PropTypes.func.isRequired,
+  };
+
+  const InfiniteHits = connectInfiniteHits(preInfiniteHits);
+
+  const preHighlight = ({attribute, hit, highlight}) => {
+    const highlights = highlight({
+      highlightProperty: '_highlightResult',
+      attribute,
+      hit,
+    });
+
+    return (
+      <Text>
+        {highlights.map(({value, isHighlighted}, index) => {
+          const style = {
+            color: isHighlighted ? 'black' : 'white',
+            backgroundColor: isHighlighted ? 'yellow' : 'transparent',
+          };
+          return (
+            <Text key={index} style={style}>
+              {value}
+            </Text>
+          );
+        })}
+      </Text>
+    );
+  };
+
+  preHighlight.propTypes = {
+    attribute: PropTypes.string.isRequired,
+    hit: PropTypes.object.isRequired,
+    highlight: PropTypes.func.isRequired,
+  };
+
+  const Highlight = connectHighlight(preHighlight);
+
+  const renderServiceItem = ({item}) => {
+    const parsedServiceCategoryId = parseInt(
+      item.serviceCategory.split('/')[1],
+      10,
+    );
+    const serviceCategory = categories.find(
+      category => category.serviceCategoryId === parsedServiceCategoryId,
+    );
+
+    if (!serviceCategory) {
+      return (
+        <View style={styles.serviceItemContainer}>
+          <Image source={{uri: item.imageUrl}} style={styles.serviceImage} />
+          <View style={styles.overlay} />
+          <View style={styles.serviceTextContainer}>
+            <Text style={styles.serviceText}>Service Name...</Text>
+            <Text style={styles.serviceText}>Nombre de Servicio...</Text>
+          </View>
+          {item.serviceCategory && (
+            <View style={styles.categoryTextContainer}>
+              <Text style={styles.categoryText}>Category...</Text>
+              <Text style={styles.categoryText}>Categoría</Text>
+            </View>
+          )}
+        </View>
+      );
+    } else {
+      return (
+        <View style={styles.serviceItemContainer}>
+          <Image source={{uri: item.imageUrl}} style={styles.serviceImage} />
+          <View style={styles.overlay} />
+          <View style={styles.serviceTextContainer}>
+            <Text style={styles.serviceText}>
+              <Highlight attribute="serviceEnglish" hit={item} />
+            </Text>
+            <Text style={styles.serviceText}>
+              <Highlight attribute="serviceSpanish" hit={item} />
+            </Text>
+          </View>
+          {item.serviceCategory && (
+            <View style={styles.categoryTextContainer}>
+              <Text style={styles.categoryText}>
+                {serviceCategory.serviceCategoryEnglish}
+              </Text>
+              <Text style={styles.categoryText}>
+                {serviceCategory.serviceCategorySpanish}
+              </Text>
+            </View>
+          )}
+        </View>
+      );
+    }
+  };
 
   return (
-    <ScrollView style={styles.container}>
+    <SafeAreaView style={styles.safeAreaViewStyle}>
       <Text style={styles.searchTitle}>Estoy buscando</Text>
-      <View style={styles.servicesView}>
-        <FlatList
-          data={services}
-          renderItem={renderServiceItem}
-          keyExtractor={item => item.serviceId.toString()}
-          showsHorizontalScrollIndicator={true}
-          horizontal
-        />
-      </View>
-    </ScrollView>
+      <InstantSearch
+        style={styles.instantSearchStyle}
+        indexName={ALGOLIA_INDEX_NAME}
+        searchClient={algoliaClient}>
+        <SearchBox />
+        <InfiniteHits style={styles.infiniteHits} />
+      </InstantSearch>
+    </SafeAreaView>
   );
-}
+};
+
+export default ServiMarket;
 
 const styles = StyleSheet.create({
-  container: {
+  safeAreaViewStyle: {
     flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
     paddingHorizontal: 10,
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
   },
   searchTitle: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 16,
-  },
-  servicesView: {
-    //height: 150,
   },
   serviceItemContainer: {
-    position: 'relative',
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginRight: 10,
-    height: 150,
+    //position: 'relative',
+    //flexDirection: 'column',
+    //alignItems: 'center',
+    //marginRight: 10,
+    //width:'100%',
+    height: 200,
   },
   serviceImage: {
-    width: 225,
-    height: 150,
+    width: '100%',
+    height: '100%',
     borderRadius: 15,
   },
-  textContainer: {
+  serviceTextContainer: {
     position: 'absolute',
-    width: 225,
-    height: 150,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 10,
+    top: 10,
+    left: 10,
+    width: '100%',
+    height: '100%',
+    justifyContent: 'flex-start',
+    zIndex: 2,
+  },
+  categoryTextContainer: {
+    position: 'absolute',
+    bottom: 10,
+    right: 10,
+    width: '100%',
+    height: '100%',
+    justifyContent: 'flex-end',
     zIndex: 2,
   },
   overlay: {
@@ -137,21 +217,26 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   serviceText: {
-    position: 'absolute',
-    top: 10,
-    left: 10,
     fontSize: 24,
     fontWeight: 'bold',
     color: 'white',
   },
   categoryText: {
-    position: 'absolute',
-    bottom: 10,
-    right: 10,
     fontSize: 20,
     color: '#A8C5F3',
     textAlign: 'right',
   },
+  separator: {
+    borderBottomWidth: 10,
+    borderColor: 'transparent',
+  },
+  instantSearchStyle: {
+    backgroundColor: 'green',
+  },
+  infiniteHits: {
+    backgroundColor: 'green',
+    fontFamily: 'Times',
+    fontSize: 24,
+    //height: 500,
+  },
 });
-
-export default ServiMarket;

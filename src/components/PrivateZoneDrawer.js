@@ -4,8 +4,6 @@ import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 import {View, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import ServiMarket from '../screens/PrivateZone/ServiMarket';
-import SearchServices from '../screens/PrivateZone/SearchServices';
-import ServiceInstantSearch from '../screens/PrivateZone/ServiceInstantSearch';
 import MyProfile from '../screens/PrivateZone/MyProfile';
 import MyServices from '../screens/PrivateZone/MyServices';
 import MyAppointments from '../screens/PrivateZone/MyAppointments';
@@ -13,10 +11,32 @@ import ViewHistory from '../screens/PrivateZone/ViewHistory';
 import MyWallet from '../screens/PrivateZone/MyWallet';
 import MySettings from '../screens/PrivateZone/MySettings';
 import {useNavigation} from '@react-navigation/native';
+import {DrawerActions} from '@react-navigation/routers';
 
 const CustomDrawerContent = ({handleSignOut, user, navigation}) => {
+  const closeDrawer = () => {
+    navigation.dispatch(DrawerActions.closeDrawer());
+  };
+
   return (
     <DrawerContentScrollView style={styles.drawerContentScrollViewStyle}>
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label=""
+        icon={({focused, color, size}) => (
+          <View style={styles.drawerCloseIconContainer}>
+            <TouchableOpacity onPress={closeDrawer}>
+              <Icon
+                name="close"
+                size={size}
+                color={color}
+                style={styles.drawerCloseIcon}
+              />
+            </TouchableOpacity>
+          </View>
+        )}
+      />
+
       <View style={styles.headerContainer}>
         {user && user.photoURL && (
           <Image source={{uri: user.photoURL}} style={styles.headerImage} />
@@ -33,18 +53,6 @@ const CustomDrawerContent = ({handleSignOut, user, navigation}) => {
         label="ServiMarket"
         labelStyle={styles.drawerItemLabelStyle}
         onPress={() => navigation.navigate('ServiMarket')}
-      />
-      <DrawerItem
-        style={styles.drawerItemStyle}
-        label="Search Services"
-        labelStyle={styles.drawerItemLabelStyle}
-        onPress={() => navigation.navigate('SearchServices')}
-      />
-      <DrawerItem
-        style={styles.drawerItemStyle}
-        label="Service Instant Search"
-        labelStyle={styles.drawerItemLabelStyle}
-        onPress={() => navigation.navigate('ServiceInstantSearch')}
       />
       <DrawerItem
         style={styles.drawerItemStyle}
@@ -95,7 +103,7 @@ const HeaderRight = () => {
 
   return (
     <TouchableOpacity onPress={handleOpenDrawer}>
-      <Icon name="menu" size={24} color="black" style={{marginRight: 15}} />
+      <Icon name="menu" size={24} color="white" style={{marginRight: 15}} />
     </TouchableOpacity>
   );
 };
@@ -109,10 +117,10 @@ function PrivateZoneDrawer({handleSignOut, user, navigation}) {
       screenOptions={{
         drawerType: 'front',
         drawerPosition: 'right',
-
+        headerStyle: styles.drawerHeaderStyle, // Aplica el estilo al título del Drawer
+        headerTitleStyle: styles.drawerHeaderTitleStyle, // Aplica el estilo al título del Drawer
         drawerStyle: {
-          width: '66%',
-          opacity: 0.85,
+          width: '55%',
         },
         headerLeft: () => null, // Elimina el icono de hamburguesa del lado izquierdo
         headerRight: () => <HeaderRight navigation={navigation} />,
@@ -127,8 +135,6 @@ function PrivateZoneDrawer({handleSignOut, user, navigation}) {
       )}>
       <Drawer.Screen name="MyProfile" component={MyProfile} />
       <Drawer.Screen name="ServiMarket" component={ServiMarket} />
-      <Drawer.Screen name="SearchServices" component={SearchServices} />
-      <Drawer.Screen name="ServiceInstantSearch" component={ServiceInstantSearch} />
       <Drawer.Screen name="MyServices" component={MyServices} />
       <Drawer.Screen name="MyAppointments" component={MyAppointments} />
       <Drawer.Screen name="ViewHistory" component={ViewHistory} />
@@ -153,9 +159,14 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     borderRadius: 75,
   },
+  drawerHeaderStyle: {
+    backgroundColor: '#1E3264',
+  },
+  drawerHeaderTitleStyle: {
+    color: 'white',
+  },
   drawerItemStyle: {
-    marginVertical: 1,
-    marginLeft: 2,
+    marginLeft: 0,
     marginRight: 0,
   },
   drawerItemLabelStyle: {
@@ -163,6 +174,16 @@ const styles = StyleSheet.create({
     fontFamily: 'Comic Sans',
     fontSize: 20,
     fontWeight: 'bold',
+  },
+  drawerCloseIconContainer: {
+    minWidth: '90%',
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
+  drawerCloseIcon: {
+    color: 'white',
   },
 });
 
