@@ -1,0 +1,583 @@
+Archivo /App.tsx:
+import React from 'react';
+import Navigation from './components/Navigation';
+import {Animated} from 'react-native';
+
+const av = new Animated.Value(0);
+av.addListener(() => {
+  return;
+});
+
+function App() {
+  return <Navigation />;
+}
+
+export default App;
+Archivo /PrivateZone.js:
+import React, {useEffect, useState} from 'react';
+import {useNavigation} from '@react-navigation/native';
+import auth from '@react-native-firebase/auth';
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import PrivateZoneDrawer from './components/PrivateZoneDrawer';
+import ServiMarket from './screens/PrivateZone/ServiMarket';
+
+function PrivateZone() {
+  const navigation = useNavigation();
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth().onAuthStateChanged(currentUser => {
+      setUser(currentUser);
+    });
+
+    return unsubscribe;
+  }, []);
+
+  const handleSignOut = async () => {
+    try {
+      console.log(user);
+      if (user != null) {
+        console.log('Auth Signing Out');
+        await auth().signOut();
+      }
+      const isGoogleSignedIn = await GoogleSignin.isSignedIn();
+      console.log('isGoogleSignedIn:', isGoogleSignedIn);
+      if (isGoogleSignedIn) {
+        console.log('Google Signing Out');
+        await GoogleSignin.revokeAccess();
+        console.log('Access Revoked');
+      }
+    } catch (error) {
+      console.log('Error en Sign Out: ', error);
+    } finally {
+      console.log('Nav Reset');
+      navigation.reset({
+        index: 0,
+        routes: [{name: 'Login'}],
+      });
+    }
+  };
+
+  return (
+    <PrivateZoneDrawer
+      handleSignOut={handleSignOut}
+      user={user}
+      navigation={navigation}>
+      <ServiMarket />
+    </PrivateZoneDrawer>
+  );
+}
+
+export default PrivateZone;
+Archivo /components/CustomImage.js:
+import React from 'react';
+import {Image, StyleSheet} from 'react-native';
+
+// Importar las imágenes necesarias
+import logoImage from '../assets/images/logo.png';
+
+const imageMap = {
+  logo: logoImage,
+  // Agrega aquí más nombres de archivo y sus rutas de importación correspondientes
+};
+
+const CustomImage = ({
+  fileName = 'logo',
+  width = 150,
+  height = 150,
+  borderRadius = 25,
+}) => {
+  const styles = StyleSheet.create({
+    imageStyle: {
+      width: width,
+      height: height,
+      borderRadius: borderRadius,
+    },
+  });
+
+  const imageSource = imageMap[fileName];
+
+  return <Image source={imageSource} style={styles.imageStyle} />;
+};
+
+export default CustomImage;
+Archivo /components/InsetShadow.js:
+import React from 'react';
+import {StyleSheet, View} from 'react-native';
+import PropTypes from 'prop-types';
+
+const getShadowOffset = (type, offset) => {
+  switch (type) {
+    case ['top', 'bottom'].includes(type):
+      return {
+        width: 0,
+        height: offset,
+      };
+    case ['left', 'right'].includes(type):
+      return {
+        width: offset,
+        height: 0,
+      };
+    default:
+      return {
+        width: 0,
+        height: 0,
+      };
+  }
+};
+
+const Shadow = ({
+  type,
+  shadowColor,
+  shadowOpacity,
+  shadowOffset,
+  shadowRadius,
+  elevation,
+}) => {
+  const shadowStyle = {
+    shadowColor: shadowColor,
+    shadowOffset: getShadowOffset(type, shadowOffset),
+    shadowRadius: shadowRadius,
+    shadowOpacity: shadowOpacity,
+    elevation: elevation,
+  };
+  return <View style={[styles.shadow, styles[type], shadowStyle]} />;
+};
+
+const shadowTypes = ['left', 'top', 'right', 'bottom'];
+
+const Shadows = props => {
+  return shadowTypes.map((shadow, i) => {
+    if (!props[shadow]) {
+      return null;
+    }
+    const {shadowColor, shadowOpacity, shadowOffset, shadowRadius, elevation} =
+      props;
+    const shadowProps = {
+      shadowColor,
+      shadowOpacity,
+      shadowOffset,
+      shadowRadius,
+      elevation,
+    };
+    return <Shadow key={`shadow-${i}`} type={shadow} {...shadowProps} />;
+  });
+};
+
+// default to show all edges
+Shadows.defaultProps = {
+  left: true,
+  top: true,
+  right: true,
+  bottom: true,
+};
+
+const InsetShadow = ({
+  children,
+  containerStyle,
+  left,
+  top,
+  right,
+  bottom,
+  shadowColor,
+  shadowRadius,
+  shadowOffset,
+  shadowOpacity,
+  elevation,
+}) => {
+  const shadowProps = {
+    left,
+    top,
+    right,
+    bottom,
+    shadowColor,
+    shadowRadius,
+    shadowOffset,
+    shadowOpacity,
+    elevation,
+  };
+  return (
+    <View style={[styles.container, containerStyle]}>
+      {children}
+      <Shadows {...shadowProps} />
+    </View>
+  );
+};
+
+InsetShadow.propTypes = {
+  children: PropTypes.node.isRequired,
+  /* (default: {}) add style to the wrapper */
+  containerStyle: PropTypes.object,
+  /* (default: true) show the left shadow? */
+  left: PropTypes.bool,
+  /* (default: true) show the top shadow? */
+  top: PropTypes.bool,
+  /* (default: true) show the right shadow? */
+  right: PropTypes.bool,
+  /* (default: true) show the bottom shadow? */
+  bottom: PropTypes.bool,
+  /* (default: black) shadow color */
+  shadowColor: PropTypes.string,
+  /* (default: 3) shadow radius */
+  shadowRadius: PropTypes.number,
+  /* (default: 1) shadow offset - height for top, bottom, width for left, right */
+  shadowOffset: PropTypes.number,
+  /* (default 0.5) shadow opacity */
+  shadowOpacity: PropTypes.number,
+  /* (default: 5) shadow elevation for android */
+  elevation: PropTypes.number,
+};
+
+InsetShadow.defaultProps = {
+  containerStyle: {},
+  left: true,
+  top: true,
+  right: true,
+  bottom: true,
+  shadowColor: 'black',
+  shadowRadius: 3,
+  shadowOffset: 5,
+  shadowOpacity: 0.5,
+  elevation: 5,
+};
+
+const styles = StyleSheet.create({
+  container: {
+    overflow: 'hidden',
+    height: '100%',
+  },
+  shadow: {
+    position: 'absolute',
+    backgroundColor: 'white',
+    alignSelf: 'center',
+  },
+  left: {
+    width: 10,
+    height: '100%',
+    left: -10,
+  },
+  top: {
+    height: 10,
+    width: '100%',
+    top: -10,
+  },
+  right: {
+    width: 10,
+    height: '100%',
+    right: -10,
+  },
+  bottom: {
+    height: 10,
+    width: '100%',
+    bottom: -10,
+  },
+});
+
+export default InsetShadow;
+Archivo /components/Navigation.js:
+import React from 'react';
+import {createStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer} from '@react-navigation/native';
+import Login from '../screens/PublicZone/Login';
+import SignUp from '../screens/PublicZone/SignUp';
+import PrivateZone from '../PrivateZone';
+
+const Stack = createStackNavigator();
+
+function Navigation() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="SignUp"
+          component={SignUp}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="PrivateZone"
+          component={PrivateZone}
+          options={{
+            headerShown: false,
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default Navigation;
+Archivo /components/PrivateZoneDrawer.js:
+import React from 'react';
+import {createDrawerNavigator} from '@react-navigation/drawer';
+import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
+import {View, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import ServiMarket from '../screens/PrivateZone/ServiMarket';
+import MyProfile from '../screens/PrivateZone/MyProfile';
+import MyServices from '../screens/PrivateZone/MyServices';
+import MyAppointments from '../screens/PrivateZone/MyAppointments';
+import ViewHistory from '../screens/PrivateZone/ViewHistory';
+import MyWallet from '../screens/PrivateZone/MyWallet';
+import MySettings from '../screens/PrivateZone/MySettings';
+import {useNavigation} from '@react-navigation/native';
+import {DrawerActions} from '@react-navigation/routers';
+
+const CustomDrawerContent = ({handleSignOut, user, navigation}) => {
+  const closeDrawer = () => {
+    navigation.dispatch(DrawerActions.closeDrawer());
+  };
+
+  return (
+    <DrawerContentScrollView style={styles.drawerContentScrollViewStyle}>
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label=""
+        icon={({focused, color, size}) => (
+          <View style={styles.drawerCloseIconContainer}>
+            <TouchableOpacity onPress={closeDrawer}>
+              <Icon
+                name="close"
+                size={size}
+                color={color}
+                style={styles.drawerCloseIcon}
+              />
+            </TouchableOpacity>
+          </View>
+        )}
+      />
+
+      <View style={styles.headerContainer}>
+        {user && user.photoURL && (
+          <Image source={{uri: user.photoURL}} style={styles.headerImage} />
+        )}
+      </View>
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Profile"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MyProfile')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="ServiMarket"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('ServiMarket')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Services"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MyServices')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Appointments"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MyAppointments')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="View History"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('ViewHistory')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Wallet"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MyWallet')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Settings"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MySettings')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="Sign Out"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={handleSignOut}
+      />
+    </DrawerContentScrollView>
+  );
+};
+
+const HeaderRight = () => {
+  const navigation = useNavigation();
+
+  const handleOpenDrawer = () => {
+    navigation.openDrawer();
+  };
+
+  return (
+    <TouchableOpacity onPress={handleOpenDrawer}>
+      <Icon name="menu" size={24} color="white" style={{marginRight: 15}} />
+    </TouchableOpacity>
+  );
+};
+
+function PrivateZoneDrawer({handleSignOut, user, navigation}) {
+  const Drawer = createDrawerNavigator();
+
+  return (
+    <Drawer.Navigator
+      initialRouteName="ServiMarket" // Modificar esta línea
+      screenOptions={{
+        drawerType: 'front',
+        drawerPosition: 'right',
+        headerStyle: styles.drawerHeaderStyle, // Aplica el estilo al título del Drawer
+        headerTitleStyle: styles.drawerHeaderTitleStyle, // Aplica el estilo al título del Drawer
+        drawerStyle: {
+          width: '55%',
+        },
+        headerLeft: () => null, // Elimina el icono de hamburguesa del lado izquierdo
+        headerRight: () => <HeaderRight navigation={navigation} />,
+        headerTitleAlign: 'center', // Centra el título en la barra de navegación
+      }}
+      drawerContent={() => (
+        <CustomDrawerContent
+          handleSignOut={handleSignOut}
+          user={user}
+          navigation={navigation}
+        />
+      )}>
+      <Drawer.Screen name="MyProfile" component={MyProfile} />
+      <Drawer.Screen name="ServiMarket" component={ServiMarket} />
+      <Drawer.Screen name="MyServices" component={MyServices} />
+      <Drawer.Screen name="MyAppointments" component={MyAppointments} />
+      <Drawer.Screen name="ViewHistory" component={ViewHistory} />
+      <Drawer.Screen name="MyWallet" component={MyWallet} />
+      <Drawer.Screen name="MySettings" component={MySettings} />
+    </Drawer.Navigator>
+  );
+}
+
+const styles = StyleSheet.create({
+  drawerContentScrollViewStyle: {
+    backgroundColor: '#1E3264',
+  },
+  headerContainer: {
+    height: 150,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  headerImage: {
+    width: 100,
+    height: 100,
+    resizeMode: 'contain',
+    borderRadius: 75,
+  },
+  drawerHeaderStyle: {
+    backgroundColor: '#1E3264',
+  },
+  drawerHeaderTitleStyle: {
+    color: 'white',
+  },
+  drawerItemStyle: {
+    marginLeft: 0,
+    marginRight: 0,
+  },
+  drawerItemLabelStyle: {
+    color: 'white',
+    fontFamily: 'Comic Sans',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  drawerCloseIconContainer: {
+    minWidth: '90%',
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
+  drawerCloseIcon: {
+    color: 'white',
+  },
+});
+
+export default PrivateZoneDrawer;
+Archivo /components/SearchBox.js:
+import React, {useEffect, useState} from 'react';
+import {StyleSheet, View, TextInput} from 'react-native';
+import PropTypes from 'prop-types';
+import {connectSearchBox} from 'react-instantsearch-native';
+import InsetShadow from './InsetShadow';
+
+const getRandomPlaceholder = () => {
+  const placeholders = [
+    'Wedding Planner',
+    'Fontanero',
+    'Kids Teacher',
+    'Profesor de piano',
+    'Consultor educativo',
+    'House painting',
+    'Programador',
+    // Agrega más opciones aquí
+  ];
+  const randomIndex = Math.floor(Math.random() * placeholders.length);
+  return placeholders[randomIndex];
+};
+
+const SearchBox = ({currentRefinement, refine}) => {
+  const [placeholder, setPlaceholder] = useState(getRandomPlaceholder());
+
+  useEffect(() => {
+    if (!currentRefinement) {
+      const interval = setInterval(() => {
+        setPlaceholder(getRandomPlaceholder());
+      }, 1000); // Cambiar cada 3 segundos (ajusta según tus preferencias)
+
+      return () => clearInterval(interval);
+    }
+  }, [currentRefinement]);
+
+  return (
+    <View style={styles.container}>
+      <InsetShadow
+        containerStyle={styles.insetShadowStyle}
+        elevation={15}
+        left={true}
+        top={true}
+        right={false}
+        bottom={false}>
+        <TextInput
+          style={styles.textInputStyle}
+          onChangeText={value => refine(value)}
+          value={currentRefinement}
+          placeholder={placeholder}
+          //autoFocus
+        />
+      </InsetShadow>
+    </View>
+  );
+};
+
+SearchBox.propTypes = {
+  currentRefinement: PropTypes.string.isRequired,
+  refine: PropTypes.func.isRequired,
+};
+
+const styles = StyleSheet.create({
+  container: {
+    paddingVertical: 10,
+    height: 'auto',
+  },
+  textInputStyle: {
+    height: 48,
+    padding: 12,
+    fontSize: 16,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    borderColor: 'gray',
+    borderWidth: 1,
+  },
+  insetShadowStyle: {borderRadius: 5, height: 'auto'},
+});
+
+export default connectSearchBox(SearchBox);

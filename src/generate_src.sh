@@ -1,29 +1,38 @@
 #!/bin/bash
->src.txt
-echo Archivo /App.tsx: >> src.txt
-cat App.tsx >> src.txt
-echo Archivo /PrivateZone.js: >> src.txt
-cat PrivateZone.js >> src.txt
-echo Archivo /components/CustomImage.js: >> src.txt
-cat ./components/CustomImage.js >> src.txt
-echo Archivo /components/Navigation.js: >> src.txt
-cat ./components/Navigation.js >> src.txt
-echo Archivo /components/PrivateZoneDrawer.js: >> src.txt
-cat ./components/PrivateZoneDrawer.js >> src.txt
-echo Archivo /components/Highlight.js: >> src.txt
-cat ./components/Highlight.js >> src.txt
-echo Archivo /components/InfiniteHits.js: >> src.txt
-cat ./components/InfiniteHits.js >> src.txt
-echo Archivo /components/SearchBox.js: >> src.txt
-cat ./components/SearchBox.js >> src.txt
-echo Archivo /screens/PrivateZone/ServiMarket.js: >> src.txt
-cat ./screens/PrivateZone/ServiMarket.js >> src.txt
-echo Archivo /screens/PrivateZone/SearchServices.js: >> src.txt
-cat ./screens/PrivateZone/SearchServices.js >> src.txt
-echo Archivo /screens/PrivateZone/ServiceInstantSearch.js: >> src.txt
-cat ./screens/PrivateZone/ServiceInstantSearch.js >> src.txt
-echo Archivo /screens/PublicZone/Login.js: >> src.txt
-cat ./screens/PublicZone/Login.js >> src.txt
-echo Archivo /screens/PublicZone/SignUp.js: >> src.txt
-cat ./screens/PublicZone/SignUp.js >> src.txt
+>src01.txt
+>src02.txt
+>src03.txt
+echo Archivo /App.tsx: >> src01.txt
+cat App.tsx >> src01.txt
+echo Archivo /PrivateZone.js: >> src01.txt
+cat PrivateZone.js >> src01.txt
+echo Archivo /components/CustomImage.js: >> src01.txt
+cat ./components/CustomImage.js >> src01.txt
+echo Archivo /components/InsetShadow.js: >> src01.txt
+cat ./components/InsetShadow.js >> src01.txt
+echo Archivo /components/Navigation.js: >> src01.txt
+cat ./components/Navigation.js >> src01.txt
+echo Archivo /components/PrivateZoneDrawer.js: >> src01.txt
+cat ./components/PrivateZoneDrawer.js >> src01.txt
+echo Archivo /components/SearchBox.js: >> src01.txt
+cat ./components/SearchBox.js >> src01.txt
 
+echo Archivo /screens/PrivateZone/MyAppointments.js: >> src02.txt
+cat ./screens/PrivateZone/MyAppointments.js >> src02.txt
+echo Archivo /screens/PrivateZone/MyProfile.js: >> src02.txt
+cat ./screens/PrivateZone/MyProfile.js >> src02.txt
+echo Archivo /screens/PrivateZone/MyServices.js: >> src02.txt
+cat ./screens/PrivateZone/MyServices.js >> src02.txt
+echo Archivo /screens/PrivateZone/MySettings.js: >> src02.txt
+cat ./screens/PrivateZone/MySettings.js >> src02.txt
+echo Archivo /screens/PrivateZone/MyWallet.js: >> src02.txt
+cat ./screens/PrivateZone/MyWallet.js >> src02.txt
+echo Archivo /screens/PrivateZone/ServiMarket.js: >> src02.txt
+cat ./screens/PrivateZone/ServiMarket.js >> src02.txt
+echo Archivo /screens/PrivateZone/ViewHistory.js: >> src02.txt
+cat ./screens/PrivateZone/ViewHistory.js >> src02.txt
+
+echo Archivo /screens/PublicZone/Login.js: >> src03.txt
+cat ./screens/PublicZone/Login.js >> src03.txt
+echo Archivo /screens/PublicZone/SignUp.js: >> src03.txt
+cat ./screens/PublicZone/SignUp.js >> src03.txt

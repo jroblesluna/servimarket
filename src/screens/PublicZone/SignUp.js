@@ -8,6 +8,7 @@ import {
   Alert,
 } from 'react-native';
 import auth from '@react-native-firebase/auth';
+import firestore from '@react-native-firebase/firestore'; // Import firestore
 import CustomImage from '../../components/CustomImage';
 
 function SignUp({navigation}) {
@@ -54,6 +55,21 @@ function SignUp({navigation}) {
       const newUser = auth().currentUser;
       console.log('Enviar mail de verificación');
       await newUser.sendEmailVerification();
+
+      // Crear el documento en la colección "users" si no existe
+      const userRef = firestore().collection('users').doc(email);
+      const doc = await userRef.get();
+      if (!doc.exists) {
+        console.log('Creando documento del usuario en Firestore');
+        await userRef.set({
+          email: email,
+          displayName: '',
+          givenName: '',
+          familyName: '',
+          photoURL: '',
+        });
+      }
+
       console.log('Aviso para verificar email');
       Alert.alert(
         'Verifica tu email',

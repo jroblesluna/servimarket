@@ -13,7 +13,11 @@ const getRandomPlaceholder = () => {
     'Consultor educativo',
     'House painting',
     'Programador',
-    // Agrega más opciones aquí
+    'Architecht',
+    'Coreographer',
+    'Auxiliar contable',
+    'Party planner',
+    'Instructor de buceo',
   ];
   const randomIndex = Math.floor(Math.random() * placeholders.length);
   return placeholders[randomIndex];
@@ -26,7 +30,7 @@ const SearchBox = ({currentRefinement, refine}) => {
     if (!currentRefinement) {
       const interval = setInterval(() => {
         setPlaceholder(getRandomPlaceholder());
-      }, 1000); // Cambiar cada 3 segundos (ajusta según tus preferencias)
+      }, 500); // Cambiar cada 3 segundos (ajusta según tus preferencias)
 
       return () => clearInterval(interval);
     }
@@ -46,7 +50,7 @@ const SearchBox = ({currentRefinement, refine}) => {
           onChangeText={value => refine(value)}
           value={currentRefinement}
           placeholder={placeholder}
-          //autoFocus
+          autoFocus
         />
       </InsetShadow>
     </View>
