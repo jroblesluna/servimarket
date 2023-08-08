@@ -1,7 +1,87 @@
-Archivo /App.tsx:
+Archivo /package.json:
+{
+  "name": "servimarket",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "lint": "eslint .",
+    "start": "react-native start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@react-native-community/masked-view": "^0.1.11",
+    "@react-native-firebase/app": "^18.3.0",
+    "@react-native-firebase/auth": "^18.3.0",
+    "@react-native-firebase/firestore": "^18.3.0",
+    "@react-native-firebase/storage": "^18.3.0",
+    "@react-native-google-signin/google-signin": "^10.0.1",
+    "@react-navigation/drawer": "^6.6.3",
+    "@react-navigation/native": "^6.1.7",
+    "@react-navigation/stack": "^6.3.17",
+    "@types/react-native": "^0.72.2",
+    "algoliasearch": "^4.19.1",
+    "i18next": "^23.4.2",
+    "intl-pluralrules": "^2.0.1",
+    "prop-types": "^15.8.1",
+    "react": "18.2.0",
+    "react-i18next": "^13.0.3",
+    "react-instantsearch-hooks": "^6.47.3",
+    "react-instantsearch-native": "^6.40.4",
+    "react-native": "0.72.3",
+    "react-native-gesture-handler": "^2.12.0",
+    "react-native-reanimated": "^3.3.0",
+    "react-native-safe-area-context": "^4.6.4",
+    "react-native-screens": "^3.22.1",
+    "react-native-vector-icons": "^9.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@babel/preset-env": "^7.20.0",
+    "@babel/runtime": "^7.20.0",
+    "@react-native/eslint-config": "^0.72.2",
+    "@react-native/metro-config": "^0.72.7",
+    "@tsconfig/react-native": "^3.0.0",
+    "@types/metro-config": "^0.76.3",
+    "@types/react": "^18.2.14",
+    "@types/react-test-renderer": "^18.0.0",
+    "babel-jest": "^29.2.1",
+    "eslint": "^8.19.0",
+    "jest": "^29.2.1",
+    "metro-react-native-babel-preset": "0.76.5",
+    "prettier": "^2.4.1",
+    "react-test-renderer": "18.2.0",
+    "typescript": "4.8.4"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
+Archivo /index.js:
+/**
+ * @format
+ */
+
+import {AppRegistry} from 'react-native';
+import App from './src/App';
+import {name as appName} from './app.json';
+
+// Importar las fuentes de iconos para iOS y Android
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+
+// Registrar las fuentes de iconos
+MaterialIcons.loadFont();
+FontAwesome.loadFont();
+
+AppRegistry.registerComponent(appName, () => App);
+Archivo /src/App.tsx:
 import React from 'react';
 import Navigation from './components/Navigation';
 import {Animated} from 'react-native';
+import {I18nextProvider} from 'react-i18next';
+import i18n from './i18n'; // Import the i18n configuration
 
 const av = new Animated.Value(0);
 av.addListener(() => {
@@ -9,67 +89,37 @@ av.addListener(() => {
 });
 
 function App() {
-  return <Navigation />;
-}
-
-export default App;
-Archivo /PrivateZone.js:
-import React, {useEffect, useState} from 'react';
-import {useNavigation} from '@react-navigation/native';
-import auth from '@react-native-firebase/auth';
-import {GoogleSignin} from '@react-native-google-signin/google-signin';
-import PrivateZoneDrawer from './components/PrivateZoneDrawer';
-import ServiMarket from './screens/PrivateZone/ServiMarket';
-
-function PrivateZone() {
-  const navigation = useNavigation();
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const unsubscribe = auth().onAuthStateChanged(currentUser => {
-      setUser(currentUser);
-    });
-
-    return unsubscribe;
-  }, []);
-
-  const handleSignOut = async () => {
-    try {
-      console.log(user);
-      if (user != null) {
-        console.log('Auth Signing Out');
-        await auth().signOut();
-      }
-      const isGoogleSignedIn = await GoogleSignin.isSignedIn();
-      console.log('isGoogleSignedIn:', isGoogleSignedIn);
-      if (isGoogleSignedIn) {
-        console.log('Google Signing Out');
-        await GoogleSignin.revokeAccess();
-        console.log('Access Revoked');
-      }
-    } catch (error) {
-      console.log('Error en Sign Out: ', error);
-    } finally {
-      console.log('Nav Reset');
-      navigation.reset({
-        index: 0,
-        routes: [{name: 'Login'}],
-      });
-    }
-  };
-
   return (
-    <PrivateZoneDrawer
-      handleSignOut={handleSignOut}
-      user={user}
-      navigation={navigation}>
-      <ServiMarket />
-    </PrivateZoneDrawer>
+    <I18nextProvider i18n={i18n}>
+      <Navigation />
+    </I18nextProvider>
   );
 }
 
-export default PrivateZone;
-Archivo /components/CustomImage.js:
+export default App;
+Archivo /src/i18n.js:
+import i18n from 'i18next';
+import {initReactI18next} from 'react-i18next';
+import 'intl-pluralrules';
+
+import en from './locales/en.json'; // English translations
+import es from './locales/es.json'; // Spanish translations
+
+// Initialize i18n
+i18n.use(initReactI18next).init({
+  resources: {
+    en: {translation: en},
+    es: {translation: es},
+  },
+  lng: 'en', // Default language
+  fallbackLng: 'en', // Fallback language
+  interpolation: {
+    escapeValue: false, // React already safe from XSS
+  },
+});
+
+export default i18n;
+Archivo /src/components/CustomImage.js:
 import React from 'react';
 import {Image, StyleSheet} from 'react-native';
 
@@ -101,7 +151,7 @@ const CustomImage = ({
 };
 
 export default CustomImage;
-Archivo /components/InsetShadow.js:
+Archivo /src/components/InsetShadow.js:
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import PropTypes from 'prop-types';
@@ -274,13 +324,13 @@ const styles = StyleSheet.create({
 });
 
 export default InsetShadow;
-Archivo /components/Navigation.js:
+Archivo /src/components/Navigation.js:
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import Login from '../screens/PublicZone/Login';
 import SignUp from '../screens/PublicZone/SignUp';
-import PrivateZone from '../PrivateZone';
+import PrivateZone from '../screens/PrivateZone/PrivateZone';
 
 const Stack = createStackNavigator();
 
@@ -311,7 +361,7 @@ function Navigation() {
 }
 
 export default Navigation;
-Archivo /components/PrivateZoneDrawer.js:
+Archivo /src/components/PrivateZoneDrawer.js:
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
@@ -502,7 +552,7 @@ const styles = StyleSheet.create({
 });
 
 export default PrivateZoneDrawer;
-Archivo /components/SearchBox.js:
+Archivo /src/components/SearchBox.js:
 import React, {useEffect, useState} from 'react';
 import {StyleSheet, View, TextInput} from 'react-native';
 import PropTypes from 'prop-types';
@@ -518,7 +568,11 @@ const getRandomPlaceholder = () => {
     'Consultor educativo',
     'House painting',
     'Programador',
-    // Agrega más opciones aquí
+    'Architecht',
+    'Coreographer',
+    'Auxiliar contable',
+    'Party planner',
+    'Instructor de buceo',
   ];
   const randomIndex = Math.floor(Math.random() * placeholders.length);
   return placeholders[randomIndex];
@@ -531,7 +585,7 @@ const SearchBox = ({currentRefinement, refine}) => {
     if (!currentRefinement) {
       const interval = setInterval(() => {
         setPlaceholder(getRandomPlaceholder());
-      }, 1000); // Cambiar cada 3 segundos (ajusta según tus preferencias)
+      }, 500); // Cambiar cada 3 segundos (ajusta según tus preferencias)
 
       return () => clearInterval(interval);
     }
@@ -551,7 +605,7 @@ const SearchBox = ({currentRefinement, refine}) => {
           onChangeText={value => refine(value)}
           value={currentRefinement}
           placeholder={placeholder}
-          //autoFocus
+          autoFocus
         />
       </InsetShadow>
     </View>

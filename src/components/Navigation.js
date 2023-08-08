@@ -3,7 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import Login from '../screens/PublicZone/Login';
 import SignUp from '../screens/PublicZone/SignUp';
-import PrivateZone from '../PrivateZone';
+import PrivateZone from '../screens/PrivateZone/PrivateZone';
 
 const Stack = createStackNavigator();
 

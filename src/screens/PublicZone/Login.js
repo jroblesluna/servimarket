@@ -17,6 +17,7 @@ import firestore from '@react-native-firebase/firestore'; // Add this line
 import storage from '@react-native-firebase/storage'; // Add this line
 import CustomImage from '../../components/CustomImage';
 import {useRoute} from '@react-navigation/native';
+import {useTranslation} from 'react-i18next';
 
 GoogleSignin.configure({
   webClientId:
@@ -24,7 +25,8 @@ GoogleSignin.configure({
 });
 
 function Login() {
-  const route = useRoute();
+  const {t} = useTranslation(); // Initialize the translation hook
+ const route = useRoute();//
   const {notSigningUp} = route.params ?? {};
 
   const navigation = useNavigation();
@@ -161,18 +163,22 @@ function Login() {
       />
 
       <Text style={styles.titleText}>ServiMarket.app</Text>
+      <Text style={styles.versionText}>
+        {t('version')} {process.env.APP_VERSION}
+      </Text>
 
       <TextInput
-        style={styles.input}
-        placeholder="Correo electrónico"
+        style={styles.inputLogin}
+        placeholder={t('email')}
         value={email}
         onChangeText={text => setEmail(text)}
         ref={emailInputRef}
+        autoFocus
       />
 
       <TextInput
-        style={styles.input}
-        placeholder="Contraseña"
+        style={styles.inputLogin}
+        placeholder={t('password')}
         value={password}
         onChangeText={text => setPassword(text)}
         secureTextEntry
@@ -187,7 +193,7 @@ function Login() {
           ]}
           onPress={() => handleEmailSignIn()}
           disabled={isLoggingIn}>
-          <Text style={styles.classicButtonText}>Iniciar sesión</Text>
+          <Text style={styles.classicButtonText}>{t('login')}</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -197,7 +203,7 @@ function Login() {
             isLoggingIn && styles.disabledButton,
           ]}
           onPress={() => handleEmailSignUp()}>
-          <Text style={styles.classicButtonText}>Registrarme</Text>
+          <Text style={styles.classicButtonText}>{t('signup')}</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.hr} />
@@ -220,21 +226,24 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#1E3264',
   },
+  versionText: {
+    fontSize: 18,
+  },
   classicLoginView: {
     flexDirection: 'row',
   },
   classicButtonText: {
-    fontSize: 15,
+    fontSize: 20,
     fontWeight: 'bold',
     color: 'white',
   },
   classicButton: {
     width: 142,
-    height: 42,
+    height: 45,
     margin: 5,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 2,
+    borderRadius: 25,
     shadowColor: '#000000',
     shadowRadius: 2,
     shadowOffset: {
@@ -253,16 +262,18 @@ const styles = StyleSheet.create({
   loginGoogleButton: {
     width: 300,
     height: 50,
-    margin: 5,
   },
   disabledButton: {
     opacity: 0.5, // Cambiar la opacidad del botón deshabilitado
   },
-  input: {
+  inputLogin: {
     width: 290,
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
+    //height: 40,
+    fontSize: 18,
+    //borderColor: 'gray',
+    borderBottomColor: 'gray',
+    borderRadius: 2,
+    backgroundColor: 'white',
     marginVertical: 5,
     paddingHorizontal: 10,
   },
