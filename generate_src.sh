@@ -10,21 +10,19 @@ echo Archivo /index.js: >> src01.txt
 cat index.js >> src01.txt
 echo Archivo /src/App.tsx: >> src01.txt
 cat src/App.tsx >> src01.txt
-echo Archivo /src/i18n.js: >> src01.txt
-cat src/i18n.js >> src01.txt
 echo Archivo /src/components/CustomImage.js: >> src01.txt
 cat src/components/CustomImage.js >> src01.txt
 echo Archivo /src/components/InsetShadow.js: >> src01.txt
 cat src/components/InsetShadow.js >> src01.txt
 echo Archivo /src/components/Navigation.js: >> src01.txt
 cat src/components/Navigation.js >> src01.txt
-echo Archivo /src/components/PrivateZoneDrawer.js: >> src01.txt
-cat src/components/PrivateZoneDrawer.js >> src01.txt
 echo Archivo /src/components/SearchBox.js: >> src01.txt
 cat src/components/SearchBox.js >> src01.txt
 
 echo Archivo /src/screens/PrivateZone/PrivateZone.js: >> src02.txt
 cat src/screens/PrivateZone/PrivateZone.js >> src02.txt
+echo Archivo /src/components/PrivateZoneDrawer.js: >> src02.txt
+cat src/components/PrivateZoneDrawer.js >> src02.txt
 echo Archivo /src/screens/PrivateZone/MyAppointments.js: >> src02.txt
 cat src/screens/PrivateZone/MyAppointments.js >> src02.txt
 echo Archivo /src/screens/PrivateZone/MyProfile.js: >> src02.txt
@@ -44,3 +42,9 @@ echo Archivo /src/screens/PublicZone/Login.js: >> src03.txt
 cat src/screens/PublicZone/Login.js >> src03.txt
 echo Archivo /src/screens/PublicZone/SignUp.js: >> src03.txt
 cat src/screens/PublicZone/SignUp.js >> src03.txt
+echo Archivo /src/i18n.js: >> src03.txt
+cat src/i18n.js >> src03.txt
+echo Archivo /src/locales/en.json: >> src03.txt
+cat src/locales/en.json >> src03.txt
+echo Archivo /src/locales/es.json: >> src03.txt
+cat src/locales/es.json >> src03.txt

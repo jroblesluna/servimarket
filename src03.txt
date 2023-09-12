@@ -21,13 +21,12 @@ import {useRoute} from '@react-navigation/native';
 import {useTranslation} from 'react-i18next';
 
 GoogleSignin.configure({
-  webClientId:
-    '861186813540-hr41m36t7sh491dvc5ug8qrrtmajfp6g.apps.googleusercontent.com',
+  webClientId: process.env.GOOGLE_WEBCLIENTID,
 });
 
 function Login() {
-  const {t} = useTranslation();
-  const route = useRoute();
+  const {t} = useTranslation(); // Initialize the translation hook
+  const route = useRoute(); //
   const {notSigningUp} = route.params ?? {};
 
   const navigation = useNavigation();
@@ -59,6 +58,7 @@ function Login() {
       const {idToken} = await GoogleSignin.signIn();
       const googleCredential = auth.GoogleAuthProvider.credential(idToken);
       const googleUser = await auth().signInWithCredential(googleCredential);
+      console.log(googleUser);
 
       // Download the image data
       const response = await fetch(googleUser.user.photoURL);
@@ -77,21 +77,45 @@ function Login() {
       const userRef = firestore()
         .collection('users')
         .doc(googleUser.user.email);
-      await userRef.update({
-        photoURL: downloadURL,
-      });
+      const userDoc = await userRef.get();
+      console.log('userDoc:', userDoc);
+      console.log('!userDoc.exists', !userDoc.exists);
+      console.log(
+        'Error',
+        googleUser.user.email,
+        googleUser.user.displayName,
+        googleUser.additionalUserInfo.profile.given_name,
+        googleUser.additionalUserInfo.profile.family_name,
+        downloadURL,
+      );
+      if (!userDoc.exists) {
+        // If the user document doesn't exist, create it with necessary information
+        console.log('No existe Google User en users');
+        await userRef.set({
+          email: googleUser.user.email,
+          displayName: googleUser.user.displayName,
+          given_name: googleUser.additionalUserInfo.profile.given_name,
+          family_name: googleUser.additionalUserInfo.profile.family_name,
+          photoURL: downloadURL,
+        });
+
+        console.log('Google User Set');
+      }
 
       navigation.navigate('PrivateZone');
     } catch (error) {
       console.log('Error:', error.message);
-      Alert.alert('Error', 'An error occurred during sign-in');
+      Alert.alert(
+        'Error:',
+        'An error occurred during sign-in: ' + error.message,
+      );
     } finally {
       setIsLoggingIn(false);
     }
   };
 
   const handleEmailSignIn = async () => {
-    console.log('emailSignIn');
+    //console.log('emailSignIn');
 
     if (email === '' || password === '') {
       Alert.alert('Error', 'Por favor, completa todos los campos');
@@ -164,17 +188,21 @@ function Login() {
       />
 
       <Text style={styles.titleText}>ServiMarket.app</Text>
+      <Text style={styles.versionText}>
+        {t('version')} {process.env.APP_VERSION}
+      </Text>
 
       <TextInput
-        style={styles.input}
+        style={styles.inputLogin}
         placeholder={t('email')}
         value={email}
         onChangeText={text => setEmail(text)}
         ref={emailInputRef}
+        autoFocus
       />
 
       <TextInput
-        style={styles.input}
+        style={styles.inputLogin}
         placeholder={t('password')}
         value={password}
         onChangeText={text => setPassword(text)}
@@ -190,7 +218,7 @@ function Login() {
           ]}
           onPress={() => handleEmailSignIn()}
           disabled={isLoggingIn}>
-          <Text style={styles.classicButtonText}>Iniciar sesión</Text>
+          <Text style={styles.classicButtonText}>{t('login')}</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -200,7 +228,7 @@ function Login() {
             isLoggingIn && styles.disabledButton,
           ]}
           onPress={() => handleEmailSignUp()}>
-          <Text style={styles.classicButtonText}>Registrarme</Text>
+          <Text style={styles.classicButtonText}>{t('signup')}</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.hr} />
@@ -223,21 +251,24 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#1E3264',
   },
+  versionText: {
+    fontSize: 18,
+  },
   classicLoginView: {
     flexDirection: 'row',
   },
   classicButtonText: {
-    fontSize: 15,
+    fontSize: 20,
     fontWeight: 'bold',
     color: 'white',
   },
   classicButton: {
     width: 142,
-    height: 42,
+    height: 45,
     margin: 5,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 2,
+    borderRadius: 25,
     shadowColor: '#000000',
     shadowRadius: 2,
     shadowOffset: {
@@ -256,18 +287,21 @@ const styles = StyleSheet.create({
   loginGoogleButton: {
     width: 300,
     height: 50,
-    margin: 5,
   },
   disabledButton: {
     opacity: 0.5, // Cambiar la opacidad del botón deshabilitado
   },
-  input: {
+  inputLogin: {
     width: 290,
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
+    //height: 40,
+    fontSize: 18,
+    //borderColor: 'gray',
+    borderBottomColor: 'gray',
+    borderRadius: 2,
+    backgroundColor: 'white',
     marginVertical: 5,
     paddingHorizontal: 10,
+    paddingVertical: 10,
   },
   hr: {
     width: 300,
@@ -528,3 +562,41 @@ const styles = StyleSheet.create({
 });
 
 export default SignUp;
+Archivo /src/i18n.js:
+import i18n from 'i18next';
+import {initReactI18next} from 'react-i18next';
+import 'intl-pluralrules';
+
+import en from './locales/en.json'; // English translations
+import es from './locales/es.json'; // Spanish translations
+
+// Initialize i18n
+i18n.use(initReactI18next).init({
+  resources: {
+    en: {translation: en},
+    es: {translation: es},
+  },
+  lng: 'en', // Default language
+  fallbackLng: 'en', // Fallback language
+  interpolation: {
+    escapeValue: false, // React already safe from XSS
+  },
+});
+
+export default i18n;
+Archivo /src/locales/en.json:
+{
+  "version": "Version",
+  "email": "E-Mail",
+  "password": "Password",
+  "login": "Login",
+  "signup": "Sign Up"
+}
+Archivo /src/locales/es.json:
+{
+  "version": "Versión",
+  "email": "Correo electrónico",
+  "password": "Contraseña",
+  "login": "Iniciar sesión",
+  "signup": "Registrarme"
+}

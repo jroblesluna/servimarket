@@ -20,13 +20,12 @@ import {useRoute} from '@react-navigation/native';
 import {useTranslation} from 'react-i18next';
 
 GoogleSignin.configure({
-  webClientId:
-    '861186813540-hr41m36t7sh491dvc5ug8qrrtmajfp6g.apps.googleusercontent.com',
+  webClientId: process.env.GOOGLE_WEBCLIENTID,
 });
 
 function Login() {
   const {t} = useTranslation(); // Initialize the translation hook
- const route = useRoute();//
+  const route = useRoute(); //
   const {notSigningUp} = route.params ?? {};
 
   const navigation = useNavigation();
@@ -58,6 +57,7 @@ function Login() {
       const {idToken} = await GoogleSignin.signIn();
       const googleCredential = auth.GoogleAuthProvider.credential(idToken);
       const googleUser = await auth().signInWithCredential(googleCredential);
+      console.log(googleUser);
 
       // Download the image data
       const response = await fetch(googleUser.user.photoURL);
@@ -76,21 +76,45 @@ function Login() {
       const userRef = firestore()
         .collection('users')
         .doc(googleUser.user.email);
-      await userRef.update({
-        photoURL: downloadURL,
-      });
+      const userDoc = await userRef.get();
+      console.log('userDoc:', userDoc);
+      console.log('!userDoc.exists', !userDoc.exists);
+      console.log(
+        'Error',
+        googleUser.user.email,
+        googleUser.user.displayName,
+        googleUser.additionalUserInfo.profile.given_name,
+        googleUser.additionalUserInfo.profile.family_name,
+        downloadURL,
+      );
+      if (!userDoc.exists) {
+        // If the user document doesn't exist, create it with necessary information
+        console.log('No existe Google User en users');
+        await userRef.set({
+          email: googleUser.user.email,
+          displayName: googleUser.user.displayName,
+          given_name: googleUser.additionalUserInfo.profile.given_name,
+          family_name: googleUser.additionalUserInfo.profile.family_name,
+          photoURL: downloadURL,
+        });
+
+        console.log('Google User Set');
+      }
 
       navigation.navigate('PrivateZone');
     } catch (error) {
       console.log('Error:', error.message);
-      Alert.alert('Error', 'An error occurred during sign-in');
+      Alert.alert(
+        'Error:',
+        'An error occurred during sign-in: ' + error.message,
+      );
     } finally {
       setIsLoggingIn(false);
     }
   };
 
   const handleEmailSignIn = async () => {
-    console.log('emailSignIn');
+    //console.log('emailSignIn');
 
     if (email === '' || password === '') {
       Alert.alert('Error', 'Por favor, completa todos los campos');
@@ -276,6 +300,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     marginVertical: 5,
     paddingHorizontal: 10,
+    paddingVertical: 10,
   },
   hr: {
     width: 300,

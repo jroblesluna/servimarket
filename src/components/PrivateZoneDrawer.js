@@ -147,6 +147,9 @@ function PrivateZoneDrawer({handleSignOut, user, navigation}) {
 const styles = StyleSheet.create({
   drawerContentScrollViewStyle: {
     backgroundColor: '#1E3264',
+    //paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : undefined,
+    paddingLeft: 0,
+    paddingRight: 0,
   },
   headerContainer: {
     height: 150,
@@ -168,19 +171,22 @@ const styles = StyleSheet.create({
   drawerItemStyle: {
     marginLeft: 0,
     marginRight: 0,
+    //backgroundColor: 'green',
+    paddingLeft: 5,
   },
   drawerItemLabelStyle: {
     color: 'white',
-    fontFamily: 'Comic Sans',
+    //fontFamily: 'Comic Sans',
     fontSize: 20,
     fontWeight: 'bold',
+    //backgroundColor: 'pink',
   },
   drawerCloseIconContainer: {
     minWidth: '90%',
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'flex-end',
-    alignItems: 'center',
+    //alignItems: 'center',
   },
   drawerCloseIcon: {
     color: 'white',

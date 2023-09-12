@@ -30,7 +30,7 @@ const SearchBox = ({currentRefinement, refine}) => {
     if (!currentRefinement) {
       const interval = setInterval(() => {
         setPlaceholder(getRandomPlaceholder());
-      }, 500); // Cambiar cada 3 segundos (ajusta según tus preferencias)
+      }, 1000); // Cambiar cada 1 segundos (ajusta según tus preferencias)
 
       return () => clearInterval(interval);
     }
@@ -50,7 +50,7 @@ const SearchBox = ({currentRefinement, refine}) => {
           onChangeText={value => refine(value)}
           value={currentRefinement}
           placeholder={placeholder}
-          autoFocus
+          //autoFocus
         />
       </InsetShadow>
     </View>
@@ -71,9 +71,8 @@ const styles = StyleSheet.create({
     height: 48,
     padding: 12,
     fontSize: 16,
-    backgroundColor: '#fff',
     borderRadius: 5,
-    borderColor: 'gray',
+    borderColor: 'lightgray',
     borderWidth: 1,
   },
   insetShadowStyle: {borderRadius: 5, height: 'auto'},

@@ -34,14 +34,13 @@ const ServiMarket = () => {
     fetchCategories();
   }, []);
 
-  const ALGOLIA_APP_ID = 'VSO7VMX0UE';
-  const ALGOLIA_API_KEY = '262fe5ea97e94bf5e4a9460e2846fba1';
-  const ALGOLIA_INDEX_NAME = 'serviceSearchIndex';
-
-  const algoliaClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_API_KEY);
+  const algoliaClient = algoliasearch(
+    process.env.ALGOLIA_APP_ID,
+    process.env.ALGOLIA_API_KEY,
+  );
 
   const preInfiniteHits = ({hits, hasMore, refineNext}) => {
-    console.log(hits);
+    //console.log(hits);
     return (
       <FlatList
         data={hits}
@@ -153,7 +152,7 @@ const ServiMarket = () => {
       <Text style={styles.searchTitle}>I'm looking for...</Text>
       <InstantSearch
         style={styles.instantSearchStyle}
-        indexName={ALGOLIA_INDEX_NAME}
+        indexName={process.env.ALGOLIA_INDEX_NAME}
         searchClient={algoliaClient}>
         <SearchBox />
         <InfiniteHits style={styles.infiniteHits} />

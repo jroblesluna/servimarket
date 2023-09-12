@@ -54,6 +54,203 @@ function PrivateZone() {
 }
 
 export default PrivateZone;
+Archivo /src/components/PrivateZoneDrawer.js:
+import React from 'react';
+import {createDrawerNavigator} from '@react-navigation/drawer';
+import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
+import {View, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import ServiMarket from '../screens/PrivateZone/ServiMarket';
+import MyProfile from '../screens/PrivateZone/MyProfile';
+import MyServices from '../screens/PrivateZone/MyServices';
+import MyAppointments from '../screens/PrivateZone/MyAppointments';
+import ViewHistory from '../screens/PrivateZone/ViewHistory';
+import MyWallet from '../screens/PrivateZone/MyWallet';
+import MySettings from '../screens/PrivateZone/MySettings';
+import {useNavigation} from '@react-navigation/native';
+import {DrawerActions} from '@react-navigation/routers';
+
+const CustomDrawerContent = ({handleSignOut, user, navigation}) => {
+  const closeDrawer = () => {
+    navigation.dispatch(DrawerActions.closeDrawer());
+  };
+
+  return (
+    <DrawerContentScrollView style={styles.drawerContentScrollViewStyle}>
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label=""
+        icon={({focused, color, size}) => (
+          <View style={styles.drawerCloseIconContainer}>
+            <TouchableOpacity onPress={closeDrawer}>
+              <Icon
+                name="close"
+                size={size}
+                color={color}
+                style={styles.drawerCloseIcon}
+              />
+            </TouchableOpacity>
+          </View>
+        )}
+      />
+
+      <View style={styles.headerContainer}>
+        {user && user.photoURL && (
+          <Image source={{uri: user.photoURL}} style={styles.headerImage} />
+        )}
+      </View>
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Profile"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MyProfile')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="ServiMarket"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('ServiMarket')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Services"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MyServices')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Appointments"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MyAppointments')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="View History"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('ViewHistory')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Wallet"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MyWallet')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="My Settings"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={() => navigation.navigate('MySettings')}
+      />
+      <DrawerItem
+        style={styles.drawerItemStyle}
+        label="Sign Out"
+        labelStyle={styles.drawerItemLabelStyle}
+        onPress={handleSignOut}
+      />
+    </DrawerContentScrollView>
+  );
+};
+
+const HeaderRight = () => {
+  const navigation = useNavigation();
+
+  const handleOpenDrawer = () => {
+    navigation.openDrawer();
+  };
+
+  return (
+    <TouchableOpacity onPress={handleOpenDrawer}>
+      <Icon name="menu" size={24} color="white" style={{marginRight: 15}} />
+    </TouchableOpacity>
+  );
+};
+
+function PrivateZoneDrawer({handleSignOut, user, navigation}) {
+  const Drawer = createDrawerNavigator();
+
+  return (
+    <Drawer.Navigator
+      initialRouteName="ServiMarket" // Modificar esta línea
+      screenOptions={{
+        drawerType: 'front',
+        drawerPosition: 'right',
+        headerStyle: styles.drawerHeaderStyle, // Aplica el estilo al título del Drawer
+        headerTitleStyle: styles.drawerHeaderTitleStyle, // Aplica el estilo al título del Drawer
+        drawerStyle: {
+          width: '55%',
+        },
+        headerLeft: () => null, // Elimina el icono de hamburguesa del lado izquierdo
+        headerRight: () => <HeaderRight navigation={navigation} />,
+        headerTitleAlign: 'center', // Centra el título en la barra de navegación
+      }}
+      drawerContent={() => (
+        <CustomDrawerContent
+          handleSignOut={handleSignOut}
+          user={user}
+          navigation={navigation}
+        />
+      )}>
+      <Drawer.Screen name="MyProfile" component={MyProfile} />
+      <Drawer.Screen name="ServiMarket" component={ServiMarket} />
+      <Drawer.Screen name="MyServices" component={MyServices} />
+      <Drawer.Screen name="MyAppointments" component={MyAppointments} />
+      <Drawer.Screen name="ViewHistory" component={ViewHistory} />
+      <Drawer.Screen name="MyWallet" component={MyWallet} />
+      <Drawer.Screen name="MySettings" component={MySettings} />
+    </Drawer.Navigator>
+  );
+}
+
+const styles = StyleSheet.create({
+  drawerContentScrollViewStyle: {
+    backgroundColor: '#1E3264',
+    //paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : undefined,
+    paddingLeft: 0,
+    paddingRight: 0,
+  },
+  headerContainer: {
+    height: 150,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  headerImage: {
+    width: 100,
+    height: 100,
+    resizeMode: 'contain',
+    borderRadius: 75,
+  },
+  drawerHeaderStyle: {
+    backgroundColor: '#1E3264',
+  },
+  drawerHeaderTitleStyle: {
+    color: 'white',
+  },
+  drawerItemStyle: {
+    marginLeft: 0,
+    marginRight: 0,
+    //backgroundColor: 'green',
+    paddingLeft: 5,
+  },
+  drawerItemLabelStyle: {
+    color: 'white',
+    //fontFamily: 'Comic Sans',
+    fontSize: 20,
+    fontWeight: 'bold',
+    //backgroundColor: 'pink',
+  },
+  drawerCloseIconContainer: {
+    minWidth: '90%',
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    //alignItems: 'center',
+  },
+  drawerCloseIcon: {
+    color: 'white',
+  },
+});
+
+export default PrivateZoneDrawer;
 Archivo /src/screens/PrivateZone/MyAppointments.js:
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
@@ -70,7 +267,7 @@ export default MyAppointments;
 
 const styles = StyleSheet.create({});
 Archivo /src/screens/PrivateZone/MyProfile.js:
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {
   StyleSheet,
   Text,
@@ -79,35 +276,69 @@ import {
   TouchableOpacity,
   Alert,
   Image,
+  ScrollView,
 } from 'react-native';
 import firestore from '@react-native-firebase/firestore';
 import auth from '@react-native-firebase/auth';
 import CustomImage from '../../components/CustomImage';
+import {useTranslation} from 'react-i18next';
+import PhoneInput from 'react-native-phone-number-input';
+import Navigation from '../../components/Navigation';
 
 function MyProfile() {
+  const {t} = useTranslation();
   const [currentUser, setCurrentUser] = useState(null);
   const [displayName, setDisplayName] = useState('');
-  const [givenName, setGivenName] = useState('');
-  const [familyName, setFamilyName] = useState('');
+  const [given_name, setGivenName] = useState('');
+  const [family_name, setFamilyName] = useState('');
   const [photoURL, setPhotoURL] = useState('');
+  const [phoneCountry, setPhoneCountry] = useState('');
+  const [phoneCallingCode, setPhoneCallingCode] = useState([]);
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [province, setProvince] = useState('');
+  const [country, setCountry] = useState('');
+  const [zipcode, setZipcode] = useState('');
+  const [about, setAbout] = useState('');
+
+  const phoneInputRef = useRef(null);
 
   useEffect(() => {
     const user = auth().currentUser;
     if (user) {
       const userRef = firestore().collection('users').doc(user.email);
-
       userRef.get().then(doc => {
         if (doc.exists) {
           const userData = doc.data();
           setCurrentUser(userData);
           setDisplayName(userData.displayName);
-          setGivenName(userData.givenName);
-          setFamilyName(userData.familyName);
+          setGivenName(userData.given_name);
+          setFamilyName(userData.family_name);
           setPhotoURL(userData.photoURL);
+          setPhoneCountry(userData.phoneCountry);
+          setPhoneCallingCode(userData.phoneCallingCode);
+          setPhoneNumber(userData.phoneNumber);
+          setAddress(userData.address);
+          setCity(userData.city);
+          setProvince(userData.province);
+          setCountry(userData.country);
+          setZipcode(userData.zipcode);
+          setAbout(userData.about);
         }
       });
     }
   }, []);
+
+  useEffect(() => {
+    if (phoneInputRef.current && phoneNumber) {
+      phoneInputRef.current.onSelect({
+        cca2: phoneCountry,
+        callingCode: phoneCallingCode,
+      });
+      phoneInputRef.current.onChangeText(phoneNumber);
+    }
+  }, [phoneCallingCode, phoneCountry, phoneNumber]);
 
   const handleSaveChanges = async () => {
     const user = auth().currentUser;
@@ -116,9 +347,18 @@ function MyProfile() {
       try {
         await userRef.update({
           displayName,
-          givenName,
-          familyName,
+          given_name,
+          family_name,
           photoURL,
+          phoneCountry,
+          phoneCallingCode,
+          phoneNumber,
+          address,
+          city,
+          province,
+          country,
+          zipcode,
+          about,
         });
         Alert.alert('Éxito', 'Cambios guardados exitosamente');
       } catch (error) {
@@ -126,12 +366,13 @@ function MyProfile() {
       }
     }
   };
-  console.log(photoURL);
+
+  const handleOnChangeText = text => {
+    setPhoneNumber(text);
+  };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.titleText}>Mi Perfil</Text>
-
+    <ScrollView contentContainerStyle={styles.container}>
       {currentUser && (
         <>
           {photoURL ? (
@@ -145,33 +386,100 @@ function MyProfile() {
             />
           )}
 
-          <TextInput
-            style={styles.input}
-            placeholder="Nombre Completo"
-            value={displayName}
-            onChangeText={text => setDisplayName(text)}
-          />
+          <View>
+            <Text style={styles.fieldText}>{t('email')}</Text>
+            <TextInput
+              style={styles.input}
+              placeholder={t('email')}
+              value={auth().currentUser.email}
+              editable={false}
+            />
+            <Text style={styles.fieldText}>Display Name</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Nombre Completo"
+              value={displayName}
+              onChangeText={text => setDisplayName(text)}
+            />
+            <Text style={styles.fieldText}>Given Name</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Nombre"
+              value={given_name}
+              onChangeText={text => setGivenName(text)}
+            />
+            <Text style={styles.fieldText}>Family Name</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Apellido"
+              value={family_name}
+              onChangeText={text => setFamilyName(text)}
+            />
+            <Text style={styles.fieldText}>Phone Number</Text>
 
-          <TextInput
-            style={styles.input}
-            placeholder="Nombre"
-            value={givenName}
-            onChangeText={text => setGivenName(text)}
-          />
-
-          <TextInput
-            style={styles.input}
-            placeholder="Apellido"
-            value={familyName}
-            onChangeText={text => setFamilyName(text)}
-          />
-
-          <TextInput
-            style={styles.input}
-            placeholder="URL de la Foto de Perfil"
-            value={photoURL}
-            onChangeText={text => setPhotoURL(text)}
-          />
+            <View style={styles.phoneInputContainer}>
+              <PhoneInput
+                ref={phoneInputRef}
+                defaultCode={phoneCountry}
+                countryCode={phoneCountry}
+                defaultValue={phoneNumber}
+                //value={phoneNumber}
+                containerStyle={{
+                  height: 45,
+                  backgroundColor: 'transparent',
+                  alignContent: 'center',
+                }}
+                textInputStyle={{height: 45}}
+                codeTextStyle={{height: 45, paddingVertical: 12}}
+                textContainerStyle={{backgroundColor: 'transparent'}}
+                onChangeText={text => handleOnChangeText(text)}
+              />
+            </View>
+            <Text style={styles.fieldText}>Address</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Address"
+              value={address}
+              onChangeText={text => setAddress(text)}
+            />
+            <Text style={styles.fieldText}>City</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="City"
+              value={city}
+              onChangeText={text => setCity(text)}
+            />
+            <Text style={styles.fieldText}>Province</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Province"
+              value={province}
+              onChangeText={text => setProvince(text)}
+            />
+            <Text style={styles.fieldText}>Country</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Country"
+              value={country}
+              onChangeText={text => setCountry(text)}
+            />
+            <Text style={styles.fieldText}>Zipcode</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Zipcode"
+              value={zipcode}
+              onChangeText={text => setZipcode(text)}
+            />
+            <Text style={styles.fieldText}>About</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="About"
+              value={about}
+              onChangeText={text => setAbout(text)}
+              multiline={true}
+              numberOfLines={3}
+            />
+          </View>
 
           <TouchableOpacity
             style={styles.saveButton}
@@ -180,7 +488,7 @@ function MyProfile() {
           </TouchableOpacity>
         </>
       )}
-    </View>
+    </ScrollView>
   );
 }
 
@@ -192,23 +500,22 @@ const styles = StyleSheet.create({
     borderRadius: 75,
   },
   container: {
-    flex: 1,
+    flexGrow: 1, // This ensures the content can grow and allows scrolling
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  titleText: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: '#1E3264',
+    paddingBottom: 10,
   },
   input: {
-    width: 290,
-    height: 40,
+    minWidth: '90%',
+    height: 45,
     borderColor: 'gray',
     borderWidth: 1,
     marginVertical: 5,
     paddingHorizontal: 10,
     fontSize: 16,
+  },
+  disabledInput: {
+    backgroundColor: '#ddd',
   },
   saveButton: {
     width: 150,
@@ -223,6 +530,22 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: 'bold',
     color: 'white',
+  },
+  fieldText: {
+    textAlign: 'left', // Align the text to the left
+    fontSize: 16, // Adjust the font size if needed
+    fontWeight: 'bold', // Add bold font weight if desired
+    color: 'gray', // Adjust the text color if needed
+    width: '100%', // Set the width to 100% to ensure the label spans the full width
+  },
+  phoneInputContainer: {
+    borderWidth: 1,
+    borderColor: 'gray',
+    paddingHorizontal: 10,
+  },
+  phoneInput: {
+    fontSize: 16,
+    height: 40,
   },
 });
 
@@ -309,14 +632,13 @@ const ServiMarket = () => {
     fetchCategories();
   }, []);
 
-  const ALGOLIA_APP_ID = 'VSO7VMX0UE';
-  const ALGOLIA_API_KEY = '262fe5ea97e94bf5e4a9460e2846fba1';
-  const ALGOLIA_INDEX_NAME = 'serviceSearchIndex';
-
-  const algoliaClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_API_KEY);
+  const algoliaClient = algoliasearch(
+    process.env.ALGOLIA_APP_ID,
+    process.env.ALGOLIA_API_KEY,
+  );
 
   const preInfiniteHits = ({hits, hasMore, refineNext}) => {
-    console.log(hits);
+    //console.log(hits);
     return (
       <FlatList
         data={hits}
@@ -428,7 +750,7 @@ const ServiMarket = () => {
       <Text style={styles.searchTitle}>I'm looking for...</Text>
       <InstantSearch
         style={styles.instantSearchStyle}
-        indexName={ALGOLIA_INDEX_NAME}
+        indexName={process.env.ALGOLIA_INDEX_NAME}
         searchClient={algoliaClient}>
         <SearchBox />
         <InfiniteHits style={styles.infiniteHits} />
