@@ -174,6 +174,7 @@ const styles = StyleSheet.create({
   searchTitle: {
     fontSize: 24,
     fontWeight: 'bold',
+    color: 'black',
   },
   serviceItemContainer: {
     //position: 'relative',
@@ -211,7 +212,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     backgroundColor: 'black',
-    opacity: 0.5,
+    opacity: 0.2,
     borderRadius: 15,
     zIndex: 1,
   },
